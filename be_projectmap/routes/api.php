@@ -18,4 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get("card",[cardApi::class ,'getCard']);
-Route::get("card_id/{id}",[cardApi::class ,'getCardId']);
+Route::get("card_id/{id?}",[cardApi::class ,'getCardId']);
