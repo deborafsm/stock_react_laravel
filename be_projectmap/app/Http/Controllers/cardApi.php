@@ -9,4 +9,7 @@ class cardApi extends Controller
     function getCard(){
         return cards::all();
     }
+    function getCardId($id){
+        return cards::find($id);
+    }
 }
