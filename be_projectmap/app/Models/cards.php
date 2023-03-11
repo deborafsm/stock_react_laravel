@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class cards extends Model
 {
     use HasFactory;
+    public $timestamp;
 }
