@@ -15,4 +15,8 @@ class cardApi extends Controller
     {
         return $id ? cards::find($id) : cards::all();
     }
+    function addCard(){
+        $card = new cards;
+        return "o card inserido com sucesso!";
+    }
 }
