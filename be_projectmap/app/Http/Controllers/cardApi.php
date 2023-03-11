@@ -15,8 +15,19 @@ class cardApi extends Controller
     {
         return $id ? cards::find($id) : cards::all();
     }
-    function addCard(){
+    function addCard(Request $req)
+    {
         $card = new cards;
-        return "o card inserido com sucesso!";
+        $card->titulo = $req->titulo;
+        $card->id = $req->id;
+        $card->tag = $req->tag;
+        $card->text_front = $req->text_front;
+        $card->text_back = $req->text_back;
+        $resut = $card->save();
+        if ($resut) {
+            return ["Result" => "o card inserido com sucesso!"];
+        } else {
+            return ["Result" => "Não foi possivel salvar o card!"];
+        }
     }
 }
