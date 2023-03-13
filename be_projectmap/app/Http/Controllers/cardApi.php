@@ -46,4 +46,14 @@ class cardApi extends Controller
             return ["result" => "Não foi possível atualizar!"];
         }
     }
+    function upDel(Request $req)
+    {
+        $card = cards::find($req->id);
+        $result = $card->delete();
+        if ($result) {
+            return ["result" => "Card removido com sucesso!"];
+        } else {
+            return ["result" => "Não foi possível remover!"];
+        }
+    }
 }
