@@ -23,11 +23,27 @@ class cardApi extends Controller
         $card->tag = $req->tag;
         $card->text_front = $req->text_front;
         $card->text_back = $req->text_back;
-        $resut = $card->save();
-        if ($resut) {
-            return ["Result" => "o card inserido com sucesso!"];
+        $result = $card->save();
+        if ($result) {
+            return ["result" => "o card inserido com sucesso!"];
         } else {
-            return ["Result" => "Não foi possivel salvar o card!"];
+            return ["result" => "Não foi possivel salvar o card!"];
+        }
+    }
+    function upCard(Request $req)
+    {
+
+        $card = cards::find($req->id);
+        $card->titulo = $req->titulo;
+        $card->id = $req->id;
+        $card->tag = $req->tag;
+        $card->text_front = $req->text_front;
+        $card->text_back = $req->text_back;
+        $result = $card->save();
+        if ($result) {
+            return ["result" => "Card atualizado com sucesso!"];
+        } else {
+            return ["result" => "Não foi possível atualizar!"];
         }
     }
 }
