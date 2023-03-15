@@ -46,7 +46,7 @@ class cardApi extends Controller
             return ["result" => "Não foi possível atualizar!"];
         }
     }
-    function upDel(Request $req)
+    function delCard(Request $req)
     {
         $card = cards::find($req->id);
         $result = $card->delete();
@@ -55,5 +55,9 @@ class cardApi extends Controller
         } else {
             return ["result" => "Não foi possível remover!"];
         }
+    }
+    function findCard($tag)
+    {
+        return cards::where("tag", "like", "%" . $tag . "%")->get();
     }
 }
