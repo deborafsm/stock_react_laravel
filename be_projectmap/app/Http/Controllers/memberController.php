@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use  App\Models\Member;
-
+use App\Models\cards;
 class memberController extends Controller
 {
     /**
