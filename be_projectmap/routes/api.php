@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\cardApi;
-use App\Http\Controllers\memberController;
+use App\Http\Controllers\Controllers\Head\headController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +19,12 @@ use App\Http\Controllers\memberController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get("card", [cardApi::class, 'getCard']);
-Route::get("card_id/{id?}", [cardApi::class, 'getCardId']);
-Route::post("cardAdd", [cardApi::class, 'addCard']);
-Route::post("update", [cardApi::class, 'upCard']);
-Route::post("delete/{id?}", [cardApi::class, 'delCard']);
-Route::get("search/{tag}", [cardApi::class, 'findCard']);
-
-Route::apiResource("member", memberController::class);
+// Route::get("card", [cardApi::class, 'getCard']);
+// Route::get("card_id/{id?}", [cardApi::class, 'getCardId']);
+// Route::post("cardAdd", [cardApi::class, 'addCard']);
+// Route::post("update", [cardApi::class, 'upCard']);
+// Route::post("delete/{id?}", [cardApi::class, 'delCard']);
+// Route::get("search/{tag}", [cardApi::class, 'findCard']);
+// Head
+Route::get("head", [headController::class, 'getHead']);
+// Route::apiResource("member", memberController::class);
