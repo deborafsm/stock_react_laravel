@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controllers\Head\headController;
-
+use App\Models\Models\Head\head;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +27,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::get("search/{tag}", [cardApi::class, 'findCard']);
 // Head
 Route::get("head", [headController::class, 'getHead']);
+Route::get("head_id/{id_head?}", [headController::class, 'getHeadById']);
+Route::post("headAdd",[headController::class,'addHead']);
 // Route::apiResource("member", memberController::class);
