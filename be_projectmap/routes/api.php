@@ -30,4 +30,5 @@ Route::get("head", [headController::class, 'getHead']);
 Route::get("head_id/{id_head?}", [headController::class, 'getHeadById']);
 Route::post("headAdd", [headController::class, 'addHead']);
 Route::post("headUpdate", [headController::class, 'updateHead']);
+Route::post("headDel/{id?}", [headController::class, 'delHead']);
 // Route::apiResource("member", memberController::class);

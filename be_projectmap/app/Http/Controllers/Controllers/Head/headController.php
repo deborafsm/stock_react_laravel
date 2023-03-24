@@ -24,7 +24,7 @@ class headController extends Controller
         $head->head_marca = $request->head_marca;
         $result = $head->save();
         if ($result) {
-            return ['result' => 'head inserido com sucesso!'];
+            return ['result' => 'Head inserido com sucesso.'];
         } else {
             return ['result' => 'Não foi possivel salvar head.'];
         }
@@ -35,9 +35,19 @@ class headController extends Controller
         $head->head_marca = $request->head_marca;
         $result = $head->save();
         if ($result) {
-            return ['result' => 'head atualizado com sucesso!'];
+            return ['result' => 'Head atualizado com sucesso.'];
         } else {
             return ['result' => 'Não foi possivel atualizar.'];
+        }
+    }
+    function delHead(Request $request)
+    {
+        $head = heads::find($request->id);
+        $result = $head::delete();
+        if ($result) {
+            return ['result' => 'Head deletado com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel remover.'];
         }
     }
 }
