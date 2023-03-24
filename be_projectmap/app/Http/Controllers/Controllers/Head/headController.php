@@ -26,7 +26,18 @@ class headController extends Controller
         if ($result) {
             return ['result' => 'head inserido com sucesso!'];
         } else {
-            return ['result' => 'head inserido com sucesso!'];
+            return ['result' => 'Não foi possivel salvar head.'];
+        }
+    }
+    function updateHead(Request $request)
+    {
+        $head = heads::find($request->id);
+        $head->head_marca = $request->head_marca;
+        $result = $head->save();
+        if ($result) {
+            return ['result' => 'head atualizado com sucesso!'];
+        } else {
+            return ['result' => 'Não foi possivel atualizar.'];
         }
     }
 }
