@@ -50,4 +50,8 @@ class headController extends Controller
             return ['result' => 'Não foi possivel remover.'];
         }
     }
+    function searchHead($head_marca)
+    {
+        return heads::where("head_marca", "like", "%" . $head_marca . "%")->get();
+    }
 }
