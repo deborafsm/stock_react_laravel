@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controllers\Head\headController;
 use App\Models\Models\Head\head;
+use App\Http\Controllers\Controllers\Head\headController;
+use App\Http\Controllers\Controllers\Teclado\tecladoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,6 @@ Route::post("headAdd", [headController::class, 'addHead']);
 Route::post("headUpdate", [headController::class, 'updateHead']);
 Route::post("headDel/{id?}", [headController::class, 'delHead']);
 Route::get("searchHead/{head_marca}", [headController::class, 'searchHead']);
+// Teclado
+Route::get("teclado", [tecladoController::class, 'getTeclado']);
 // Route::apiResource("member", memberController::class);
