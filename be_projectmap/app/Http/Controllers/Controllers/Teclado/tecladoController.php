@@ -10,5 +10,6 @@ class tecladoController extends Controller
 {
     function getTeclado()
     {
+        return teclado::all();
     }
 }
