@@ -38,4 +38,5 @@ Route::get("searchHead/{head_marca}", [headController::class, 'searchHead']);
 Route::get("teclado", [tecladoController::class, 'getTeclado']);
 Route::get("teclado_id/{id_teclado?}", [tecladoController::class, 'getTecById']);
 Route::post("tecladoAdd",[tecladoController::class,'addTeclado']);
+Route::post("tecladoUpdate",[tecladoController::class,'tecladoUpdate']);
 // Route::apiResource("member", memberController::class);
