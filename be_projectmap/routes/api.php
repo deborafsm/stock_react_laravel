@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Models\Head\head;
 use App\Http\Controllers\Controllers\Head\headController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
+use App\Models\Teclado\teclado;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,5 @@ Route::get("searchHead/{head_marca}", [headController::class, 'searchHead']);
 // Teclado
 Route::get("teclado", [tecladoController::class, 'getTeclado']);
 Route::get("teclado_id/{id_teclado?}", [tecladoController::class, 'getTecById']);
+Route::post("tecladoAdd",[tecladoController::class,'addTeclado']);
 // Route::apiResource("member", memberController::class);
