@@ -12,4 +12,8 @@ class tecladoController extends Controller
     {
         return teclado::all();
     }
+    function getTecById($id = null)
+    {
+        return $id ? teclado::find($id) : teclado::all();
+    }
 }

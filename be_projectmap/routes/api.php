@@ -35,4 +35,5 @@ Route::post("headDel/{id?}", [headController::class, 'delHead']);
 Route::get("searchHead/{head_marca}", [headController::class, 'searchHead']);
 // Teclado
 Route::get("teclado", [tecladoController::class, 'getTeclado']);
+Route::get("teclado_id/{id_teclado?}", [tecladoController::class, 'getTecById']);
 // Route::apiResource("member", memberController::class);
