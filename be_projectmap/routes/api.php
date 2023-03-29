@@ -43,3 +43,4 @@ Route::post("tecladoAdd", [tecladoController::class, 'addTeclado']);
 Route::post("tecladoUpdate", [tecladoController::class, 'tecladoUpdate']);
 Route::post("tecladoDel/{id?}", [tecladoController::class, 'tecladoDel']);
 Route::get("searchTel/{teclado_marca", [tecladoController::class, 'searchTeclado']);
+//

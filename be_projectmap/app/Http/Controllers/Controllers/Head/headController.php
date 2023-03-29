@@ -22,6 +22,7 @@ class headController extends Controller
     {
         $head = new heads();
         $head->head_marca = $request->head_marca;
+        $head->quantidade = $request->quantidade;
         $result = $head->save();
         if ($result) {
             return ['result' => 'Head inserido com sucesso.'];
@@ -33,6 +34,7 @@ class headController extends Controller
     {
         $head = heads::find($request->id);
         $head->head_marca = $request->head_marca;
+        $head->quantidade = $request->quantidade;
         $result = $head->save();
         if ($result) {
             return ['result' => 'Head atualizado com sucesso.'];
