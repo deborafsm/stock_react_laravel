@@ -21,12 +21,14 @@ use App\Models\Teclado\teclado;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+// Card
 // Route::get("card", [cardApi::class, 'getCard']);
 // Route::get("card_id/{id?}", [cardApi::class, 'getCardId']);
 // Route::post("cardAdd", [cardApi::class, 'addCard']);
 // Route::post("update", [cardApi::class, 'upCard']);
 // Route::post("delete/{id?}", [cardApi::class, 'delCard']);
 // Route::get("search/{tag}", [cardApi::class, 'findCard']);
+// Route::apiResource("member", memberController::class);
 // Head
 Route::get("head", [headController::class, 'getHead']);
 Route::get("head_id/{id_head?}", [headController::class, 'getHeadById']);
@@ -41,4 +43,3 @@ Route::post("tecladoAdd", [tecladoController::class, 'addTeclado']);
 Route::post("tecladoUpdate", [tecladoController::class, 'tecladoUpdate']);
 Route::post("tecladoDel/{id?}", [tecladoController::class, 'tecladoDel']);
 Route::get("searchTel/{teclado_marca", [tecladoController::class, 'searchTeclado']);
-// Route::apiResource("member", memberController::class);
