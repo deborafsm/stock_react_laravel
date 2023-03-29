@@ -38,4 +38,18 @@ class tecladoController extends Controller
             return ["result" => "erro ao atualizar."];
         }
     }
+    function tecladoDel(Request $request)
+    {
+        $teclado = teclado::find($request->id);
+        $result = $teclado->delete();
+        if ($result) {
+            return ["result" => "o teclado removido com sucesso!"];
+        } else {
+            return ["result" => "erro ao remover."];
+        }
+    }
+    function searchTeclado($teclado_marca)
+    {
+        return teclado::where("teclado_marca", "like", "%" . $teclado_marca . "%")->get();
+    }
 }
