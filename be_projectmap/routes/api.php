@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Models\Head\head;
 use App\Http\Controllers\Controllers\Head\headController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
+use App\Http\Controllers\Controllers\Mouse\mouseController;
 use App\Models\Teclado\teclado;
 
 /*
@@ -43,4 +44,5 @@ Route::post("tecladoAdd", [tecladoController::class, 'addTeclado']);
 Route::post("tecladoUpdate", [tecladoController::class, 'tecladoUpdate']);
 Route::post("tecladoDel/{id?}", [tecladoController::class, 'tecladoDel']);
 Route::get("searchTel/{teclado_marca", [tecladoController::class, 'searchTeclado']);
-//
+//Mouse
+Route::get("mouse", [mouseController::class, 'getMouse']);
