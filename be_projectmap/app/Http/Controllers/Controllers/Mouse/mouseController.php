@@ -12,8 +12,12 @@ class mouseController extends Controller
     {
         return mouse::all();
     }
-    function getMouseByLId($id_mouse = null)
+    function getMouseById($id_mouse = null)
     {
         return $id_mouse ? mouse::find($id_mouse) : mouse::all();
+    }
+    function searchMouse($mouse_marca)
+    {
+        return mouse::where("mouse_marca", "like", "%" . $mouse_marca . "%")->get();
     }
 }
