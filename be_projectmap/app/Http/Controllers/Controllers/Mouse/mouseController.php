@@ -32,5 +32,18 @@ class mouseController extends Controller
             return ['result' => 'Não foi possivel salvar mouse.'];
         }
     }
+    function updateMouse(Request $request)
+    {
+        $mouse = mouse::find($request->id);
+        $mouse->mouse_marca = $request->mouse_marca;
+        $mouse->quantidade = $request->quantidade;
+        $result = $mouse->save();
+        if ($result) {
+            return ['result' => 'Mouse atualizado com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel atualizar.'];
+        }
+    }
+
 
 }
