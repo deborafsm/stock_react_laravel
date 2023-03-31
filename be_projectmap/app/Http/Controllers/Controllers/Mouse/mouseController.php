@@ -20,4 +20,17 @@ class mouseController extends Controller
     {
         return mouse::where("mouse_marca", "like", "%" . $mouse_marca . "%")->get();
     }
+    function addMouse(Request $request)
+    {
+        $mouse = new mouse();
+        $mouse->mouse_marca = $request->mouse_marca;
+        $mouse->quantidade = $request->quantidade;
+        $result = $mouse->save();
+        if ($result) {
+            return ['result' => 'Mouse inserido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel salvar mouse.'];
+        }
+    }
+
 }
