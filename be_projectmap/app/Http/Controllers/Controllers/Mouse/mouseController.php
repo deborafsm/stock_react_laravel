@@ -45,5 +45,14 @@ class mouseController extends Controller
         }
     }
 
-
+    function delMouse(Request $request)
+    {
+        $mouse = mouse::find($request->id);
+        $result = $mouse::delete();
+        if ($result) {
+            return ['result' => 'Removido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel remover.'];
+        }
+    }
 }
