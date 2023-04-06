@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Models\Head\head;
 use App\Http\Controllers\Controllers\Head\headController;
+use App\Http\Controllers\Controllers\Monitores\monitorController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
 use App\Http\Controllers\Controllers\Mouse\mouseController;
 use App\Models\Teclado\teclado;
@@ -52,3 +53,4 @@ Route::post("mouseUpdate", [mouseController::class, 'updateMouse']);
 Route::post("mouseDel/{id?}", [mouseController::class, 'delMouse']);
 Route::get("search/{mouse_marca", [mouseController::class, 'searchMouse']);
 // Monitores
+Route::get("monitor", [monitorController::class, 'getMonitor']);
