@@ -12,4 +12,8 @@ class monitorController extends Controller
     {
         return monitor::all();
     }
+    function getMonitorById($id = null)
+    {
+        return $id ? monitor::find($id) : monitor::all();
+    }
 }

@@ -54,3 +54,5 @@ Route::post("mouseDel/{id?}", [mouseController::class, 'delMouse']);
 Route::get("search/{mouse_marca", [mouseController::class, 'searchMouse']);
 // Monitores
 Route::get("monitor", [monitorController::class, 'getMonitor']);
+Route::get("monitor_id/{id_monitor}",[monitorController::class,'getMonitorById']);
+
