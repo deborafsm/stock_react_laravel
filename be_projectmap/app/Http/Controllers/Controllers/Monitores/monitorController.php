@@ -46,4 +46,14 @@ class monitorController extends Controller
             return ["result" => "erro ao atualizar."];
         }
     }
+    function delMonitor(Request $request)
+    {
+        $monitor = monitor::find($request->id);
+        $result = $monitor->delete();
+        if ($result) {
+            return ["result" => "o monitor removido com sucesso!"];
+        } else {
+            return ["result" => "erro ao remover."];
+        }
+    }
 }
