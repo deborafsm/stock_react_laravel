@@ -56,4 +56,8 @@ class monitorController extends Controller
             return ["result" => "erro ao remover."];
         }
     }
+    function searchMonitor($cod_monitor)
+    {
+        return monitor::where("cod_monitor", "like", "%" . $cod_monitor . "%")->get();
+    }
 }
