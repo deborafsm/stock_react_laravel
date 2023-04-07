@@ -58,4 +58,4 @@ Route::get("monitor_id/{id_monitor?}", [monitorController::class, 'getMonitorByI
 Route::post("monitorAdd", [monitorController::class, 'addMonitor']);
 Route::post("monitorUp", [monitorController::class, 'updateMonitor']);
 Route::post("monitorDel/{id?}", [monitorController::class, 'delMonitor']);
-Route::get("searchMonitor",[monitorController::class,'searchMonitor']);
+Route::get("searchMonitor", [monitorController::class, 'searchMonitor']);
