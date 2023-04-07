@@ -31,4 +31,19 @@ class monitorController extends Controller
             return ["result" => "erro ao salvar."];
         }
     }
+    function updateMonitor(Request $request)
+    {
+        $monitor = monitor::find($request->id);
+        $monitor->marca_monitor = $request->marca_monitor;
+        $monitor->modelo_monitor = $request->modelo_monitor;
+        $monitor->cod_monitor = $request->cod_monitor;
+        $monitor->status_monitor = $request->status_monitor;
+        $monitor->quantidade = $request->quantidade;
+        $result = $monitor->save();
+        if ($result) {
+            return ["result" => "o monitor atualizado com sucesso!"];
+        } else {
+            return ["result" => "erro ao atualizar."];
+        }
+    }
 }
