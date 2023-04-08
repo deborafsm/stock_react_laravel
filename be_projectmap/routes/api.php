@@ -8,6 +8,7 @@ use App\Http\Controllers\Controllers\Monitores\monitorController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
 use App\Http\Controllers\Controllers\Mouse\mouseController;
 use App\Models\Teclado\teclado;
+use App\Http\Controllers\Controllers\WebCam\webcamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,5 @@ Route::post("monitorAdd", [monitorController::class, 'addMonitor']);
 Route::post("monitorUp", [monitorController::class, 'updateMonitor']);
 Route::post("monitorDel/{id?}", [monitorController::class, 'delMonitor']);
 Route::get("searchMonitor", [monitorController::class, 'searchMonitor']);
+// Web Cam
+Route::get("webcam", webcamController::class, 'getWebCam');
