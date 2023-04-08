@@ -12,4 +12,8 @@ class webcamController extends Controller
     {
         return webcam::all();
     }
+    function getWebCamById($id = null)
+    {
+        return $id ? webcam::find($id) : webcam::all();
+    }
 }
