@@ -12,8 +12,21 @@ class webcamController extends Controller
     {
         return webcam::all();
     }
-    function getWebCamById($id = null)
+    function getWebcamById($id = null)
     {
         return $id ? webcam::find($id) : webcam::all();
+    }
+    function addWebCam(Request $request)
+    {
+        $webcam = new webcam();
+        $webcam->webcam_marca = $request->webcam_marca;
+        $webcam->quantidade = $request->quantidade;
+        $webcam->cod_web = $request->cod_web;
+        $result = $webcam->save();
+        if ($result) {
+            return ['result' => 'webcam adicionado com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel salvar.'];
+        }
     }
 }

@@ -61,4 +61,6 @@ Route::post("monitorUp", [monitorController::class, 'updateMonitor']);
 Route::post("monitorDel/{id?}", [monitorController::class, 'delMonitor']);
 Route::get("searchMonitor", [monitorController::class, 'searchMonitor']);
 // Web Cam
-Route::get("webcam", webcamController::class, 'getWebCam');
+Route::get("webcam", [webcamController::class, 'getWebCam']);
+Route::get("webcam_id/{id?}", [webcamController::class, 'getWebcamById']);
+Route::post("webcamAdd", [webcamController::class, 'addWebCam']);
