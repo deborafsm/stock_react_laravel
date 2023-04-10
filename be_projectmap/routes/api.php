@@ -49,7 +49,7 @@ Route::get("searchTel/{teclado_marca", [tecladoController::class, 'searchTeclado
 //Mouse
 Route::get("mouse", [mouseController::class, 'getMouse']);
 Route::get("mouse_id/{id_mouse?}", [mouseController::class, 'getMouseById']);
-Route::post("mouseAll", [mouseController::class, 'addMouse']);
+Route::post("mouseAdd", [mouseController::class, 'addMouse']);
 Route::post("mouseUpdate", [mouseController::class, 'updateMouse']);
 Route::post("mouseDel/{id?}", [mouseController::class, 'delMouse']);
 Route::get("search/{mouse_marca", [mouseController::class, 'searchMouse']);
@@ -64,3 +64,4 @@ Route::get("searchMonitor", [monitorController::class, 'searchMonitor']);
 Route::get("webcam", [webcamController::class, 'getWebCam']);
 Route::get("webcam_id/{id?}", [webcamController::class, 'getWebcamById']);
 Route::post("webcamAdd", [webcamController::class, 'addWebCam']);
+
