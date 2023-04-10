@@ -29,4 +29,17 @@ class webcamController extends Controller
             return ['result' => 'Não foi possivel salvar.'];
         }
     }
+    function updateWebCam(Request $request)
+    {
+        $webcam = webcam::find($request->id);
+        $webcam->webcam_marca = $request->webcam_marca;
+        $webcam->quantidade = $request->quantidade;
+        $webcam->cod_web = $request->cod_web;
+        $result = $webcam->save();
+        if ($result) {
+            return ['result' => 'webcam atualizado com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel atualizar.'];
+        }
+    }
 }
