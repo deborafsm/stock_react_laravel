@@ -42,4 +42,13 @@ class webcamController extends Controller
             return ['result' => 'Não foi possivel atualizar.'];
         }
     }
+    function delWebCam(Request $request){
+        $webcam = webcam::find($request -> id);
+        $result = $webcam::delete();
+        if ($result) {
+            return ['result' => 'Removido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel remover.'];
+        }
+    }
 }
