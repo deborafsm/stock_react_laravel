@@ -67,3 +67,4 @@ Route::get("webcam_id/{id?}", [webcamController::class, 'getWebcamById']);
 Route::post("webcamAdd", [webcamController::class, 'addWebCam']);
 Route::post("webcamUpdate", [webcamController::class, 'updateWebCam']);
 Route::post("webcamDel/{id?}", [webcamController::class, 'delWebCam']);
+Route::get("searchWebCam", [webcamController::class, 'searchWebCam']);

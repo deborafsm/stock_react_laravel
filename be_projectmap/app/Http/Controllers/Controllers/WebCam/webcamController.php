@@ -16,6 +16,9 @@ class webcamController extends Controller
     {
         return $id ? webcam::find($id) : webcam::all();
     }
+    function searchWebCam($webcam_cod){
+        return webcam::where("webcam_cod", "like", "%" . $webcam_cod . "%")->get();
+    }
     function addWebCam(Request $request)
     {
         $webcam = new webcam();
