@@ -7,6 +7,7 @@ use App\Http\Controllers\Controllers\Head\headController;
 use App\Http\Controllers\Controllers\Monitores\monitorController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
 use App\Http\Controllers\Controllers\Mouse\mouseController;
+use App\Http\Controllers\Controllers\Pc\pcController;
 use App\Models\Teclado\teclado;
 use App\Http\Controllers\Controllers\WebCam\webcamController;
 use App\Models\WebCam\webcam;
@@ -68,3 +69,5 @@ Route::post("webcamAdd", [webcamController::class, 'addWebCam']);
 Route::post("webcamUpdate", [webcamController::class, 'updateWebCam']);
 Route::post("webcamDel/{id?}", [webcamController::class, 'delWebCam']);
 Route::get("searchWebCam", [webcamController::class, 'searchWebCam']);
+// PC
+Route::get("pc", [pcController::class, 'getPc']);
