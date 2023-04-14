@@ -70,4 +70,6 @@ Route::post("webcamUpdate", [webcamController::class, 'updateWebCam']);
 Route::post("webcamDel/{id?}", [webcamController::class, 'delWebCam']);
 Route::get("searchWebCam", [webcamController::class, 'searchWebCam']);
 // PC
+Route::get("", []);
 Route::get("pc", [pcController::class, 'getPc']);
+Route::get("pc_id{id?}", [pcController::class, 'getWebcamId']);
