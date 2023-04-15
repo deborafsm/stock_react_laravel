@@ -20,4 +20,14 @@ class pcController extends Controller
     {
         return pc::where("cod_pc", "like", "%" . $cod_pc . "%")->get();
     }
+    function delPc(Request $request)
+    {
+        $pc = pc::find($request->id);
+        $result = $pc::delete();
+        if ($result) {
+            return ['result' => 'Removido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel remover.'];
+        }
+    }
 }
