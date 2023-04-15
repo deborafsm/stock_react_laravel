@@ -30,4 +30,28 @@ class pcController extends Controller
             return ['result' => 'Não foi possivel remover.'];
         }
     }
+    function addPc(Request $request)
+    {
+        $pc = new pc();
+        $pc->cod_pc = $request->cod_pc;
+        $pc->data_def = $request->data_def;
+        $pc->nomePc = $request->nomePc;
+        $pc->marca = $request->marca;
+        $pc->modelo = $request->modelo;
+        $pc->so = $request->so;
+        $pc->garantia = $request->garantia;
+        $pc->ram = $request->ram;
+        $pc->processador = $request->processador;
+        $pc->hd = $request->hd;
+        $pc->statusd = $request->statusd;
+        $pc->descricao = $request->descricao;
+        $pc->email = $request->email;
+        $pc->descricao = $request->descricao;
+        $result = $pc->save();
+        if ($result) {
+            return ['result' => 'Mouse inserido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi possivel salvar mouse.'];
+        }
+    }
 }
