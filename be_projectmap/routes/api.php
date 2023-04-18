@@ -7,6 +7,7 @@ use App\Http\Controllers\Controllers\Head\headController;
 use App\Http\Controllers\Controllers\Monitores\monitorController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
 use App\Http\Controllers\Controllers\Mouse\mouseController;
+use App\Http\Controllers\Controllers\Operador\operadorController;
 use App\Http\Controllers\Controllers\Pc\pcController;
 use App\Models\Teclado\teclado;
 use App\Http\Controllers\Controllers\WebCam\webcamController;
@@ -76,6 +77,6 @@ Route::get("pc_id/{id?}", [pcController::class, 'getWebcamId']);
 Route::post("searchPc/{cod_pc?}", [pcController::class, 'searchPc']);
 Route::post("pcDel/{id?}", [pcController::class, 'delPc']);
 Route::post("pcAdd", [pcController::class, 'addPc']);
-Route::post("pcUpdate",[pcController::class,'updatePc']);
+Route::post("pcUpdate", [pcController::class, 'updatePc']);
 // Operador
-// get::get("operadores",)
+Route::get("operadores", [operadorController::class, 'getOperador']);
