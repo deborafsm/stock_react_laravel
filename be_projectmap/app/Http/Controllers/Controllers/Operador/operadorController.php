@@ -12,4 +12,8 @@ class operadorController extends Controller
     {
         return operador::all();
     }
+    function getOperadorById($id = null)
+    {
+        return $id ? operador::find($id) : operador::all();
+    }
 }
