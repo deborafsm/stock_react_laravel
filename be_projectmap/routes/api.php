@@ -81,3 +81,4 @@ Route::post("pcUpdate", [pcController::class, 'updatePc']);
 // Operador
 Route::get("operadores", [operadorController::class, 'getOperador']);
 Route::get("operador/{id?}",[operadorController::class,'getOperadorById']);
+Route::get("searchPc/{cod_operador}",[operadorController::class,'searchOperador']);

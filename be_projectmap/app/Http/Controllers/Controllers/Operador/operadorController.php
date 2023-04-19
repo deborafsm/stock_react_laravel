@@ -16,4 +16,8 @@ class operadorController extends Controller
     {
         return $id ? operador::find($id) : operador::all();
     }
+    function searchOperador($cod_operador)
+    {
+        return operador::where("cod_operador", "like", "%" . $cod_operador . "%")->get();
+    }
 }
