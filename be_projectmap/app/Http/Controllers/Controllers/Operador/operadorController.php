@@ -20,4 +20,15 @@ class operadorController extends Controller
     {
         return operador::where("cod_operador", "like", "%" . $cod_operador . "%")->get();
     }
+    function delOperador(Request $req)
+
+    {
+        $operador = operador::find($req->id);
+        $result = $operador::delete();
+        if ($result) {
+            return ["result" => "Removido com sucesso!"];
+        } else {
+            return ["result" => "Não foi possivel remover."];
+        }
+    }
 }
