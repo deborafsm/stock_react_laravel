@@ -83,3 +83,4 @@ Route::get("operadores", [operadorController::class, 'getOperador']);
 Route::get("operador/{id?}", [operadorController::class, 'getOperadorById']);
 Route::post("searchPc/{cod_operador}", [operadorController::class, 'searchOperador']);
 Route::post("operadorDel/{id?}", [operadorController::class, 'delOperador']);
+Route::post("operadorAdd", [operadorController::class, 'addOperador']);

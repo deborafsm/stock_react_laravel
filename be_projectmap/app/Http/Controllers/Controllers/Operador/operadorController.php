@@ -31,4 +31,34 @@ class operadorController extends Controller
             return ["result" => "Não foi possivel remover."];
         }
     }
+    function addOperador(Request $request)
+    {
+        $operador = new operador();
+        $operador->data_cad = $request->data_cad;
+        $operador->nome_operador = $request->nome_operador;
+        $operador->email_operador = $request->email_operador;
+        $operador->telefone = $request->telefone;
+        $operador->celular = $request->celular;
+        $operador->endereco = $request->endereco;
+        $operador->cep = $request->cep;
+        $operador->numero = $request->numero;
+        $operador->complemento = $request->complemento;
+        $operador->referencia = $request->referencia;
+        $operador->bairro = $request->bairro;
+        $operador->cidade = $request->cidade;
+        $operador->estado = $request->estado;
+        $operador->setor = $request->setor;
+        $operador->cargo = $request->cargo;
+        $operador->operacao = $request->operacao;
+        $operador->status_operador = $request->status_operador;
+        $operador->empresa = $request->empresa;
+        $operador->supervisor = $request->supervisor;
+        $operador->cpf = $request->cpf;
+        $result = $operador->save();
+        if ($result) {
+            return ['result' => 'Operador inserido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi salvar.'];
+        }
+    }
 }
