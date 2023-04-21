@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Models\Head\head;
 use App\Http\Controllers\Controllers\Head\headController;
+use App\Http\Controllers\Controllers\Monitor\monitorDefController;
 use App\Http\Controllers\Controllers\Monitores\monitorController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
 use App\Http\Controllers\Controllers\Mouse\mouseController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\Controllers\Operador\operadorController;
 use App\Http\Controllers\Controllers\Pc\pcController;
 use App\Models\Teclado\teclado;
 use App\Http\Controllers\Controllers\WebCam\webcamController;
+use App\Models\Monitor\monitor;
 use App\Models\WebCam\webcam;
 
 /*
@@ -87,3 +89,4 @@ Route::post("operadorAdd", [operadorController::class, 'addOperador']);
 Route::post("operadorUpdate", [operadorController::class, 'updateOperador']);
 // Monitor com Defeito
 Route::get("monitorDef", [monitorDefController::class, 'getMonitorDef']);
+Route::get("monitorDef/{id?}", [monitorDefController::class, 'getMonitorDefBiId']);
