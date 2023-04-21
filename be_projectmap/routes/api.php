@@ -85,3 +85,5 @@ Route::post("searchPc/{cod_operador}", [operadorController::class, 'searchOperad
 Route::post("operadorDel/{id?}", [operadorController::class, 'delOperador']);
 Route::post("operadorAdd", [operadorController::class, 'addOperador']);
 Route::post("operadorUpdate", [operadorController::class, 'updateOperador']);
+// Monitor com Defeito
+Route::get("monitorDef", [monitorDefController::class, 'getMonitorDef']);

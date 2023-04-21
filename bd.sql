@@ -114,7 +114,7 @@ CREATE TABLE `monitor` (
 CREATE TABLE `monitordef` (
   `id_monitorDefeito` int(11) NOT NULL,
   `cod_monitor` varchar(200) DEFAULT NULL,
-  `data_defeito` varchar(200) DEFAULT NULL,
+  `data_defeito` varchar(200) DEFAULT NULL, 
   `marca_monitor` varchar(200) DEFAULT NULL,
   `descricao` varchar(200) DEFAULT NULL,
   `statusm` varchar(200) DEFAULT NULL,
