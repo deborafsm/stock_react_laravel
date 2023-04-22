@@ -21,3 +21,14 @@ class monitorDefController extends Controller
         return monitorDefModel::where("cod_monitorDef", "like", "%" . $cod_monitorDef . "%")->get();
     }
 
+    function delMonitorDef(Request $req)
+    {
+        $monitorDefModel = monitorDefModel::find($req->id);
+        $result = $monitorDefModel::delete();
+        if ($result) {
+            return ["result" => "Removido com sucesso!"];
+        } else {
+            return ["result" => "Não foi possivel remover."];
+        }
+    }
+}
