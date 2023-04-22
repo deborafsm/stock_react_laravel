@@ -16,4 +16,8 @@ class monitorDefController extends Controller
     {
         return $id ? monitorDefModel::find($id) : monitorDefModel::all();
     }
-}
+    function searchMonitorDef($cod_monitorDef)
+    {
+        return monitorDefModel::where("cod_monitorDef", "like", "%" . $cod_monitorDef . "%")->get();
+    }
+
