@@ -47,4 +47,19 @@ class monitorDefController extends Controller
             return ['result' => 'Não foi salvar.'];
         }
     }
+    function upMonitorDefModel(Request $request)
+    {
+        $monitorDefModel = monitorDefModel::find($request->id);
+        $monitorDefModel->data_defeito = $request->data_defeito;
+        $monitorDefModel->descricao = $request->descricao;
+        $monitorDefModel->statusm = $request->statusm;
+        $monitorDefModel->monitor = $request->monitor;
+        $monitorDefModel->operador = $request->operador;
+        $result = $monitorDefModel->save();
+        if ($result) {
+            return ["result" => "o monitor atualizado com sucesso!"];
+        } else {
+            return ["result" => "erro ao atualizar."];
+        }
+    }
 }
