@@ -31,4 +31,16 @@ class monitorDefController extends Controller
             return ["result" => "Não foi possivel remover."];
         }
     }
+    function monitorDefModel(Request $request)
+    {
+        $monitorDefModel = new monitorDefModel();
+        $monitorDefModel->data_defeito = $request->data_defeito;
+
+        $result = $monitorDefModel->save();
+        if ($result) {
+            return ['result' => 'Operador inserido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi salvar.'];
+        }
+    }
 }
