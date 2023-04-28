@@ -20,4 +20,14 @@ class pcDefController extends Controller
     {
         return pcDefModel::where("id", "like", "%" . $id . "%")->get();
     }
+    function delDefPc(Request $request)
+    {
+        $pcDef = pcDefModel::find($request->id);
+        $result = $pcDef::delete();
+        if ($result) {
+            return ["result" => "Removido com sucesso!"];
+        } else {
+            return ["result" => "Não foi possivel remover!"];
+        }
+    }
 }
