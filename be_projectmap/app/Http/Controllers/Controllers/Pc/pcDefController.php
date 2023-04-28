@@ -16,4 +16,8 @@ class pcDefController extends Controller
     {
         return $id ? pcDefModel::find($id) : pcDefModel::all();
     }
+    function searchPcDef($id)
+    {
+        return pcDefModel::where("id", "like", "%" . $id . "%")->get();
+    }
 }

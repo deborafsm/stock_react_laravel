@@ -91,10 +91,11 @@ Route::post("operadorUpdate", [operadorController::class, 'updateOperador']);
 // Monitor com Defeito
 Route::get("monitorDef", [monitorDefController::class, 'getMonitorDef']);
 Route::get("monitorDef/{id?}", [monitorDefController::class, 'getMonitorDefBiId']);
-Route::get("searchPc/{cod_monitorDef}", [monitorDefController::class, 'searchMonitorDef']);
+Route::get("searchPc/{cod_monitorDef?}", [monitorDefController::class, 'searchMonitorDef']);
 Route::get("operadorDel/{id?}", [monitorDefController::class, 'delMonitorDef']);
 Route::post("defMonitorAdd", [monitorDefController::class, 'addMonitorDefModel']);
 Route::post("defMonitorUpdate", [monitorDefController::class, 'upMonitorDefModel']);
 // PC com defeito
 Route::get("pcDef",[pcDefController::class,'getPcDef']);
 Route::get("pcDef/{id?}", [pcDefController::class,'getPcDefByid']);
+Route::get("searchPcDef/{codPcDef?}",[pcDefController::class,'searchPcDef']);
