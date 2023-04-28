@@ -12,4 +12,8 @@ class pcDefController extends Controller
     {
         return pcDefModel::all();
     }
+    function getPcDefByid($id = null)
+    {
+        return $id ? pcDefModel::find($id) : pcDefModel::all();
+    }
 }

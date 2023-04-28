@@ -97,3 +97,4 @@ Route::post("defMonitorAdd", [monitorDefController::class, 'addMonitorDefModel']
 Route::post("defMonitorUpdate", [monitorDefController::class, 'upMonitorDefModel']);
 // PC com defeito
 Route::get("pcDef",[pcDefController::class,'getPcDef']);
+Route::get("pcDef/{id?}", [pcDefController::class,'getPcDefByid']);
