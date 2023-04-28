@@ -10,6 +10,7 @@ use App\Http\Controllers\Controllers\Teclado\tecladoController;
 use App\Http\Controllers\Controllers\Mouse\mouseController;
 use App\Http\Controllers\Controllers\Operador\operadorController;
 use App\Http\Controllers\Controllers\Pc\pcController;
+use App\Http\Controllers\Controllers\Pc\pcDefController;
 use App\Models\Teclado\teclado;
 use App\Http\Controllers\Controllers\WebCam\webcamController;
 use App\Models\Monitor\monitor;
@@ -94,3 +95,5 @@ Route::get("searchPc/{cod_monitorDef}", [monitorDefController::class, 'searchMon
 Route::get("operadorDel/{id?}", [monitorDefController::class, 'delMonitorDef']);
 Route::post("defMonitorAdd", [monitorDefController::class, 'addMonitorDefModel']);
 Route::post("defMonitorUpdate", [monitorDefController::class, 'upMonitorDefModel']);
+// PC com defeito
+Route::get("pcDef",[pcDefController::class,'getPcDef']);
