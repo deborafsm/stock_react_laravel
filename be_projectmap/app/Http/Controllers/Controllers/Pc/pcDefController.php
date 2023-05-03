@@ -46,4 +46,19 @@ class pcDefController extends Controller
             }
         }
     }
+    function upDefPc(Request $request)
+    {
+        $pcDefModel = pcDefModel::find($request->id);
+        $pcDefModel->data_def = $request->data_def;
+        $pcDefModel->descricao = $request->descricao;
+        $pcDefModel->pc = $request->pc;
+        $pcDefModel->operador = $request->operador;
+        $pcDefModel->status_pc = $request->status_pc;
+        $result = $pcDefModel->save();
+        if ($result) {
+            return ["result" => "Atualizado com sucesso!"];
+        } else {
+            return ["result" => "erro ao atualizar."];
+        }
+    }
 }

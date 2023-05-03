@@ -101,3 +101,4 @@ Route::get("pcDef/{id?}", [pcDefController::class, 'getPcDefByid']);
 Route::get("searchPcDef/{codPcDef?}", [pcDefController::class, 'searchPcDef']);
 Route::post("pcDefDel/{id?}", [pcDefController::class, 'delDefPc']);
 Route::post("pcDefAdd", [pcDefController::class, 'addDefPc']);
+Route::post("upDefPc", [pcDefController::class, 'upDefPc']);
