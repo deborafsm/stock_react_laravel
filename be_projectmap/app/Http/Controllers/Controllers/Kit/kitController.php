@@ -12,4 +12,8 @@ class kitController extends Controller
     {
         return kitModel::all();
     }
+    function getKitById($id = null)
+    {
+        return $id ? kitModel::find($id) : kitModel::all();
+    }
 }
