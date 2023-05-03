@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Models\Head\head;
 use App\Http\Controllers\Controllers\Head\headController;
+use App\Http\Controllers\Controllers\Kit\kitController;
 use App\Http\Controllers\Controllers\Monitor\monitorDefController;
 use App\Http\Controllers\Controllers\Monitores\monitorController;
 use App\Http\Controllers\Controllers\Teclado\tecladoController;
@@ -102,3 +103,5 @@ Route::get("searchPcDef/{codPcDef?}", [pcDefController::class, 'searchPcDef']);
 Route::post("pcDefDel/{id?}", [pcDefController::class, 'delDefPc']);
 Route::post("pcDefAdd", [pcDefController::class, 'addDefPc']);
 Route::post("upDefPc", [pcDefController::class, 'upDefPc']);
+// Kit
+Route::get("kit", [kitController::class, 'getKit']);
