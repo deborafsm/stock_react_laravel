@@ -29,23 +29,24 @@ class pcDefController extends Controller
         } else {
             return ["result" => "Não foi possivel remover!"];
         }
-        function addDefPc(Request $request)
-        {
-            $pcDefModel = new pcDefModel();
-            $pcDefModel->data_def = $request->data_def;
-            $pcDefModel->descricao = $request->descricao;
-            $pcDefModel->pc = $request->pc;
-            $pcDefModel->operador = $request->operador;
-            $pcDefModel->status_pc = $request->status_pc;
+    }
+    function addDefPc(Request $request)
+    {
+        $pcDefModel = new pcDefModel();
+        $pcDefModel->data_def = $request->data_def;
+        $pcDefModel->descricao = $request->descricao;
+        $pcDefModel->pc = $request->pc;
+        $pcDefModel->operador = $request->operador;
+        $pcDefModel->status_pc = $request->status_pc;
 
-            $result = $pcDefModel->save();
-            if ($result) {
-                return ['result' => 'Inserido com sucesso.'];
-            } else {
-                return ['result' => 'Não foi salvar.'];
-            }
+        $result = $pcDefModel->save();
+        if ($result) {
+            return ['result' => 'Inserido com sucesso.'];
+        } else {
+            return ['result' => 'Não foi salvar.'];
         }
     }
+
     function upDefPc(Request $request)
     {
         $pcDefModel = pcDefModel::find($request->id);
