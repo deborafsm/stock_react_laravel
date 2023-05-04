@@ -20,4 +20,14 @@ class kitController extends Controller
     {
         return kitModel::where("id", "like", "%" . $id . "%")->get();
     }
+    function delkit(Request $request)
+    {
+        $kitModel = kitModel::find($request->id);
+        $result = $kitModel::delete();
+        if ($result) {
+            return ["result" => "Removido com sucesso!"];
+        } else {
+            return ["result" => "Não foi possivel remover!"];
+        }
+    }
 }
