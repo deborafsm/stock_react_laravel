@@ -16,4 +16,8 @@ class kitController extends Controller
     {
         return $id ? kitModel::find($id) : kitModel::all();
     }
+    function searchKit($id)
+    {
+        return kitModel::where("id", "like", "%" . $id . "%")->get();
+    }
 }

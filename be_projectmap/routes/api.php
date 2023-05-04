@@ -105,4 +105,5 @@ Route::post("pcDefAdd", [pcDefController::class, 'addDefPc']);
 Route::post("upDefPc", [pcDefController::class, 'upDefPc']);
 // Kit
 Route::get("kit", [kitController::class, 'getKit']);
-Route::get("kit/{id?}",[kitController::class,'getKitById']);
+Route::get("kit/{id?}", [kitController::class, 'getKitById']);
+Route::get("searchKit/{cod_kit?}", [kitController::class, 'searchKit']);
