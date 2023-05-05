@@ -109,3 +109,4 @@ Route::get("kit/{id?}", [kitController::class, 'getKitById']);
 Route::get("searchKit/{cod_kit?}", [kitController::class, 'searchKit']);
 Route::post("kitDel/{id?}", [pcDefController::class, 'delkit']);
 Route::post("kitAdd", [pcDefController::class, 'addkit']);
+Route::post("kitUp", [pcDefController::class, 'kitUp']);
