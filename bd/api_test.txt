@@ -45,3 +45,7 @@ http://127.0.0.1:8000/api/tecladoUpdate
     "teclado_marca":"multilaser",
     "quantidade": 101
 }
+#search
+127.0.0.1:8000/api/searchTel/multilaser
+#delete
+127.0.0.1:8000/api/tecladoDel/1

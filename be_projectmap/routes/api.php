@@ -52,7 +52,7 @@ Route::get("teclado_id/{id_teclado?}", [tecladoController::class, 'getTecById'])
 Route::post("tecladoAdd", [tecladoController::class, 'addTeclado']);
 Route::post("tecladoUpdate", [tecladoController::class, 'tecladoUpdate']);
 Route::get("tecladoDel/{id?}", [tecladoController::class, 'tecladoDel']);
-Route::get("searchTel/{teclado_marca", [tecladoController::class, 'searchTeclado']);
+Route::get("searchTel/{teclado_marca?}", [tecladoController::class, 'searchTeclado']);
 //Mouse
 Route::get("mouse", [mouseController::class, 'getMouse']);
 Route::get("mouse_id/{id_mouse?}", [mouseController::class, 'getMouseById']);
