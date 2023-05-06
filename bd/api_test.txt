@@ -16,3 +16,7 @@ http://127.0.0.1:8000/api/headAdd
     "head_marca":"logitech",
     "quantidade":100
 }
+#search head
+http://127.0.0.1:8000/api/searchHead/logitech
+# delete
+http://127.0.0.1:8000/api/headDel/4
