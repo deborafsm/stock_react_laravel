@@ -47,7 +47,7 @@ class webcamController extends Controller
     }
     function delWebCam(Request $request){
         $webcam = webcam::find($request -> id);
-        $result = $webcam::delete();
+        $result = $webcam->delete();
         if ($result) {
             return ['result' => 'Removido com sucesso.'];
         } else {

@@ -24,7 +24,7 @@ class monitorDefController extends Controller
     function delMonitorDef(Request $req)
     {
         $monitorDefModel = monitorDefModel::find($req->id);
-        $result = $monitorDefModel::delete();
+        $result = $monitorDefModel->delete();
         if ($result) {
             return ["result" => "Removido com sucesso!"];
         } else {

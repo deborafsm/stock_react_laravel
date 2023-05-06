@@ -51,62 +51,62 @@ Route::get("teclado", [tecladoController::class, 'getTeclado']);
 Route::get("teclado_id/{id_teclado?}", [tecladoController::class, 'getTecById']);
 Route::post("tecladoAdd", [tecladoController::class, 'addTeclado']);
 Route::post("tecladoUpdate", [tecladoController::class, 'tecladoUpdate']);
-Route::post("tecladoDel/{id?}", [tecladoController::class, 'tecladoDel']);
+Route::get("tecladoDel/{id?}", [tecladoController::class, 'tecladoDel']);
 Route::get("searchTel/{teclado_marca", [tecladoController::class, 'searchTeclado']);
 //Mouse
 Route::get("mouse", [mouseController::class, 'getMouse']);
 Route::get("mouse_id/{id_mouse?}", [mouseController::class, 'getMouseById']);
 Route::post("mouseAdd", [mouseController::class, 'addMouse']);
 Route::post("mouseUpdate", [mouseController::class, 'updateMouse']);
-Route::post("mouseDel/{id?}", [mouseController::class, 'delMouse']);
+Route::get("mouseDel/{id?}", [mouseController::class, 'delMouse']);
 Route::get("search/{mouse_marca", [mouseController::class, 'searchMouse']);
 // Monitores
 Route::get("monitor", [monitorController::class, 'getMonitor']);
 Route::get("monitor_id/{id_monitor?}", [monitorController::class, 'getMonitorById']);
 Route::post("monitorAdd", [monitorController::class, 'addMonitor']);
 Route::post("monitorUp", [monitorController::class, 'updateMonitor']);
-Route::post("monitorDel/{id?}", [monitorController::class, 'delMonitor']);
+Route::get("monitorDel/{id?}", [monitorController::class, 'delMonitor']);
 Route::get("searchMonitor", [monitorController::class, 'searchMonitor']);
 // Web Cam
 Route::get("webcam", [webcamController::class, 'getWebCam']);
 Route::get("webcam_id/{id?}", [webcamController::class, 'getWebcamById']);
 Route::post("webcamAdd", [webcamController::class, 'addWebCam']);
 Route::post("webcamUpdate", [webcamController::class, 'updateWebCam']);
-Route::post("webcamDel/{id?}", [webcamController::class, 'delWebCam']);
+Route::get("webcamDel/{id?}", [webcamController::class, 'delWebCam']);
 Route::get("searchWebCam", [webcamController::class, 'searchWebCam']);
 // PC
 Route::get("", []);
 Route::get("pc", [pcController::class, 'getPc']);
 Route::get("pc_id/{id?}", [pcController::class, 'getWebcamId']);
 Route::post("searchPc/{cod_pc?}", [pcController::class, 'searchPc']);
-Route::post("pcDel/{id?}", [pcController::class, 'delPc']);
+Route::get("pcDel/{id?}", [pcController::class, 'delPc']);
 Route::post("pcAdd", [pcController::class, 'addPc']);
 Route::post("pcUpdate", [pcController::class, 'updatePc']);
 // Operador
 Route::get("operadores", [operadorController::class, 'getOperador']);
 Route::get("operador/{id?}", [operadorController::class, 'getOperadorById']);
 Route::post("searchPc/{cod_operador}", [operadorController::class, 'searchOperador']);
-Route::post("operadorDel/{id?}", [operadorController::class, 'delOperador']);
+Route::get("operadorDel/{id?}", [operadorController::class, 'delOperador']);
 Route::post("operadorAdd", [operadorController::class, 'addOperador']);
 Route::post("operadorUpdate", [operadorController::class, 'updateOperador']);
 // Monitor com Defeito
 Route::get("monitorDef", [monitorDefController::class, 'getMonitorDef']);
 Route::get("monitorDef/{id?}", [monitorDefController::class, 'getMonitorDefBiId']);
 Route::get("searchPc/{cod_monitorDef?}", [monitorDefController::class, 'searchMonitorDef']);
-Route::post("operadorDel/{id?}", [monitorDefController::class, 'delMonitorDef']);
+Route::get("operadorDel/{id?}", [monitorDefController::class, 'delMonitorDef']);
 Route::post("defMonitorAdd", [monitorDefController::class, 'addMonitorDefModel']);
 Route::post("defMonitorUpdate", [monitorDefController::class, 'upMonitorDefModel']);
 // PC com defeito
 Route::get("pcDef", [pcDefController::class, 'getPcDef']);
 Route::get("pcDef/{id?}", [pcDefController::class, 'getPcDefByid']);
 Route::get("searchPcDef/{codPcDef?}", [pcDefController::class, 'searchPcDef']);
-Route::post("pcDefDel/{id?}", [pcDefController::class, 'delDefPc']);
+Route::get("pcDefDel/{id?}", [pcDefController::class, 'delDefPc']);
 Route::post("pcDefAdd", [pcDefController::class, 'addDefPc']);
 Route::post("upDefPc", [pcDefController::class, 'upDefPc']);
 // Kit
 Route::get("kit", [kitController::class, 'getKit']);
 Route::get("kit/{id?}", [kitController::class, 'getKitById']);
 Route::get("searchKit/{cod_kit?}", [kitController::class, 'searchKit']);
-Route::post("kitDel/{id?}", [pcDefController::class, 'delkit']);
+Route::get("kitDel/{id?}", [pcDefController::class, 'delkit']);
 Route::post("kitAdd", [pcDefController::class, 'addkit']);
 Route::post("kitUp", [pcDefController::class, 'kitUp']);

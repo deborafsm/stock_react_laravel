@@ -23,7 +23,7 @@ class pcController extends Controller
     function delPc(Request $request)
     {
         $pc = pc::find($request->id);
-        $result = $pc::delete();
+        $result = $pc->delete();
         if ($result) {
             return ['result' => 'Removido com sucesso.'];
         } else {

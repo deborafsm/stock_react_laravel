@@ -23,7 +23,7 @@ class pcDefController extends Controller
     function delDefPc(Request $request)
     {
         $pcDef = pcDefModel::find($request->id);
-        $result = $pcDef::delete();
+        $result = $pcDef->delete();
         if ($result) {
             return ["result" => "Removido com sucesso!"];
         } else {

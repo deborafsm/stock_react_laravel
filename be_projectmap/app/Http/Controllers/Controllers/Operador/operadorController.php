@@ -24,7 +24,7 @@ class operadorController extends Controller
 
     {
         $operador = operador::find($req->id);
-        $result = $operador::delete();
+        $result = $operador->delete();
         if ($result) {
             return ["result" => "Removido com sucesso!"];
         } else {

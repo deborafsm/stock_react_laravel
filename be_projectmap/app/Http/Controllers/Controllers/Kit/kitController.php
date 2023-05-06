@@ -23,7 +23,7 @@ class kitController extends Controller
     function delkit(Request $request)
     {
         $kitModel = kitModel::find($request->id);
-        $result = $kitModel::delete();
+        $result = $kitModel->delete();
         if ($result) {
             return ["result" => "Removido com sucesso!"];
         } else {
