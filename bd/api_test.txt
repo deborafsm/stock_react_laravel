@@ -1,0 +1,18 @@
+-- heads
+#all
+http://127.0.0.1:8000/api/head
+#byId
+http://127.0.0.1:8000/api/head_id/1
+#Add
+http://127.0.0.1:8000/api/headAdd
+{
+    "head_marca":"teste",
+    "quantidade": 5
+}
+#update
+127.0.0.1:8000/api/headUpdate
+{
+    "id":1,
+    "head_marca":"logitech",
+    "quantidade":100
+}
