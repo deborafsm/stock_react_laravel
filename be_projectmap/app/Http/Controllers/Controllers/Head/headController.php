@@ -45,7 +45,7 @@ class headController extends Controller
     function delHead(Request $request)
     {
         $head = heads::find($request->id);
-        $result = $head::delete();
+        $result = $head->delete();
         if ($result) {
             return ['result' => 'Head removido com sucesso.'];
         } else {

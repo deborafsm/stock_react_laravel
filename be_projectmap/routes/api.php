@@ -44,7 +44,7 @@ Route::get("head", [headController::class, 'getHead']);
 Route::get("head_id/{id_head?}", [headController::class, 'getHeadById']);
 Route::post("headAdd", [headController::class, 'addHead']);
 Route::post("headUpdate", [headController::class, 'updateHead']);
-Route::post("headDel/{id?}", [headController::class, 'delHead']);
+Route::get("headDel/{id?}", [headController::class, 'delHead']);
 Route::get("searchHead/{head_marca?}", [headController::class, 'searchHead']);
 // Teclado
 Route::get("teclado", [tecladoController::class, 'getTeclado']);
