@@ -20,3 +20,28 @@ http://127.0.0.1:8000/api/headAdd
 http://127.0.0.1:8000/api/searchHead/logitech
 # delete
 http://127.0.0.1:8000/api/headDel/4
+-- teclado
+#all
+http://127.0.0.1:8000/api/teclado
+#byId
+http://127.0.0.1:8000/api/teclado_id/1
+{
+    "id": 1,
+    "teclado_marca": "microsoft",
+    "quantidade": null,
+    "updated_at": "2023-03-28T01:16:25.000000Z",
+    "created_at": null
+}
+#add 
+http://127.0.0.1:8000/api/tecladoAdd
+{
+    "teclado_marca":"samsung",
+    "quantidade": 10
+}
+#update 
+http://127.0.0.1:8000/api/tecladoUpdate
+{
+    "id":3,
+    "teclado_marca":"multilaser",
+    "quantidade": 101
+}
