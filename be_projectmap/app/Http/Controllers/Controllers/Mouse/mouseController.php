@@ -23,7 +23,7 @@ class mouseController extends Controller
     function addMouse(Request $request)
     {
         $mouse = new mouse();
-        $mouse->mouse_marca = $request->mouse_marca;
+        $mouse->marca_mouse = $request->marca_mouse;
         $mouse->quantidade = $request->quantidade;
         $result = $mouse->save();
         if ($result) {
