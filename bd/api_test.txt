@@ -49,3 +49,25 @@ http://127.0.0.1:8000/api/tecladoUpdate
 127.0.0.1:8000/api/searchTel/multilaser
 #delete
 127.0.0.1:8000/api/tecladoDel/1
+-- mouse
+#get mouse
+http://127.0.0.1:8000/api/mouse
+#get mouse by id
+http://127.0.0.1:8000/api/mouse_id/1
+#add 
+http://127.0.0.1:8000/api/mouseAdd
+{
+    "marca_mouse":"raizer",
+    "quantidade":122
+}
+#update 
+http://127.0.0.1:8000/api/mouseUpdate
+{
+    "id":1,
+    "marca_mouse":"microsoft",
+    "quantidade":100
+}
+#delete
+http://127.0.0.1:8000/api/mouseDel/3
+#search 
+http://127.0.0.1:8000/api/search/raizer
