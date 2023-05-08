@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class mouse extends Model
 {
+    protected $table = "mouses";
+
+
     use HasFactory;
 }
