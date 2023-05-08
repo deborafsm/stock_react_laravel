@@ -35,7 +35,7 @@ class mouseController extends Controller
     function updateMouse(Request $request)
     {
         $mouse = mouse::find($request->id);
-        $mouse->mouse_marca = $request->mouse_marca;
+        $mouse->marca_mouse = $request->marca_mouse;
         $mouse->quantidade = $request->quantidade;
         $result = $mouse->save();
         if ($result) {
