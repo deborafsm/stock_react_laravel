@@ -71,3 +71,32 @@ http://127.0.0.1:8000/api/mouseUpdate
 http://127.0.0.1:8000/api/mouseDel/3
 #search 
 http://127.0.0.1:8000/api/search/raizer
+--monitor
+#all monitor
+http://127.0.0.1:8000/api/monitor
+# monitr by id
+http://127.0.0.1:8000/api/monitor_id/1
+# add monitor 
+http://127.0.0.1:8000/api/monitorAdd
+{
+    "marca_monitor":"Samsung",
+    "modelo_monitor":"X-1",
+    "cod_monitor":"Q12-00",
+    "status_monitor":"1",
+    "quantidade":23
+}
+#up monitor 
+http://127.0.0.1:8000/api/monitorUp
+{
+    "id": 1,
+    "marca_monitor": "Husky",
+    "modelo_monitor": "R-1123",
+    "cod_monitor": "Q12-21300",
+    "status_monitor": "1",
+    "quantidade": 233
+}
+# del monitor
+http://127.0.0.1:8000/api/monitorDel/3
+#search monitor
+{codigo}
+http://127.0.0.1:8000/api/searchMonitor/Q12-21300
