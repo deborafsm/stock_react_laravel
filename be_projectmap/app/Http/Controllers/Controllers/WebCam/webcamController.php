@@ -24,7 +24,7 @@ class webcamController extends Controller
         $webcam = new webcam();
         $webcam->webcam_marca = $request->webcam_marca;
         $webcam->quantidade = $request->quantidade;
-        $webcam->cod_web = $request->cod_web;
+
         $result = $webcam->save();
         if ($result) {
             return ['result' => 'webcam adicionado com sucesso.'];
@@ -37,7 +37,7 @@ class webcamController extends Controller
         $webcam = webcam::find($request->id);
         $webcam->webcam_marca = $request->webcam_marca;
         $webcam->quantidade = $request->quantidade;
-        $webcam->cod_web = $request->cod_web;
+
         $result = $webcam->save();
         if ($result) {
             return ['result' => 'webcam atualizado com sucesso.'];
