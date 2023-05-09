@@ -100,3 +100,26 @@ http://127.0.0.1:8000/api/monitorDel/3
 #search monitor
 {codigo}
 http://127.0.0.1:8000/api/searchMonitor/Q12-21300
+
+--webcam
+#getall 
+http://127.0.0.1:8000/api/webcam
+#get by id
+http://127.0.0.1:8000/api/webcam_id/1
+#add 
+http://127.0.0.1:8000/api/webcamAdd
+{
+    "webcam_marca":"logitech",
+    "quantidade":100
+}
+#update webcam
+http://127.0.0.1:8000/api/webcamUpdate
+{
+    "id":1,
+    "webcam_marca":"tesla",
+    "quantidade":100
+}
+#delete 
+http://127.0.0.1:8000/api/webcamDel/3
+#search (marca)
+http://127.0.0.1:8000/api/searchWebCam/tesla
