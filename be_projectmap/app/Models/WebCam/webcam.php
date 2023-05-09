@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class webcam extends Model
 {
+    protected $table = "webcam";
     use HasFactory;
+
 }
