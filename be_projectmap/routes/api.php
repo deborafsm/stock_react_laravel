@@ -78,14 +78,14 @@ Route::get("searchWebCam/{webcam_marca?}", [webcamController::class, 'searchWebC
 Route::get("", []);
 Route::get("pc", [pcController::class, 'getPc']);
 Route::get("pc_id/{id?}", [pcController::class, 'getWebcamId']);
-Route::post("searchPc/{cod_pc?}", [pcController::class, 'searchPc']);
+Route::get("searchPc/{codpc?}", [pcController::class, 'searchPc']);
 Route::get("pcDel/{id?}", [pcController::class, 'delPc']);
 Route::post("pcAdd", [pcController::class, 'addPc']);
 Route::post("pcUpdate", [pcController::class, 'updatePc']);
 // Operador
 Route::get("operadores", [operadorController::class, 'getOperador']);
 Route::get("operador/{id?}", [operadorController::class, 'getOperadorById']);
-Route::post("searchPc/{cod_operador}", [operadorController::class, 'searchOperador']);
+// Route::post("searchPc/{cod_operador}", [operadorController::class, 'searchOperador']);
 Route::get("operadorDel/{id?}", [operadorController::class, 'delOperador']);
 Route::post("operadorAdd", [operadorController::class, 'addOperador']);
 Route::post("operadorUpdate", [operadorController::class, 'updateOperador']);
