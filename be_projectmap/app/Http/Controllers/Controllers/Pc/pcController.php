@@ -16,9 +16,9 @@ class pcController extends Controller
     {
         return $id_pc ? pc::find($id_pc) : pc::all();
     }
-    function searchPc($cod_pc)
+    function searchPc($codpc)
     {
-        return pc::where("cod_pc", "like", "%" . $cod_pc . "%")->get();
+        return pc::where("codpc", "like", "%" . $codpc . "%")->get();
     }
     function delPc(Request $request)
     {
