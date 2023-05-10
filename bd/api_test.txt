@@ -123,3 +123,44 @@ http://127.0.0.1:8000/api/webcamUpdate
 http://127.0.0.1:8000/api/webcamDel/3
 #search (marca)
 http://127.0.0.1:8000/api/searchWebCam/tesla
+-- PC
+#get all
+http://127.0.0.1:8000/api/pc
+#get by id
+http://127.0.0.1:8000/api/pc_id/1
+#search pc 
+(codpc)
+http://127.0.0.1:8000/api/searchPc/12338294732
+#add pc 
+{
+    "codpc": "23423",
+    "datacad": "10/06/2023",
+    "nome_pc": "T.I 2",
+    "marca_pc": "Dell",
+    "modelo": "Dell XPRO",
+    "so": "Windows 11",
+    "garantia": "1 ano",
+    "memoria": "16GB",
+    "processador": "I7",
+    "hd": "2 Tb",
+    "status_pc": "entregue"
+}
+http://127.0.0.1:8000/api/pcAdd
+# pc update
+http://127.0.0.1:8000/api/pcUpdate
+{
+    "id": 3,
+    "codpc": "23423",
+    "datacad": "10/06/2023",
+    "nome_pc": "T.I 2",
+    "marca_pc": "Dell",
+    "modelo": "Dell XPRO",
+    "so": "Windows 11",
+    "garantia": "1 ano",
+    "memoria": "16GB",
+    "processador": "I7",
+    "hd": "2 Tb",
+    "status_pc": "entregue"
+}
+#pc del 
+http://127.0.0.1:8000/api/pcDel/1
