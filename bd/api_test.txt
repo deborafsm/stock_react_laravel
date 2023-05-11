@@ -164,3 +164,61 @@ http://127.0.0.1:8000/api/pcUpdate
 }
 #pc del 
 http://127.0.0.1:8000/api/pcDel/1
+-- operador
+#get all
+http://127.0.0.1:8000/api/operador
+#add operador
+http://127.0.0.1:8000/api/operadorAdd
+{
+    "data_cad":"11/05/2023",
+    "nome_operador":"Teste",
+    "email_operador":"teste@teste.com.br",
+    "tel":"(11)12345-6789",
+    "celular":"(11)12345-6789",
+    "endereco":"rua teste",
+    "cep":"00000-000",
+    "numero":"444",
+    "complemento":"nenhum",
+    "referencia":"perto do shopping teste",
+    "bairro":"teste",
+    "cidade":"São Paulo",
+    "estado":"SP",
+    "setor":"teste",
+    "cargo":"Teste",
+    "operacao":"teste",
+    "status_operador":"empregado",
+    "empresa":"teste",
+    "supervisor":"teste",
+    "cpf":"000.000.000-00"
+}
+#add update
+http://127.0.0.1:8000/api/operadorUpdate
+{
+    "id": 3,
+    "data_cad":"11/05/2023",
+    "nome_operador":"Teste Silva",
+    "email_operador":"teste1@teste.com.br",
+    "tel":"(11)12343-6789",
+    "celular":"(11)12343-6789",
+    "endereco":"rua teste",
+    "cep":"00000-000",
+    "numero":"444",
+    "complemento":"nenhum",
+    "referencia":"perto do shopping teste",
+    "bairro":"teste",
+    "cidade":"São Paulo",
+    "estado":"SP",
+    "setor":"teste",
+    "cargo":"Teste",
+    "operacao":"teste",
+    "status_operador":"empregado",
+    "empresa":"teste",
+    "supervisor":"teste",
+    "cpf":"000.000.000-00"
+}
+#get by id
+http://127.0.0.1:8000/api/operador/1
+#search 
+http://127.0.0.1:8000/api/searchOperador/teste@teste.com.br
+#del 
+http://127.0.0.1:8000/api/operadorDel/4
