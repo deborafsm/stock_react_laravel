@@ -83,7 +83,7 @@ Route::get("pcDel/{id?}", [pcController::class, 'delPc']);
 Route::post("pcAdd", [pcController::class, 'addPc']);
 Route::post("pcUpdate", [pcController::class, 'updatePc']);
 // Operador
-Route::get("operadores", [operadorController::class, 'getOperador']);
+Route::get("operador", [operadorController::class, 'getOperador']);
 Route::get("operador/{id?}", [operadorController::class, 'getOperadorById']);
 // Route::post("searchPc/{cod_operador}", [operadorController::class, 'searchOperador']);
 Route::get("operadorDel/{id?}", [operadorController::class, 'delOperador']);
