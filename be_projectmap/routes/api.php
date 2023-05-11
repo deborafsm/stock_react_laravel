@@ -85,10 +85,10 @@ Route::post("pcUpdate", [pcController::class, 'updatePc']);
 // Operador
 Route::get("operador", [operadorController::class, 'getOperador']);
 Route::get("operador/{id?}", [operadorController::class, 'getOperadorById']);
-// Route::post("searchPc/{cod_operador}", [operadorController::class, 'searchOperador']);
+Route::get("searchOperador/{email_operador?}", [operadorController::class, 'searchOperador']);
 Route::get("operadorDel/{id?}", [operadorController::class, 'delOperador']);
 Route::post("operadorAdd", [operadorController::class, 'addOperador']);
-Route::post("operadorUpdate", [operadorController::class, 'updateOperador']);
+Route::post("operadorUpdate", [operadorController::class, 'updatePc']);
 // Monitor com Defeito
 Route::get("monitorDef", [monitorDefController::class, 'getMonitorDef']);
 Route::get("monitorDef/{id?}", [monitorDefController::class, 'getMonitorDefBiId']);

@@ -16,9 +16,9 @@ class operadorController extends Controller
     {
         return $id ? operador::find($id) : operador::all();
     }
-    function searchOperador($cod_operador)
+    function searchOperador($email_operador)
     {
-        return operador::where("cod_operador", "like", "%" . $cod_operador . "%")->get();
+        return operador::where("email_operador", "like", "%" . $email_operador . "%")->get();
     }
     function delOperador(Request $req)
 
@@ -37,7 +37,7 @@ class operadorController extends Controller
         $operador->data_cad = $request->data_cad;
         $operador->nome_operador = $request->nome_operador;
         $operador->email_operador = $request->email_operador;
-        $operador->telefone = $request->telefone;
+        $operador->tel = $request->tel;
         $operador->celular = $request->celular;
         $operador->endereco = $request->endereco;
         $operador->cep = $request->cep;
@@ -49,7 +49,6 @@ class operadorController extends Controller
         $operador->estado = $request->estado;
         $operador->setor = $request->setor;
         $operador->cargo = $request->cargo;
-        $operador->operacao = $request->operacao;
         $operador->status_operador = $request->status_operador;
         $operador->empresa = $request->empresa;
         $operador->supervisor = $request->supervisor;
@@ -64,9 +63,10 @@ class operadorController extends Controller
     function updatePc(Request $request)
     {
         $operador = operador::find($request->id);
+        $operador->data_cad = $request->data_cad;
         $operador->nome_operador = $request->nome_operador;
         $operador->email_operador = $request->email_operador;
-        $operador->telefone = $request->telefone;
+        $operador->tel = $request->tel;
         $operador->celular = $request->celular;
         $operador->endereco = $request->endereco;
         $operador->cep = $request->cep;
@@ -78,7 +78,6 @@ class operadorController extends Controller
         $operador->estado = $request->estado;
         $operador->setor = $request->setor;
         $operador->cargo = $request->cargo;
-        $operador->operacao = $request->operacao;
         $operador->status_operador = $request->status_operador;
         $operador->empresa = $request->empresa;
         $operador->supervisor = $request->supervisor;
