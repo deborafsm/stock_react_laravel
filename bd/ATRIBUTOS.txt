@@ -1,0 +1,2 @@
+- cada mouse, teclado, webcam, monitor, head, pc devem ter os seus respectivos códigos.
+- deve ter um dashboard mostrando a quantidade de perifericos, monitor e pcs os que estão "Livres" e os que estão sendo utilizados.
