@@ -23,6 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #bd folder
-/db
+/bd
 api_test.txt
 ATRIBUTOS.txt
