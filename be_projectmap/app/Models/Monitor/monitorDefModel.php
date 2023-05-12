@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class monitorDefModel extends Model
 {
+    protected $table = "monitordef";
     use HasFactory;
 }
