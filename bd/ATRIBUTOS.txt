@@ -1,2 +1,24 @@
+#PERIFERICOS
 - cada mouse, teclado, webcam, monitor, head, pc devem ter os seus respectivos códigos.
+#FRONT-END
 - deve ter um dashboard mostrando a quantidade de perifericos, monitor e pcs os que estão "Livres" e os que estão sendo utilizados.
+#KIT
+- quando SALVAR um novo KIT -> (mouse 1, webcam 1) a coluna KIT EM TODOS PERIFERICOS ESCOLHIDO NO KIT receberão TRUE
+# API (CONT)
+- Fazer uma api quantidade de mouse, webcam, teclado, head, monitor,pc  (KIT = 1) -> ESTÁ EM ALGUM KIT
+- Fazer uma api quantidade de mouse, webcam, teclado, head, monitor,pc  (KIT = 0) -> NÃO ESTÁ EM ALGUM KIT
+#MOUSE
+- MODIFICAR ADD colocando um novo atributo -> cod_mouse e kit
+- UPDATE ADD colocando um novo atributo -> cod_mouse e kit
+
+#Teclado
+- MODIFICAR ADD colocando um novo atributo -> cod_teclado e kit
+- UPDATE ADD colocando um novo atributo -> cod_teclado e kit
+#WebCam
+- MODIFICAR ADD colocando um novo atributo -> cod_webcam e kit
+- UPDATE ADD colocando um novo atributo -> cod_webcam e kit
+#heads
+- MODIFICAR ADD colocando um novo atributo -> cod_head e kit
+- UPDATE ADD colocando um novo atributo -> cod_head e kit
+#monitor
+#pc
