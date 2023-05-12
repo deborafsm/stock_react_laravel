@@ -16,9 +16,9 @@ class monitorDefController extends Controller
     {
         return $id ? monitorDefModel::find($id) : monitorDefModel::all();
     }
-    function searchMonitorDef($cod_monitorDef)
+    function searchMonitorDef($cod_monitor)
     {
-        return monitorDefModel::where("cod_monitorDef", "like", "%" . $cod_monitorDef . "%")->get();
+        return monitorDefModel::where("cod_monitor", "like", "%" . $cod_monitor . "%")->get();
     }
 
     function delMonitorDef(Request $req)
@@ -34,7 +34,7 @@ class monitorDefController extends Controller
     function addMonitorDefModel(Request $request)
     {
         $monitorDefModel = new monitorDefModel();
-        $monitorDefModel->data_defeito = $request->data_defeito;
+        $monitorDefModel->cod_monitor = $request->cod_monitor;
         $monitorDefModel->descricao = $request->descricao;
         $monitorDefModel->statusm = $request->statusm;
         $monitorDefModel->monitor = $request->monitor;
@@ -50,7 +50,7 @@ class monitorDefController extends Controller
     function upMonitorDefModel(Request $request)
     {
         $monitorDefModel = monitorDefModel::find($request->id);
-        $monitorDefModel->data_defeito = $request->data_defeito;
+        $monitorDefModel->cod_monitor = $request->cod_monitor;
         $monitorDefModel->descricao = $request->descricao;
         $monitorDefModel->statusm = $request->statusm;
         $monitorDefModel->monitor = $request->monitor;
