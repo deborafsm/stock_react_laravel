@@ -222,3 +222,35 @@ http://127.0.0.1:8000/api/operador/1
 http://127.0.0.1:8000/api/searchOperador/teste@teste.com.br
 #del 
 http://127.0.0.1:8000/api/operadorDel/4
+-- monitor defeito
+#monitor def
+http://127.0.0.1:8000/api/monitorDef
+#monitordef by id
+http://127.0.0.1:8000/api/monitorDef/1
+#monitor defeito search
+(cod_monitor)
+http://127.0.0.1:8000/api/searchMonitorDef/343245345
+#defmonitor add
+obs: monitor e operador devem existir
+
+http://127.0.0.1:8000/api/defMonitorAdd
+{
+    "cod_monitor": "12389731",
+    "descricao": "Monitor não liga",
+    "statusm": "Em manutenção",
+    "monitor": 2,
+    "operador":3
+}
+#UPDATE monitor 
+http://127.0.0.1:8000/api/defMonitorUpdate
+{
+    "id":1,
+    "cod_monitor": "324234234",
+    "descricao": "Monitor2 não liga",
+    "statusm": "Em manutenção",
+    "monitor": 2,
+    "operador":3
+}
+#monitor def 
+
+DELETE FROM `monitordef` WHERE `monitordef`.`id` = 7
