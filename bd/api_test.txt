@@ -6,15 +6,20 @@ http://127.0.0.1:8000/api/head_id/1
 #Add
 http://127.0.0.1:8000/api/headAdd
 {
-    "head_marca":"teste",
-    "quantidade": 5
+   
+    "head_marca":"logitech",
+    "modelo":"xz231",
+    "cod_head":"x123912830",
+    "kit":0
 }
 #update
 127.0.0.1:8000/api/headUpdate
 {
-    "id":1,
+   "id":2,
     "head_marca":"logitech",
-    "quantidade":100
+    "modelo":"12312",
+    "cod_head":"g-129312390128",
+    "kit":0
 }
 #search head
 http://127.0.0.1:8000/api/searchHead/logitech
@@ -109,15 +114,19 @@ http://127.0.0.1:8000/api/webcam_id/1
 #add 
 http://127.0.0.1:8000/api/webcamAdd
 {
-    "webcam_marca":"logitech",
-    "quantidade":100
+    "webcam_marca": "logitech",
+    "modelo": "teste",
+    "cod_webcam": "teste",
+    "kit": 0
 }
 #update webcam
 http://127.0.0.1:8000/api/webcamUpdate
 {
-    "id":1,
-    "webcam_marca":"tesla",
-    "quantidade":100
+    "id": 4,
+    "webcam_marca": "logitech",
+    "modelo": "x2",
+    "cod_webcam": "234235235423423x",
+    "kit": 0
 }
 #delete 
 http://127.0.0.1:8000/api/webcamDel/3
