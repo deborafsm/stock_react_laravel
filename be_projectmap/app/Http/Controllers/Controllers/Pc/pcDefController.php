@@ -33,7 +33,7 @@ class pcDefController extends Controller
     function addDefPc(Request $request)
     {
         $pcDefModel = new pcDefModel();
-        $pcDefModel->data_def = $request->data_def;
+        $pcDefModel->codigo = $request->codigo;
         $pcDefModel->descricao = $request->descricao;
         $pcDefModel->pc = $request->pc;
         $pcDefModel->operador = $request->operador;
@@ -50,7 +50,7 @@ class pcDefController extends Controller
     function upDefPc(Request $request)
     {
         $pcDefModel = pcDefModel::find($request->id);
-        $pcDefModel->data_def = $request->data_def;
+        $pcDefModel->codigo = $request->codigo;
         $pcDefModel->descricao = $request->descricao;
         $pcDefModel->pc = $request->pc;
         $pcDefModel->operador = $request->operador;
