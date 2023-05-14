@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class pcDefModel extends Model
 {
+    protected $table = "defeitopc";
     use HasFactory;
 }
