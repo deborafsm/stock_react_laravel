@@ -24,7 +24,9 @@ class mouseController extends Controller
     {
         $mouse = new mouse();
         $mouse->marca_mouse = $request->marca_mouse;
-        $mouse->quantidade = $request->quantidade;
+        $mouse->modelo = $request->modelo;
+        $mouse->cod_mouse = $request->cod_mouse;
+        $mouse->kit = $request->kit;
         $result = $mouse->save();
         if ($result) {
             return ['result' => 'Mouse inserido com sucesso.'];
@@ -36,7 +38,9 @@ class mouseController extends Controller
     {
         $mouse = mouse::find($request->id);
         $mouse->marca_mouse = $request->marca_mouse;
-        $mouse->quantidade = $request->quantidade;
+        $mouse->modelo = $request->modelo;
+        $mouse->cod_mouse = $request->cod_mouse;
+        $mouse->kit = $request->kit;
         $result = $mouse->save();
         if ($result) {
             return ['result' => 'Mouse atualizado com sucesso.'];
