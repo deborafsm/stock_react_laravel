@@ -33,22 +33,24 @@ http://127.0.0.1:8000/api/teclado_id/1
 {
     "id": 1,
     "teclado_marca": "microsoft",
-    "quantidade": null,
-    "updated_at": "2023-03-28T01:16:25.000000Z",
-    "created_at": null
+    "modelo": "mdo-9213801",
+    "cod_teclado": "cod-9213801",
+    "kit":0
 }
 #add 
 http://127.0.0.1:8000/api/tecladoAdd
 {
-    "teclado_marca":"samsung",
-    "quantidade": 10
+   "teclado_marca": "microsoft",
+    "modelo": "mdo-9213801",
+    "cod_teclado": "cod-9213801",
+    "kit":0
 }
 #update 
 http://127.0.0.1:8000/api/tecladoUpdate
 {
     "id":3,
     "teclado_marca":"multilaser",
-    "quantidade": 101
+    "modelo": 101
 }
 #search
 127.0.0.1:8000/api/searchTel/multilaser
@@ -62,15 +64,19 @@ http://127.0.0.1:8000/api/mouse_id/1
 #add 
 http://127.0.0.1:8000/api/mouseAdd
 {
-    "marca_mouse":"raizer",
-    "quantidade":122
+    "teclado_marca":"multilaser",
+    "modelo": "m213123",
+    "cod_mouse":"cod18293",
+    "kit":0
 }
 #update 
 http://127.0.0.1:8000/api/mouseUpdate
 {
     "id":1,
-    "marca_mouse":"microsoft",
-    "quantidade":100
+    "teclado_marca":"multilaser",
+    "modelo": "m213123",
+    "cod_mouse":"cod18293",
+    "kit":0
 }
 #delete
 http://127.0.0.1:8000/api/mouseDel/3
