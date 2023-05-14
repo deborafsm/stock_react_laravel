@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Controllers\WebCam;
 use App\Http\Controllers\Controller;
 use App\Models\WebCam\webcam;
 use Illuminate\Http\Request;
+use App\Models\Kit;
 
 class webcamController extends Controller
 {
