@@ -265,7 +265,7 @@ http://127.0.0.1:8000/api/searchPcDef/1
 http://127.0.0.1:8000/api/pcDefAdd
 {
 
-    "data_def": "[value-2]",
+    "codigo": "[value-2]",
     "descricao": "[value-3]",
     "updated_at": "2023-05-14T01:04:51.256833Z",
     "created_at": "2023-05-14T01:04:51.256663Z",
@@ -273,3 +273,17 @@ http://127.0.0.1:8000/api/pcDefAdd
     "operador": 1,
     "status_pc": "[value-8]"
 }
+#update pc def
+http://127.0.0.1:8000/api/upDefPc
+{
+        "id":1,
+        "codigo": "832as947238",
+        "descricao": "[value-3]",
+        "updated_at": "2023-05-14T01:04:51.256833Z",
+        "created_at": "2023-05-14T01:04:51.256663Z",
+        "pc": 1,
+        "operador": 1,
+        "status_pc": "[value-8]"
+}
+#del pc def
+http://127.0.0.1:8000/api/pcDefDel/3
