@@ -20,7 +20,9 @@ class tecladoController extends Controller
     {
         $teclado = new teclado();
         $teclado->teclado_marca = $request->teclado_marca;
-        $teclado->quantidade = $request->quantidade;
+        $teclado->modelo = $request->modelo;
+        $teclado->cod_teclado = $request->cod_teclado;
+        $teclado->kit = $request->kit;
         $result = $teclado->save();
         if ($result) {
             return ["result" => "o teclado inserido com sucesso!"];
@@ -32,7 +34,9 @@ class tecladoController extends Controller
     {
         $teclado = teclado::find($request->id);
         $teclado->teclado_marca = $request->teclado_marca;
-        $teclado->quantidade = $request->quantidade;
+        $teclado->modelo = $request->modelo;
+        $teclado->cod_teclado = $request->cod_teclado;
+        $teclado->kit = $request->kit;
         $result = $teclado->save();
         if ($result) {
             return ["result" => "o teclado atualizado com sucesso!"];
