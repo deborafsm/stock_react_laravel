@@ -254,3 +254,22 @@ http://127.0.0.1:8000/api/defMonitorUpdate
 #monitor def 
 
 DELETE FROM `monitordef` WHERE `monitordef`.`id` = 7
+-- pc defeito
+# get all
+http://127.0.0.1:8000/api/pcDef
+# get by id pc def 
+http://127.0.0.1:8000/api/pcDef/1
+# search id 
+http://127.0.0.1:8000/api/searchPcDef/1
+# add def pc
+http://127.0.0.1:8000/api/pcDefAdd
+{
+
+    "data_def": "[value-2]",
+    "descricao": "[value-3]",
+    "updated_at": "2023-05-14T01:04:51.256833Z",
+    "created_at": "2023-05-14T01:04:51.256663Z",
+    "pc": 1,
+    "operador": 1,
+    "status_pc": "[value-8]"
+}
