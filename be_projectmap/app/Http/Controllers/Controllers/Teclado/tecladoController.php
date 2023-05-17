@@ -19,10 +19,10 @@ class tecladoController extends Controller
     function addTeclado(Request $request)
     {
         $teclado = new teclado();
-        $teclado->teclado_marca = $request->teclado_marca;
+        $teclado->marca = $request->marca;
         $teclado->modelo = $request->modelo;
-        $teclado->cod_teclado = $request->cod_teclado;
-        $teclado->kit = $request->kit;
+        $teclado->codigo = $request->codigo;
+        $teclado->status = $request->status;
         $result = $teclado->save();
         if ($result) {
             return ["result" => "o teclado inserido com sucesso!"];
@@ -33,10 +33,10 @@ class tecladoController extends Controller
     function tecladoUpdate(Request $request)
     {
         $teclado = teclado::find($request->id);
-        $teclado->teclado_marca = $request->teclado_marca;
+        $teclado->marca = $request->marca;
         $teclado->modelo = $request->modelo;
-        $teclado->cod_teclado = $request->cod_teclado;
-        $teclado->kit = $request->kit;
+        $teclado->codigo = $request->codigo;
+        $teclado->status = $request->status;
         $result = $teclado->save();
         if ($result) {
             return ["result" => "o teclado atualizado com sucesso!"];
