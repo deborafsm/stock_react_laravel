@@ -19,11 +19,11 @@ class monitorController extends Controller
     function addMonitor(Request $request)
     {
         $monitor = new monitor();
-        $monitor->marca_monitor = $request->marca_monitor;
-        $monitor->modelo_monitor = $request->modelo_monitor;
-        $monitor->cod_monitor = $request->cod_monitor;
-        $monitor->status_monitor = $request->status_monitor;
-        $monitor->quantidade = $request->quantidade;
+        $monitor->marca = $request->marca_monitor;
+        $monitor->modelo = $request->modelo_monitor;
+        $monitor->codigo = $request->cod_monitor;
+        $monitor->status = $request->status_monitor;
+
         $result = $monitor->save();
         if ($result) {
             return ["result" => "o monitor inserido com sucesso!"];
@@ -34,11 +34,10 @@ class monitorController extends Controller
     function updateMonitor(Request $request)
     {
         $monitor = monitor::find($request->id);
-        $monitor->marca_monitor = $request->marca_monitor;
-        $monitor->modelo_monitor = $request->modelo_monitor;
-        $monitor->cod_monitor = $request->cod_monitor;
-        $monitor->status_monitor = $request->status_monitor;
-        $monitor->quantidade = $request->quantidade;
+        $monitor->marca = $request->marca_monitor;
+        $monitor->modelo = $request->modelo_monitor;
+        $monitor->codigo = $request->cod_monitor;
+        $monitor->status = $request->status_monitor;
         $result = $monitor->save();
         if ($result) {
             return ["result" => "o monitor atualizado com sucesso!"];
