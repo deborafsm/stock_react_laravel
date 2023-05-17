@@ -23,7 +23,7 @@ class headController extends Controller
         $head = new heads();
         $head->marca = $request->marca;
         $head->modelo = $request->modelo;
-        $head->codigo = $request->cod_head;
+        $head->codigo = $request->codigo;
         $head->status = $request->status;
         $result = $head->save();
         if ($result) {
@@ -37,7 +37,7 @@ class headController extends Controller
         $head = heads::find($request->id);
         $head->marca = $request->marca;
         $head->modelo = $request->modelo;
-        $head->codigo = $request->cod_head;
+        $head->codigo = $request->codigo;
         $head->status = $request->status;
         $result = $head->save();
         if ($result) {
