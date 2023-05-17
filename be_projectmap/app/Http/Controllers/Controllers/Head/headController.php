@@ -21,7 +21,7 @@ class headController extends Controller
     function addHead(Request $request)
     {
         $head = new heads();
-        $head->head_marca = $request->head_marca;
+        $head->marca = $request->marca;
         $head->modelo = $request->modelo;
         $head->cod_head = $request->cod_head;
         $head->kit = $request->kit;
@@ -35,7 +35,7 @@ class headController extends Controller
     function updateHead(Request $request)
     {
         $head = heads::find($request->id);
-        $head->head_marca = $request->head_marca;
+        $head->marca = $request->marca;
         $head->modelo = $request->modelo;
         $head->cod_head = $request->cod_head;
         $head->kit = $request->kit;
