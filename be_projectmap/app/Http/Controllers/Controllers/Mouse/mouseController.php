@@ -23,10 +23,10 @@ class mouseController extends Controller
     function addMouse(Request $request)
     {
         $mouse = new mouse();
-        $mouse->marca_mouse = $request->marca_mouse;
+        $mouse->marca = $request->marca;
         $mouse->modelo = $request->modelo;
-        $mouse->cod_mouse = $request->cod_mouse;
-        $mouse->kit = $request->kit;
+        $mouse->codigo = $request->codigo;
+        $mouse->status = $request->status;
         $result = $mouse->save();
         if ($result) {
             return ['result' => 'Mouse inserido com sucesso.'];
@@ -37,10 +37,10 @@ class mouseController extends Controller
     function updateMouse(Request $request)
     {
         $mouse = mouse::find($request->id);
-        $mouse->marca_mouse = $request->marca_mouse;
+        $mouse->marca = $request->marca;
         $mouse->modelo = $request->modelo;
-        $mouse->cod_mouse = $request->cod_mouse;
-        $mouse->kit = $request->kit;
+        $mouse->codigo = $request->codigo;
+        $mouse->status = $request->status;
         $result = $mouse->save();
         if ($result) {
             return ['result' => 'Mouse atualizado com sucesso.'];
