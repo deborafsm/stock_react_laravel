@@ -24,7 +24,7 @@ class headController extends Controller
         $head->marca = $request->marca;
         $head->modelo = $request->modelo;
         $head->codigo = $request->cod_head;
-        $head->kit = $request->kit;
+        $head->status = $request->status;
         $result = $head->save();
         if ($result) {
             return ['result' => 'Head inserido com sucesso.'];
@@ -38,7 +38,7 @@ class headController extends Controller
         $head->marca = $request->marca;
         $head->modelo = $request->modelo;
         $head->codigo = $request->cod_head;
-        $head->kit = $request->kit;
+        $head->status = $request->status;
         $result = $head->save();
         if ($result) {
             return ['result' => 'Head atualizado com sucesso.'];
