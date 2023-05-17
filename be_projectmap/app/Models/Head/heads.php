@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class heads extends Model
 {
     use HasFactory;
-    protected $primarykey = 'id_head';
+    protected $table = "heads";
 }
