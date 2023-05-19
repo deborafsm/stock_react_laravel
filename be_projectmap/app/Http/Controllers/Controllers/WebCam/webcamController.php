@@ -19,15 +19,15 @@ class webcamController extends Controller
     }
     function searchWebCam($webcam_marca)
     {
-        return webcam::where("webcam_marca", "like", "%" . $webcam_marca . "%")->get();
+        return webcam::where("marca", "like", "%" . $webcam_marca . "%")->get();
     }
     function addWebCam(Request $request)
     {
         $webcam = new webcam();
-        $webcam->webcam_marca = $request->webcam_marca;
+        $webcam->marca = $request->marca;
         $webcam->modelo = $request->modelo;
-        $webcam->cod_webcam = $request->cod_webcam;
-        $webcam->kit = $request->kit;
+        $webcam->codigo = $request->codigo;
+        $webcam->status = $request->status;
         $result = $webcam->save();
         if ($result) {
             return ['result' => 'webcam adicionado com sucesso.'];
@@ -38,10 +38,10 @@ class webcamController extends Controller
     function updateWebCam(Request $request)
     {
         $webcam = webcam::find($request->id);
-        $webcam->webcam_marca = $request->webcam_marca;
+        $webcam->marca = $request->marca;
         $webcam->modelo = $request->modelo;
-        $webcam->cod_webcam = $request->cod_webcam;
-        $webcam->kit = $request->kit;
+        $webcam->codigo = $request->codigo;
+        $webcam->status = $request->status;
         $result = $webcam->save();
         if ($result) {
             return ['result' => 'webcam atualizado com sucesso.'];
