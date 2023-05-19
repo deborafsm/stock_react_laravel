@@ -18,7 +18,7 @@ class operadorController extends Controller
     }
     function searchOperador($email_operador)
     {
-        return operador::where("email_operador", "like", "%" . $email_operador . "%")->get();
+        return operador::where("email", "like", "%" . $email_operador . "%")->get();
     }
     function delOperador(Request $req)
 
@@ -34,10 +34,9 @@ class operadorController extends Controller
     function addOperador(Request $request)
     {
         $operador = new operador();
-        $operador->data_cad = $request->data_cad;
-        $operador->nome_operador = $request->nome_operador;
-        $operador->email_operador = $request->email_operador;
-        $operador->tel = $request->tel;
+        $operador->nome = $request->nome;
+        $operador->email = $request->email;
+        $operador->telefone = $request->telefone;
         $operador->celular = $request->celular;
         $operador->endereco = $request->endereco;
         $operador->cep = $request->cep;
@@ -49,7 +48,7 @@ class operadorController extends Controller
         $operador->estado = $request->estado;
         $operador->setor = $request->setor;
         $operador->cargo = $request->cargo;
-        $operador->status_operador = $request->status_operador;
+        $operador->status = $request->status;
         $operador->empresa = $request->empresa;
         $operador->supervisor = $request->supervisor;
         $operador->cpf = $request->cpf;
@@ -63,10 +62,9 @@ class operadorController extends Controller
     function updatePc(Request $request)
     {
         $operador = operador::find($request->id);
-        $operador->data_cad = $request->data_cad;
-        $operador->nome_operador = $request->nome_operador;
-        $operador->email_operador = $request->email_operador;
-        $operador->tel = $request->tel;
+        $operador->nome = $request->nome;
+        $operador->email = $request->email;
+        $operador->telefone = $request->telefone;
         $operador->celular = $request->celular;
         $operador->endereco = $request->endereco;
         $operador->cep = $request->cep;
@@ -78,7 +76,7 @@ class operadorController extends Controller
         $operador->estado = $request->estado;
         $operador->setor = $request->setor;
         $operador->cargo = $request->cargo;
-        $operador->status_operador = $request->status_operador;
+        $operador->status = $request->status;
         $operador->empresa = $request->empresa;
         $operador->supervisor = $request->supervisor;
         $operador->cpf = $request->cpf;
