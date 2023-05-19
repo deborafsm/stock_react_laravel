@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class operador extends Model
 {
-    protected $table = "operador";
+    protected $table = "operators";
     use HasFactory;
 }
