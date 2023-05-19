@@ -18,7 +18,7 @@ class pcController extends Controller
     }
     function searchPc($codpc)
     {
-        return pc::where("codpc", "like", "%" . $codpc . "%")->get();
+        return pc::where("codigo", "like", "%" . $codpc . "%")->get();
     }
     function delPc(Request $request)
     {
@@ -33,17 +33,16 @@ class pcController extends Controller
     function addPc(Request $request)
     {
         $pc = new pc();
-        $pc->codpc = $request->codpc;
-        $pc->datacad = $request->datacad;
-        $pc->nome_pc = $request->nome_pc;
-        $pc->marca_pc = $request->marca_pc;
+        $pc->codigo = $request->codigo;
+        $pc->nome = $request->nome;
+        $pc->marca = $request->marca;
         $pc->modelo = $request->modelo;
         $pc->so = $request->so;
         $pc->garantia = $request->garantia;
         $pc->memoria = $request->memoria;
         $pc->processador = $request->processador;
         $pc->hd = $request->hd;
-        $pc->status_pc = $request->status_pc;
+        $pc->status = $request->status;
         $result = $pc->save();
         if ($result) {
             return ['result' => 'Mouse inserido com sucesso.'];
@@ -54,17 +53,16 @@ class pcController extends Controller
     function updatePc(Request $request)
     {
         $pc = pc::find($request->id);
-        $pc->codpc = $request->codpc;
-        $pc->datacad = $request->datacad;
-        $pc->nome_pc = $request->nome_pc;
-        $pc->marca_pc = $request->marca_pc;
+        $pc->codigo = $request->codigo;
+        $pc->nome = $request->nome;
+        $pc->marca = $request->marca;
         $pc->modelo = $request->modelo;
         $pc->so = $request->so;
         $pc->garantia = $request->garantia;
         $pc->memoria = $request->memoria;
         $pc->processador = $request->processador;
         $pc->hd = $request->hd;
-        $pc->status_pc = $request->status_pc;
+        $pc->status = $request->status;
         $result = $pc->save();
         if ($result) {
             return ['result' => 'Pc atualizado com sucesso.'];
