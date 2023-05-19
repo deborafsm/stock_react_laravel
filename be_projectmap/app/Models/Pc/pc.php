@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class pc extends Model
 {
-    protected $table = "pc";
+    protected $table = "computers";
     use HasFactory;
 }
