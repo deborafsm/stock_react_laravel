@@ -16,9 +16,9 @@ class monitorDefController extends Controller
     {
         return $id ? monitorDefModel::find($id) : monitorDefModel::all();
     }
-    function searchMonitorDef($cod_monitor)
+    function searchMonitorDef($id)
     {
-        return monitorDefModel::where("cod_monitor", "like", "%" . $cod_monitor . "%")->get();
+        return monitorDefModel::where("id", "like", "%" . $id . "%")->get();
     }
 
     function delMonitorDef(Request $req)
@@ -34,11 +34,14 @@ class monitorDefController extends Controller
     function addMonitorDefModel(Request $request)
     {
         $monitorDefModel = new monitorDefModel();
-        $monitorDefModel->cod_monitor = $request->cod_monitor;
         $monitorDefModel->descricao = $request->descricao;
-        $monitorDefModel->statusm = $request->statusm;
+        $monitorDefModel->status = $request->status;
         $monitorDefModel->monitor = $request->monitor;
         $monitorDefModel->operador = $request->operador;
+        $monitorDefModel->data_reparo = $request->data_reparo;
+        $monitorDefModel->obsercacao = $request->obsercacao;
+        $monitorDefModel->tecnico_resp = $request->tecnico_resp;
+        $monitorDefModel->empresa_resp = $request->empresa_resp;
 
         $result = $monitorDefModel->save();
         if ($result) {
@@ -50,11 +53,14 @@ class monitorDefController extends Controller
     function upMonitorDefModel(Request $request)
     {
         $monitorDefModel = monitorDefModel::find($request->id);
-        $monitorDefModel->cod_monitor = $request->cod_monitor;
         $monitorDefModel->descricao = $request->descricao;
-        $monitorDefModel->statusm = $request->statusm;
+        $monitorDefModel->status = $request->status;
         $monitorDefModel->monitor = $request->monitor;
         $monitorDefModel->operador = $request->operador;
+        $monitorDefModel->data_reparo = $request->data_reparo;
+        $monitorDefModel->obsercacao = $request->obsercacao;
+        $monitorDefModel->tecnico_resp = $request->tecnico_resp;
+        $monitorDefModel->empresa_resp = $request->empresa_resp;
         $result = $monitorDefModel->save();
         if ($result) {
             return ["result" => "o monitor atualizado com sucesso!"];
