@@ -33,12 +33,14 @@ class pcDefController extends Controller
     function addDefPc(Request $request)
     {
         $pcDefModel = new pcDefModel();
-        $pcDefModel->codigo = $request->codigo;
         $pcDefModel->descricao = $request->descricao;
+        $pcDefModel->status = $request->status;
         $pcDefModel->pc = $request->pc;
         $pcDefModel->operador = $request->operador;
-        $pcDefModel->status_pc = $request->status_pc;
-
+        $pcDefModel->data_reparo = $request->data_reparo;
+        $pcDefModel->obsercacao = $request->obsercacao;
+        $pcDefModel->tecnico_resp = $request->tecnico_resp;
+        $pcDefModel->empresa_resp = $request->empresa_resp;
         $result = $pcDefModel->save();
         if ($result) {
             return ['result' => 'Inserido com sucesso.'];
@@ -50,11 +52,14 @@ class pcDefController extends Controller
     function upDefPc(Request $request)
     {
         $pcDefModel = pcDefModel::find($request->id);
-        $pcDefModel->codigo = $request->codigo;
         $pcDefModel->descricao = $request->descricao;
+        $pcDefModel->status = $request->status;
         $pcDefModel->pc = $request->pc;
         $pcDefModel->operador = $request->operador;
-        $pcDefModel->status_pc = $request->status_pc;
+        $pcDefModel->data_reparo = $request->data_reparo;
+        $pcDefModel->obsercacao = $request->obsercacao;
+        $pcDefModel->tecnico_resp = $request->tecnico_resp;
+        $pcDefModel->empresa_resp = $request->empresa_resp;
         $result = $pcDefModel->save();
         if ($result) {
             return ["result" => "Atualizado com sucesso!"];
