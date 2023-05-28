@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Menu from './pages/Menu';
-const App = () => {
+import AppRoutes from "./route/rotas.jsx";
+import GlobalStyle from "./style/globalStyle";
+import NewAside from "./layout/Aside/NewAside";
+function App() {
   return (
-    <div className="App">
-     <Menu/>
-    </div>
+    <>
+      {/* <NewAside /> */}
+      <GlobalStyle />
+        <AppRoutes />
+    </>
   );
 }
 
