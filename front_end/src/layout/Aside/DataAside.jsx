@@ -16,5 +16,12 @@ export const SideData = [
     icon: <MdHome />,
     cName: "Home",
   },
+  {
+    id: "123456",
+    title: "WebCam",
+    path: "/webcam-create",
+    icon: <MdHome />,
+    cName: "Home",
+  },
   
 ];
