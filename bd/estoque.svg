@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg
+PUBLIC "-//W3C//DTD SVG 1.1//EN"
+       "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="125 50 1251 1298" width="1126px" height="1248px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <line x1="1159" y1="426" x2="1149" y2="426" style="stroke:#c00;stroke-width:1;"/>
+   <line x1="665" y1="863" x2="655" y2="863" style="stroke:#c00;stroke-width:1;"/>
+   <line x1="1149" y1="426" x2="665" y2="863" style="stroke:#c00;stroke-width:1;"/>
+   <line x1="1151.5" y1="426" x2="1155.0355339059" y2="429.53553390593" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="1151.5" y1="426" x2="1155.0355339059" y2="422.46446609407" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="660" y1="863" x2="663.53553390593" y2="866.53553390593" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="660" y1="863" x2="663.53553390593" y2="859.46446609407" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="1159" y1="346" x2="1149" y2="346" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="243" y1="860" x2="233" y2="860" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="1149" y1="346" x2="243" y2="860" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="1151.5" y1="346" x2="1155.0355339059" y2="349.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="1151.5" y1="346" x2="1155.0355339059" y2="342.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="238" y1="860" x2="241.53553390593" y2="863.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="238" y1="860" x2="241.53553390593" y2="856.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="1159" y1="386" x2="1149" y2="386" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="251" y1="679" x2="241" y2="679" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="1149" y1="386" x2="251" y2="679" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="1151.5" y1="386" x2="1155.0355339059" y2="389.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="1151.5" y1="386" x2="1155.0355339059" y2="382.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="246" y1="679" x2="249.53553390593" y2="682.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="246" y1="679" x2="249.53553390593" y2="675.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="1159" y1="326" x2="1149" y2="326" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="983" y1="873" x2="973" y2="873" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="1149" y1="326" x2="983" y2="873" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="1151.5" y1="326" x2="1155.0355339059" y2="329.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="1151.5" y1="326" x2="1155.0355339059" y2="322.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="978" y1="873" x2="981.53553390593" y2="876.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="978" y1="873" x2="981.53553390593" y2="869.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="1159" y1="446" x2="1149" y2="446" style="stroke:#333;stroke-width:1;"/>
+   <line x1="485" y1="219" x2="475" y2="219" style="stroke:#333;stroke-width:1;"/>
+   <line x1="1149" y1="446" x2="485" y2="219" style="stroke:#333;stroke-width:1;"/>
+   <line x1="1151.5" y1="446" x2="1155.0355339059" y2="449.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="1151.5" y1="446" x2="1155.0355339059" y2="442.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="480" y1="219" x2="483.53553390593" y2="222.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="480" y1="219" x2="483.53553390593" y2="215.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="1159" y1="406" x2="1149" y2="406" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="450" y1="867" x2="440" y2="867" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="1149" y1="406" x2="450" y2="867" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="1151.5" y1="406" x2="1155.0355339059" y2="409.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="1151.5" y1="406" x2="1155.0355339059" y2="402.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="445" y1="867" x2="448.53553390593" y2="870.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="445" y1="867" x2="448.53553390593" y2="863.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="1159" y1="366" x2="1149" y2="366" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="757" y1="95" x2="747" y2="95" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="1149" y1="366" x2="757" y2="95" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="1151.5" y1="366" x2="1155.0355339059" y2="369.53553390593" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="1151.5" y1="366" x2="1155.0355339059" y2="362.46446609407" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="752" y1="95" x2="755.53553390593" y2="98.535533905933" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="752" y1="95" x2="755.53553390593" y2="91.464466094067" style="stroke:#0b0;stroke-width:2;"/>
+   <rect width="98" height="20" x="377" y="189" style="fill:#007;stroke:black;"/>
+   <text width="98" height="20" x="382" y="203" style="fill:#fff;" font-family="Arial" font-size="16px"> computers</text>
+   <rect width="98" height="20" x="377" y="209" style="fill:#aea;stroke:black;"/>
+   <text width="98" height="20" x="382" y="223" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="98" height="20" x="377" y="229" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="243" style="fill:black;" font-family="Arial" font-size="16px">codigo</text>
+   <rect width="98" height="20" x="377" y="249" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="263" style="fill:black;" font-family="Arial" font-size="16px">nome</text>
+   <rect width="98" height="20" x="377" y="269" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="283" style="fill:black;" font-family="Arial" font-size="16px">marca</text>
+   <rect width="98" height="20" x="377" y="289" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="303" style="fill:black;" font-family="Arial" font-size="16px">modelo</text>
+   <rect width="98" height="20" x="377" y="309" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="323" style="fill:black;" font-family="Arial" font-size="16px">so</text>
+   <rect width="98" height="20" x="377" y="329" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="343" style="fill:black;" font-family="Arial" font-size="16px">garantia</text>
+   <rect width="98" height="20" x="377" y="349" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="363" style="fill:black;" font-family="Arial" font-size="16px">memoria</text>
+   <rect width="98" height="20" x="377" y="369" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="383" style="fill:black;" font-family="Arial" font-size="16px">processador</text>
+   <rect width="98" height="20" x="377" y="389" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="403" style="fill:black;" font-family="Arial" font-size="16px">hd</text>
+   <rect width="98" height="20" x="377" y="409" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="423" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="98" height="20" x="377" y="429" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="443" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="98" height="20" x="377" y="449" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="382" y="463" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="129" height="20" x="140" y="345" style="fill:#007;stroke:black;"/>
+   <text width="129" height="20" x="145" y="359" style="fill:#fff;" font-family="Arial" font-size="16px"> faulty_computers</text>
+   <rect width="129" height="20" x="140" y="365" style="fill:#aea;stroke:black;"/>
+   <text width="129" height="20" x="145" y="379" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="129" height="20" x="140" y="385" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="399" style="fill:black;" font-family="Arial" font-size="16px">descricao</text>
+   <rect width="129" height="20" x="140" y="405" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="419" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="129" height="20" x="140" y="425" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="439" style="fill:black;" font-family="Arial" font-size="16px">pc</text>
+   <rect width="129" height="20" x="140" y="445" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="459" style="fill:black;" font-family="Arial" font-size="16px">operador</text>
+   <rect width="129" height="20" x="140" y="465" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="479" style="fill:black;" font-family="Arial" font-size="16px">data_reparo</text>
+   <rect width="129" height="20" x="140" y="485" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="499" style="fill:black;" font-family="Arial" font-size="16px">obsercacao</text>
+   <rect width="129" height="20" x="140" y="505" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="519" style="fill:black;" font-family="Arial" font-size="16px">tecnico_resp</text>
+   <rect width="129" height="20" x="140" y="525" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="539" style="fill:black;" font-family="Arial" font-size="16px">empresa_resp</text>
+   <rect width="129" height="20" x="140" y="545" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="559" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="129" height="20" x="140" y="565" style="fill:none;stroke:black;"/>
+   <text width="129" height="20" x="145" y="579" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="115" height="20" x="358" y="541" style="fill:#007;stroke:black;"/>
+   <text width="115" height="20" x="363" y="555" style="fill:#fff;" font-family="Arial" font-size="16px"> faulty_monitors</text>
+   <rect width="115" height="20" x="358" y="561" style="fill:#aea;stroke:black;"/>
+   <text width="115" height="20" x="363" y="575" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="115" height="20" x="358" y="581" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="595" style="fill:black;" font-family="Arial" font-size="16px">descricao</text>
+   <rect width="115" height="20" x="358" y="601" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="615" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="115" height="20" x="358" y="621" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="635" style="fill:black;" font-family="Arial" font-size="16px">monitor</text>
+   <rect width="115" height="20" x="358" y="641" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="655" style="fill:black;" font-family="Arial" font-size="16px">operador</text>
+   <rect width="115" height="20" x="358" y="661" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="675" style="fill:black;" font-family="Arial" font-size="16px">data_reparo</text>
+   <rect width="115" height="20" x="358" y="681" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="695" style="fill:black;" font-family="Arial" font-size="16px">obsercacao</text>
+   <rect width="115" height="20" x="358" y="701" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="715" style="fill:black;" font-family="Arial" font-size="16px">tecnico_resp</text>
+   <rect width="115" height="20" x="358" y="721" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="735" style="fill:black;" font-family="Arial" font-size="16px">empresa_resp</text>
+   <rect width="115" height="20" x="358" y="741" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="755" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="115" height="20" x="358" y="761" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="363" y="775" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="77" height="20" x="578" y="833" style="fill:#007;stroke:black;"/>
+   <text width="77" height="20" x="583" y="847" style="fill:#fff;" font-family="Arial" font-size="16px"> heads</text>
+   <rect width="77" height="20" x="578" y="853" style="fill:#aea;stroke:black;"/>
+   <text width="77" height="20" x="583" y="867" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="77" height="20" x="578" y="873" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="583" y="887" style="fill:black;" font-family="Arial" font-size="16px">marca</text>
+   <rect width="77" height="20" x="578" y="893" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="583" y="907" style="fill:black;" font-family="Arial" font-size="16px">modelo</text>
+   <rect width="77" height="20" x="578" y="913" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="583" y="927" style="fill:black;" font-family="Arial" font-size="16px">codigo</text>
+   <rect width="77" height="20" x="578" y="933" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="583" y="947" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="77" height="20" x="578" y="953" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="583" y="967" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="77" height="20" x="578" y="973" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="583" y="987" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="81" height="20" x="359" y="837" style="fill:#007;stroke:black;"/>
+   <text width="81" height="20" x="364" y="851" style="fill:#fff;" font-family="Arial" font-size="16px"> keyboards</text>
+   <rect width="81" height="20" x="359" y="857" style="fill:#aea;stroke:black;"/>
+   <text width="81" height="20" x="364" y="871" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="81" height="20" x="359" y="877" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="364" y="891" style="fill:black;" font-family="Arial" font-size="16px">marca</text>
+   <rect width="81" height="20" x="359" y="897" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="364" y="911" style="fill:black;" font-family="Arial" font-size="16px">modelo</text>
+   <rect width="81" height="20" x="359" y="917" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="364" y="931" style="fill:black;" font-family="Arial" font-size="16px">codigo</text>
+   <rect width="81" height="20" x="359" y="937" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="364" y="951" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="81" height="20" x="359" y="957" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="364" y="971" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="81" height="20" x="359" y="977" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="364" y="991" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="77" height="20" x="1159" y="156" style="fill:#007;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="170" style="fill:#fff;" font-family="Arial" font-size="16px"> kit</text>
+   <rect width="77" height="20" x="1159" y="176" style="fill:#aea;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="190" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="77" height="20" x="1159" y="196" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="210" style="fill:black;" font-family="Arial" font-size="16px">data_kit</text>
+   <rect width="77" height="20" x="1159" y="216" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="230" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="77" height="20" x="1159" y="236" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="250" style="fill:black;" font-family="Arial" font-size="16px">qnt_vga</text>
+   <rect width="77" height="20" x="1159" y="256" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="270" style="fill:black;" font-family="Arial" font-size="16px">qnt_e</text>
+   <rect width="77" height="20" x="1159" y="276" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="290" style="fill:black;" font-family="Arial" font-size="16px">rede</text>
+   <rect width="77" height="20" x="1159" y="296" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="310" style="fill:black;" font-family="Arial" font-size="16px">lacre</text>
+   <rect width="77" height="20" x="1159" y="316" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="330" style="fill:black;" font-family="Arial" font-size="16px">operador</text>
+   <rect width="77" height="20" x="1159" y="336" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="350" style="fill:black;" font-family="Arial" font-size="16px">monitor</text>
+   <rect width="77" height="20" x="1159" y="356" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="370" style="fill:black;" font-family="Arial" font-size="16px">webcam</text>
+   <rect width="77" height="20" x="1159" y="376" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="390" style="fill:black;" font-family="Arial" font-size="16px">mouse</text>
+   <rect width="77" height="20" x="1159" y="396" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="410" style="fill:black;" font-family="Arial" font-size="16px">teclado</text>
+   <rect width="77" height="20" x="1159" y="416" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="430" style="fill:black;" font-family="Arial" font-size="16px">head</text>
+   <rect width="77" height="20" x="1159" y="436" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="450" style="fill:black;" font-family="Arial" font-size="16px">pc</text>
+   <rect width="77" height="20" x="1159" y="456" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="470" style="fill:black;" font-family="Arial" font-size="16px">foto</text>
+   <rect width="77" height="20" x="1159" y="476" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="490" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="77" height="20" x="1159" y="496" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="1164" y="510" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="77" height="20" x="156" y="830" style="fill:#007;stroke:black;"/>
+   <text width="77" height="20" x="161" y="844" style="fill:#fff;" font-family="Arial" font-size="16px"> monitors</text>
+   <rect width="77" height="20" x="156" y="850" style="fill:#aea;stroke:black;"/>
+   <text width="77" height="20" x="161" y="864" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="77" height="20" x="156" y="870" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="161" y="884" style="fill:black;" font-family="Arial" font-size="16px">marca</text>
+   <rect width="77" height="20" x="156" y="890" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="161" y="904" style="fill:black;" font-family="Arial" font-size="16px">modelo</text>
+   <rect width="77" height="20" x="156" y="910" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="161" y="924" style="fill:black;" font-family="Arial" font-size="16px">codigo</text>
+   <rect width="77" height="20" x="156" y="930" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="161" y="944" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="77" height="20" x="156" y="950" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="161" y="964" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="77" height="20" x="156" y="970" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="161" y="984" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="86" height="20" x="155" y="649" style="fill:#007;stroke:black;"/>
+   <text width="86" height="20" x="160" y="663" style="fill:#fff;" font-family="Arial" font-size="16px"> mouses</text>
+   <rect width="86" height="20" x="155" y="669" style="fill:#aea;stroke:black;"/>
+   <text width="86" height="20" x="160" y="683" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="86" height="20" x="155" y="689" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="160" y="703" style="fill:black;" font-family="Arial" font-size="16px">marca</text>
+   <rect width="86" height="20" x="155" y="709" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="160" y="723" style="fill:black;" font-family="Arial" font-size="16px">modelo</text>
+   <rect width="86" height="20" x="155" y="729" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="160" y="743" style="fill:black;" font-family="Arial" font-size="16px">codigo</text>
+   <rect width="86" height="20" x="155" y="749" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="160" y="763" style="fill:black;" font-family="Arial" font-size="16px">updated_at</text>
+   <rect width="86" height="20" x="155" y="769" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="160" y="783" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="106" height="20" x="867" y="843" style="fill:#007;stroke:black;"/>
+   <text width="106" height="20" x="872" y="857" style="fill:#fff;" font-family="Arial" font-size="16px"> operators</text>
+   <rect width="106" height="20" x="867" y="863" style="fill:#aea;stroke:black;"/>
+   <text width="106" height="20" x="872" y="877" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="106" height="20" x="867" y="883" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="897" style="fill:black;" font-family="Arial" font-size="16px">nome</text>
+   <rect width="106" height="20" x="867" y="903" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="917" style="fill:black;" font-family="Arial" font-size="16px">email</text>
+   <rect width="106" height="20" x="867" y="923" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="937" style="fill:black;" font-family="Arial" font-size="16px">telefone</text>
+   <rect width="106" height="20" x="867" y="943" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="957" style="fill:black;" font-family="Arial" font-size="16px">celular</text>
+   <rect width="106" height="20" x="867" y="963" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="977" style="fill:black;" font-family="Arial" font-size="16px">endereco</text>
+   <rect width="106" height="20" x="867" y="983" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="997" style="fill:black;" font-family="Arial" font-size="16px">cep</text>
+   <rect width="106" height="20" x="867" y="1003" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1017" style="fill:black;" font-family="Arial" font-size="16px">numero</text>
+   <rect width="106" height="20" x="867" y="1023" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1037" style="fill:black;" font-family="Arial" font-size="16px">complemento</text>
+   <rect width="106" height="20" x="867" y="1043" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1057" style="fill:black;" font-family="Arial" font-size="16px">referencia</text>
+   <rect width="106" height="20" x="867" y="1063" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1077" style="fill:black;" font-family="Arial" font-size="16px">bairro</text>
+   <rect width="106" height="20" x="867" y="1083" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1097" style="fill:black;" font-family="Arial" font-size="16px">cidade</text>
+   <rect width="106" height="20" x="867" y="1103" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1117" style="fill:black;" font-family="Arial" font-size="16px">estado</text>
+   <rect width="106" height="20" x="867" y="1123" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1137" style="fill:black;" font-family="Arial" font-size="16px">setor</text>
+   <rect width="106" height="20" x="867" y="1143" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1157" style="fill:black;" font-family="Arial" font-size="16px">cargo</text>
+   <rect width="106" height="20" x="867" y="1163" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1177" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="106" height="20" x="867" y="1183" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1197" style="fill:black;" font-family="Arial" font-size="16px">empresa</text>
+   <rect width="106" height="20" x="867" y="1203" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1217" style="fill:black;" font-family="Arial" font-size="16px">supervisor</text>
+   <rect width="106" height="20" x="867" y="1223" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1237" style="fill:black;" font-family="Arial" font-size="16px">cpf</text>
+   <rect width="106" height="20" x="867" y="1243" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1257" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="106" height="20" x="867" y="1263" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="872" y="1277" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+   <rect width="77" height="20" x="670" y="65" style="fill:#007;stroke:black;"/>
+   <text width="77" height="20" x="675" y="79" style="fill:#fff;" font-family="Arial" font-size="16px"> webcams</text>
+   <rect width="77" height="20" x="670" y="85" style="fill:#aea;stroke:black;"/>
+   <text width="77" height="20" x="675" y="99" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="77" height="20" x="670" y="105" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="675" y="119" style="fill:black;" font-family="Arial" font-size="16px">marca</text>
+   <rect width="77" height="20" x="670" y="125" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="675" y="139" style="fill:black;" font-family="Arial" font-size="16px">modelo</text>
+   <rect width="77" height="20" x="670" y="145" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="675" y="159" style="fill:black;" font-family="Arial" font-size="16px">codigo</text>
+   <rect width="77" height="20" x="670" y="165" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="675" y="179" style="fill:black;" font-family="Arial" font-size="16px">status</text>
+   <rect width="77" height="20" x="670" y="185" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="675" y="199" style="fill:black;" font-family="Arial" font-size="16px">create_at</text>
+   <rect width="77" height="20" x="670" y="205" style="fill:none;stroke:black;"/>
+   <text width="77" height="20" x="675" y="219" style="fill:black;" font-family="Arial" font-size="16px">update_at</text>
+</svg>
