@@ -1,5 +1,5 @@
 
-import {  MdHome } from "react-icons/md";
+import {  MdHome,MdCamera,MdInfo } from "react-icons/md";
 
 export const SideData = [
   {
@@ -13,14 +13,14 @@ export const SideData = [
     id: "123456",
     title: "Info",
     path: "/info",
-    icon: <MdHome />,
+    icon: <MdInfo />,
     cName: "Home",
   },
   {
     id: "123456",
     title: "WebCam",
     path: "/webcam-create",
-    icon: <MdHome />,
+    icon: <MdCamera/>,
     cName: "Home",
   },
   
