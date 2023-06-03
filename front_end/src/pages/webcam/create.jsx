@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Input from  '../../components/input'
 export default function create() {
   return (
     <div>
-      <h1>teste</h1>
+      <Input/>
     </div>
   )
 }
