@@ -8,6 +8,6 @@ const Grid = styled.div`
     'AS HD '
     'AS CT ';
     height: 100vh;
-
+   
 `;
 export default Grid;
