@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Controllers\Head;
 
 use App\Models\Head\heads;
 use App\Http\Controllers\Controller;
-use App\Models\Models\Head\head;
+
 use Illuminate\Http\Request;
 
 class headController extends Controller
