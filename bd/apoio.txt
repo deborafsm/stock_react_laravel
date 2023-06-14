@@ -1,0 +1,8 @@
+Botão primário (Primary): #007bff
+Botão secundário (Secondary): #6c757d
+Botão de sucesso (Success): #28a745
+Botão de perigo (Danger): #dc3545
+Botão de aviso (Warning): #ffc107
+Botão de informação (Info): #17a2b8
+Botão claro (Light): #f8f9fa
+Botão escuro (Dark): #343a40
