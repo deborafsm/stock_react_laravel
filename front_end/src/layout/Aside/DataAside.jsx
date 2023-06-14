@@ -3,28 +3,28 @@ import {  MdHome,MdCamera,MdInfo } from "react-icons/md";
 
 export const SideData = [
   {
-    id: "123",
+    id: "1",
     title: "Home",
     path: "/home",
     icon: <MdHome />,
     cName: "Home",
   },
   {
-    id: "123456",
+    id: "2",
     title: "Info",
     path: "/info",
     icon: <MdInfo />,
     cName: "Home",
   },
   {
-    id: "123456",
+    id: "3",
     title: "WebCam",
     path: "/webcam-create",
     icon: <MdCamera/>,
     cName: "Home",
   },
   {
-    id: "126",
+    id: "4",
     title: "Heads",
     path: "/heads",
     icon: <MdCamera/>,
