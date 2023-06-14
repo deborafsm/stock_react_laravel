@@ -3,7 +3,6 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .tabela {
@@ -16,6 +15,7 @@
 .tabela td {
   border: 1px solid #ccc;
   padding: 8px;
+  border-radius: 2px;
 }
 
 .tabela th {
@@ -24,38 +24,6 @@
 
 .tabela td {
   text-align: center;
-}
-
-.pagination {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 52px;
-  position: fixed;
-  bottom: 0;
-  left: 54%;
-}
-
-.pagination ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pagination li {
-  margin: 0 5px;
-  cursor: pointer;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  position: static;
-  bottom: 0;
-}
-
-.pagination li.active {
-  background-color: #ccc;
 }
 
 .container-title {
@@ -78,4 +46,5 @@
   border-radius: 5px;
   color: #080808;
   border: 0.3px solid rgb(219, 219, 219);
+  margin-bottom: 6px;
 }
