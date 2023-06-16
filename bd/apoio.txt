@@ -6,3 +6,7 @@ Botão de aviso (Warning): #ffc107
 Botão de informação (Info): #17a2b8
 Botão claro (Light): #f8f9fa
 Botão escuro (Dark): #343a40
+
+
+created_at
+updated_at
