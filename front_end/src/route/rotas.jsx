@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Info from "../pages/Info";
-import WebCamCreate from "../pages/webcam/create";
+import WebCamCreate from "../pages/webcam/WcRead";
 import HeadReadPage from "../pages/head/HeadRead.jsx";
 import Layout from "../layout/Grid/Layout";
 const Rotas = () => (
