@@ -48,7 +48,7 @@ const NewAside = () => {
         >
           <Toolbar
             style={{
-              backgroundColor: "#C1F4C5",
+              backgroundColor: "rgb(102, 102, 105)",
               display: "flex",
               alignItems: "center",
             }}
