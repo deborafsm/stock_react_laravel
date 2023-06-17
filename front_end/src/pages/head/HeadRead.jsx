@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DataTable from "../../components/data-table/DataTableHead";
+import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
 
@@ -57,6 +57,7 @@ function HeadRead() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
+  const columns = ["id", "marca", "modelo", "codigo", "status"];
 
   useEffect(() => {
     fetchData();
@@ -141,6 +142,7 @@ function HeadRead() {
               data={currentItems}
               handleRemove={handleRemove}
               handleEdit={handleEdit}
+              columns={columns}
             />
           </StyledTable>
         </div>
