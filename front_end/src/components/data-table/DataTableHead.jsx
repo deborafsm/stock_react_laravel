@@ -11,7 +11,7 @@ const CenteredCell = styled.td`
   align-items: center;
 `;
 
-function DataTable({ data, handleRemove, handleEdit }) {
+function DataTableHead({ data, handleRemove, handleEdit }) {
   return (
     <tbody>
       {data.map((item) => (
@@ -31,4 +31,4 @@ function DataTable({ data, handleRemove, handleEdit }) {
   );
 }
 
-export default DataTable;
+export default DataTableHead;
