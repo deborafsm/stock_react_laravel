@@ -30,5 +30,12 @@ export const SideData = [
     icon: <MdCamera/>,
     cName: "Home",
   },
+  {
+    id: "5",
+    title: "KeyBoard",
+    path: "/keyboard",
+    icon: <MdCamera/>,
+    cName: "Home",
+  },
   
 ];
