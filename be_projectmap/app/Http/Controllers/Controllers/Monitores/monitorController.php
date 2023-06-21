@@ -19,10 +19,10 @@ class monitorController extends Controller
     function addMonitor(Request $request)
     {
         $monitor = new monitor();
-        $monitor->marca = $request->marca_monitor;
-        $monitor->modelo = $request->modelo_monitor;
-        $monitor->codigo = $request->cod_monitor;
-        $monitor->status = $request->status_monitor;
+        $monitor->marca = $request->marca;
+        $monitor->modelo = $request->modelo;
+        $monitor->codigo = $request->codigo;
+        $monitor->status = $request->status;
 
         $result = $monitor->save();
         if ($result) {
@@ -34,10 +34,10 @@ class monitorController extends Controller
     function updateMonitor(Request $request)
     {
         $monitor = monitor::find($request->id);
-        $monitor->marca = $request->marca_monitor;
-        $monitor->modelo = $request->modelo_monitor;
-        $monitor->codigo = $request->cod_monitor;
-        $monitor->status = $request->status_monitor;
+        $monitor->marca = $request->marca;
+        $monitor->modelo = $request->modelo;
+        $monitor->codigo = $request->codigo;
+        $monitor->status = $request->status;
         $result = $monitor->save();
         if ($result) {
             return ["result" => "o monitor atualizado com sucesso!"];
@@ -55,8 +55,8 @@ class monitorController extends Controller
             return ["result" => "erro ao remover."];
         }
     }
-    function searchMonitor($cod_monitor)
+    function searchMonitor($codigo)
     {
-        return monitor::where("cod_monitor", "like", "%" . $cod_monitor . "%")->get();
+        return monitor::where("codigo", "like", "%" . $codigo . "%")->get();
     }
 }
