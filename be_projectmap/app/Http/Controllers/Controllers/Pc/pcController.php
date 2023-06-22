@@ -45,9 +45,9 @@ class pcController extends Controller
         $pc->status = $request->status;
         $result = $pc->save();
         if ($result) {
-            return ['result' => 'Mouse inserido com sucesso.'];
+            return ['result' => 'PC inserido com sucesso.'];
         } else {
-            return ['result' => 'Não foi possivel salvar mouse.'];
+            return ['result' => 'Não foi possivel salvar PC.'];
         }
     }
     function updatePc(Request $request)
