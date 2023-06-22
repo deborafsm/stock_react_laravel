@@ -1,5 +1,4 @@
-
-import {  MdHome,MdCamera,MdInfo } from "react-icons/md";
+import { MdHome, MdCamera, MdInfo } from "react-icons/md";
 
 export const SideData = [
   {
@@ -20,36 +19,49 @@ export const SideData = [
     id: "3",
     title: "WebCam",
     path: "/webcam-create",
-    icon: <MdCamera/>,
+    icon: <MdCamera />,
     cName: "Home",
   },
   {
     id: "4",
     title: "Heads",
     path: "/heads",
-    icon: <MdCamera/>,
+    icon: <MdCamera />,
     cName: "Home",
   },
   {
     id: "5",
     title: "KeyBoard",
     path: "/keyboard",
-    icon: <MdCamera/>,
+    icon: <MdCamera />,
     cName: "Home",
   },
   {
     id: "6",
     title: "Mouse",
     path: "/mouses",
-    icon: <MdCamera/>,
+    icon: <MdCamera />,
     cName: "Home",
   },
   {
     id: "7",
     title: "Monitor",
     path: "/monitor",
-    icon: <MdCamera/>,
+    icon: <MdCamera />,
     cName: "Home",
   },
-  
+  {
+    id: "8",
+    title: "Pc",
+    path: "/pc",
+    icon: <MdCamera />,
+    cName: "Home",
+  },
+  {
+    id: "9",
+    title: "Operators",
+    path: "/operators",
+    icon: <MdCamera />,
+    cName: "Home",
+  },
 ];
