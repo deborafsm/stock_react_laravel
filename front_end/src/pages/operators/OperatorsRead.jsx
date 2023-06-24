@@ -51,22 +51,30 @@ const StyledTable = styled.table`
     background-color: #f1f2f3;
   }
 `;
-export default function WcRead() {
+export default function OperatorsReads() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const columns = [
-    "codigo",
     "nome",
-    "marca",
-    "modelo",
-    "so",
-    "garantia",
-    "memoria",
-    "processador",
-    "hd",
+    "email",
+    "telefone",
+    "celular",
+    "endereco",
+    "cep",
+    "numero",
+    "complemento",
+    "referencia",
+    "bairro",
+    "cidade",
+    "estado",
+    "setor",
+    "cargo",
     "status",
+    "empresa",
+    "supervisor",
+    "cpf",
   ];
 
   useEffect(() => {
@@ -75,7 +83,7 @@ export default function WcRead() {
 
   async function fetchData() {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/pc");
+      const response = await fetch("http://127.0.0.1:8000/api/operador");
       const jsonData = await response.json();
       setData(jsonData);
     } catch (error) {
@@ -96,7 +104,7 @@ export default function WcRead() {
   }
 
   const filteredData = data.filter((item) =>
-    item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+    item.nome.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -128,7 +136,7 @@ export default function WcRead() {
   return (
     <div>
       <Container>
-        <Title>Computadores</Title>
+        <Title>Operadores</Title>
         <SearchForm>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
           <DownloadButton onClick={handleDownload}>
@@ -140,16 +148,23 @@ export default function WcRead() {
           <StyledTable>
             <thead>
               <tr>
-                <th>codigo</th>
                 <th>nome</th>
-                <th>marca</th>
-                <th>modelo</th>
-                <th>so</th>
-                <th>garantia</th>
-                <th>memoria</th>
-                <th>processador</th>
-                <th>hd</th>
+                <th>email</th>
+                <th>telefone</th>
+                <th>celular</th>
+                <th>endereco</th>
+                <th>cep</th>
+                <th>numero</th>
+                <th>referencia</th>
+                <th>bairro</th>
+                <th>cidade</th>
+                <th>estado</th>
+                <th>setor</th>
+                <th>cargo</th>
                 <th>status</th>
+                <th>empresa</th>
+                <th>supervisor</th>
+                <th>cpf</th>
                 <th>botoes</th>
               </tr>
             </thead>
