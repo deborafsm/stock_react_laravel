@@ -51,7 +51,7 @@ const StyledTable = styled.table`
     background-color: #f1f2f3;
   }
 `;
-export default function WcRead() {
+export default function KeyBoardReader() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
