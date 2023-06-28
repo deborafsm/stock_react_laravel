@@ -10,6 +10,7 @@ import MouseRead from "../pages/mouse/MouseRead";
 import MonitorRead from "../pages/monitors/MonitorRead";
 import PcReader from "../pages/computers/PcReader";
 import OperatorsReader from "../pages/operators/OperatorsRead";
+import HeadCreate from "../pages/head/HeadCreate";
 import Layout from "../layout/Grid/Layout";
 const Rotas = () => (
   <Layout>
@@ -18,6 +19,7 @@ const Rotas = () => (
       <Route path="/info" element={<Info />} />
       <Route path="/webcam-create" element={<WebCamCreate />} />
       <Route path="/heads" element={<HeadReadPage />} />
+      <Route path="/head-create" element={<HeadCreate />} />
       <Route path="/keyboard" element={<KeyBoardRead />} />
       <Route path="/mouses" element={<MouseRead />} />
       <Route path="/monitor" element={<MonitorRead />} />
