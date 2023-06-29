@@ -3,9 +3,10 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Info from "../pages/Info";
-import WebCamCreate from "../pages/webcam/WcRead";
+import WebCamCreate from "../pages/webcam/WcCreate";
 import HeadReadPage from "../pages/head/HeadRead.jsx";
 import KeyBoardRead from "../pages/keyboard/KeyBoardRead";
+import KeyBoardCreate from "../pages/keyboard/KeyBoardCreate";
 import MouseRead from "../pages/mouse/MouseRead";
 import MonitorRead from "../pages/monitors/MonitorRead";
 import PcReader from "../pages/computers/PcReader";
@@ -21,6 +22,7 @@ const Rotas = () => (
       <Route path="/heads" element={<HeadReadPage />} />
       <Route path="/head-create" element={<HeadCreate />} />
       <Route path="/keyboard" element={<KeyBoardRead />} />
+      <Route path="/keyboard-create" element={<KeyBoardCreate />} />
       <Route path="/mouses" element={<MouseRead />} />
       <Route path="/monitor" element={<MonitorRead />} />
       <Route path="/pc" element={<PcReader />} />
