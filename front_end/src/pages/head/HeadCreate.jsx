@@ -8,7 +8,7 @@ const fields = [
   { name: "status", label: "Status", type: "text" },
 ];
 const handleCreate = (formData) => {
-  fetch("http://127.0.0.1:8000/api/headAdd", {
+  fetch("http://127.0.0.1:8000/api/webcamAdd", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
