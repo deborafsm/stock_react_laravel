@@ -26,9 +26,9 @@ class monitorController extends Controller
 
         $result = $monitor->save();
         if ($result) {
-            return ["result" => "o monitor inserido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao salvar."];
+            return ["result" => "error"];
         }
     }
     function updateMonitor(Request $request)
@@ -37,12 +37,12 @@ class monitorController extends Controller
         $monitor->marca = $request->marca;
         $monitor->modelo = $request->modelo;
         $monitor->codigo = $request->codigo;
-        $monitor->status = $request->status;
+        $monitor->status = $request->status ?? 1;
         $result = $monitor->save();
         if ($result) {
-            return ["result" => "o monitor atualizado com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao atualizar."];
+            return ["result" => "error"];
         }
     }
     function delMonitor(Request $request)
@@ -50,9 +50,9 @@ class monitorController extends Controller
         $monitor = monitor::find($request->id);
         $result = $monitor->delete();
         if ($result) {
-            return ["result" => "o monitor removido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao remover."];
+            return ["result" => "error"];
         }
     }
     function searchMonitor($codigo)
