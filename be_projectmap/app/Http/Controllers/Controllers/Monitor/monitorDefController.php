@@ -26,9 +26,9 @@ class monitorDefController extends Controller
         $monitorDefModel = monitorDefModel::find($req->id);
         $result = $monitorDefModel->delete();
         if ($result) {
-            return ["result" => "Removido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "Não foi possivel remover."];
+            return ["result" => "error"];
         }
     }
     function addMonitorDefModel(Request $request)
@@ -45,9 +45,9 @@ class monitorDefController extends Controller
 
         $result = $monitorDefModel->save();
         if ($result) {
-            return ['result' => 'Inserido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi salvar.'];
+            return ["result" => "error"];
         }
     }
     function upMonitorDefModel(Request $request)
@@ -63,9 +63,9 @@ class monitorDefController extends Controller
         $monitorDefModel->empresa_resp = $request->empresa_resp;
         $result = $monitorDefModel->save();
         if ($result) {
-            return ["result" => "o monitor atualizado com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao atualizar."];
+            return ["result" => "error"];
         }
     }
 }
