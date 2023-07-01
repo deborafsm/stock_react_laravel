@@ -120,6 +120,9 @@ export default function KeyBoardReader() {
         <Title>WebCam</Title>
         <SearchForm>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+          <button>
+            <a href="/keyboard-create">Create</a>
+          </button>
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
           </DownloadButton>
