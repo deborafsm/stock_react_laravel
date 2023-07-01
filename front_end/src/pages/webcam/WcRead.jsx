@@ -119,6 +119,9 @@ export default function WcRead() {
       <Container>
         <Title>WebCam</Title>
         <SearchForm>
+        <button>
+            <a href="/webcam-create">Create</a>
+          </button>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
