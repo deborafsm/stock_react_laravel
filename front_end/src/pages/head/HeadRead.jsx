@@ -121,6 +121,9 @@ function HeadRead() {
         <Title>Head</Title>
         <SearchForm>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+          <button>
+            <a href="/head-create">Create</a>
+          </button>
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
           </DownloadButton>
