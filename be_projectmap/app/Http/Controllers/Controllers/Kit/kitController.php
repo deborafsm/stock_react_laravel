@@ -28,9 +28,9 @@ class kitController extends Controller
         $kitModel = kitModel::find($request->id);
         $result = $kitModel->delete();
         if ($result) {
-            return ["result" => "Removido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "Não foi possivel remover!"];
+            return ["result" => "error"];
         }
     }
     function addkit(Request $request)
@@ -52,9 +52,9 @@ class kitController extends Controller
         $kitModel->head = $request->head;
         $result = $kitModel->save();
         if ($result) {
-            return ['result' => 'Inserido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi salvar.'];
+            return ["result" => "error"];
         }
     }
     function kitUpdate(Request $request)
@@ -77,9 +77,9 @@ class kitController extends Controller
         $kitModel->save();
         // $kitModel->notify(new KitObserver($kitModel));
         if ($kitModel) {
-            return ['result' => 'Atualizado com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi salvar.'];
+            return ["result" => "error"];
         }
     }
 }
