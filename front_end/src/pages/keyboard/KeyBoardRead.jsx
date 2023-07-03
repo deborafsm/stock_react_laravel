@@ -58,6 +58,9 @@ export default function KeyBoardReader() {
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
 
+  
+
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -117,7 +120,7 @@ export default function KeyBoardReader() {
   return (
     <div>
       <Container>
-        <Title>WebCam</Title>
+        <Title>Teclado</Title>
         <SearchForm>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
           <button>
