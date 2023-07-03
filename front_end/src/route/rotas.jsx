@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Info from "../pages/Info";
 import WebCamCreate from "../pages/webcam/WcCreate";
+import WebCam from "../pages/webcam/WcRead"
 import HeadReadPage from "../pages/head/HeadRead.jsx";
 import KeyBoardRead from "../pages/keyboard/KeyBoardRead";
 import KeyBoardCreate from "../pages/keyboard/KeyBoardCreate";
@@ -19,6 +20,7 @@ const Rotas = () => (
       <Route path="/home" element={<Home />} />
       <Route path="/info" element={<Info />} />
       <Route path="/webcam-create" element={<WebCamCreate />} />
+      <Route path="/webcam" element={<WebCam />} />
       <Route path="/heads" element={<HeadReadPage />} />
       <Route path="/head-create" element={<HeadCreate />} />
       <Route path="/keyboard" element={<KeyBoardRead />} />
