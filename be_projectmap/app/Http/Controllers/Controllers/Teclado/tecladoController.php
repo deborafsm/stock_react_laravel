@@ -22,12 +22,12 @@ class tecladoController extends Controller
         $teclado->marca = $request->marca;
         $teclado->modelo = $request->modelo;
         $teclado->codigo = $request->codigo;
-        $teclado->status = $request->status;
+        $teclado->status = $request->status ?? 1;
         $result = $teclado->save();
         if ($result) {
-            return ["result" => "o teclado inserido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao salvar."];
+            return ["result" => "error"];
         }
     }
     function tecladoUpdate(Request $request)
@@ -39,9 +39,9 @@ class tecladoController extends Controller
         $teclado->status = $request->status;
         $result = $teclado->save();
         if ($result) {
-            return ["result" => "o teclado atualizado com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao atualizar."];
+            return ["result" => "error"];
         }
     }
     function tecladoDel(Request $request)
@@ -49,9 +49,9 @@ class tecladoController extends Controller
         $teclado = teclado::find($request->id);
         $result = $teclado->delete();
         if ($result) {
-            return ["result" => "o teclado removido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao remover."];
+            return ["result" => "error"];
         }
     }
     function searchTeclado($teclado_marca)
