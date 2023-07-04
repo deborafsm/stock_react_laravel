@@ -26,12 +26,12 @@ class mouseController extends Controller
         $mouse->marca = $request->marca;
         $mouse->modelo = $request->modelo;
         $mouse->codigo = $request->codigo;
-        $mouse->status = $request->status;
+        $mouse->status = $request->status ?? 1;
         $result = $mouse->save();
         if ($result) {
-            return ['result' => 'Mouse inserido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel salvar mouse.'];
+            return ["result" => "error"];
         }
     }
     function updateMouse(Request $request)
@@ -43,9 +43,9 @@ class mouseController extends Controller
         $mouse->status = $request->status;
         $result = $mouse->save();
         if ($result) {
-            return ['result' => 'Mouse atualizado com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel atualizar.'];
+            return ["result" => "error"];
         }
     }
 
@@ -54,9 +54,9 @@ class mouseController extends Controller
         $mouse = mouse::find($request->id);
         $result = $mouse->delete();
         if ($result) {
-            return ['result' => 'Removido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel remover.'];
+            return ["result" => "error"];
         }
     }
 }
