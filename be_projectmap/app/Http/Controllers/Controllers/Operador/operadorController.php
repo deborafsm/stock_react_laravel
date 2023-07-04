@@ -26,9 +26,9 @@ class operadorController extends Controller
         $operador = operador::find($req->id);
         $result = $operador->delete();
         if ($result) {
-            return ["result" => "Removido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "Não foi possivel remover."];
+            return ["result" => "error"];
         }
     }
     function addOperador(Request $request)
@@ -48,15 +48,15 @@ class operadorController extends Controller
         $operador->estado = $request->estado;
         $operador->setor = $request->setor;
         $operador->cargo = $request->cargo;
-        $operador->status = $request->status;
+        $operador->status = $request->status ?? 1;
         $operador->empresa = $request->empresa;
         $operador->supervisor = $request->supervisor;
         $operador->cpf = $request->cpf;
         $result = $operador->save();
         if ($result) {
-            return ['result' => 'Operador inserido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi salvar.'];
+            return ["result" => "error"];
         }
     }
     function updatePc(Request $request)
@@ -82,9 +82,9 @@ class operadorController extends Controller
         $operador->cpf = $request->cpf;
         $result = $operador->save();
         if ($result) {
-            return ['result' => 'Operador atualizado com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel atualizar.'];
+            return ["result" => "error"];
         }
     }
 }
