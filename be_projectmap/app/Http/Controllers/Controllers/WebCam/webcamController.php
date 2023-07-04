@@ -30,9 +30,9 @@ class webcamController extends Controller
         $webcam->status = $request->status;
         $result = $webcam->save();
         if ($result) {
-            return ['result' => 'webcam adicionado com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel salvar.'];
+            return ["result" => "error"];
         }
     }
     function updateWebCam(Request $request)
@@ -44,9 +44,9 @@ class webcamController extends Controller
         $webcam->status = $request->status;
         $result = $webcam->save();
         if ($result) {
-            return ['result' => 'webcam atualizado com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel atualizar.'];
+            return ["result" => "error"];
         }
     }
     function delWebCam(Request $request)
@@ -54,9 +54,9 @@ class webcamController extends Controller
         $webcam = webcam::find($request->id);
         $result = $webcam->delete();
         if ($result) {
-            return ['result' => 'Removido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel remover.'];
+            return ["result" => "error"];
         }
     }
 }
