@@ -25,9 +25,9 @@ class pcController extends Controller
         $pc = pc::find($request->id);
         $result = $pc->delete();
         if ($result) {
-            return ['result' => 'Removido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel remover.'];
+            return ["result" => "error"];
         }
     }
     function addPc(Request $request)
@@ -45,9 +45,9 @@ class pcController extends Controller
         $pc->status = $request->status;
         $result = $pc->save();
         if ($result) {
-            return ['result' => 'PC inserido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel salvar PC.'];
+            return ["result" => "error"];
         }
     }
     function updatePc(Request $request)
@@ -62,12 +62,12 @@ class pcController extends Controller
         $pc->memoria = $request->memoria;
         $pc->processador = $request->processador;
         $pc->hd = $request->hd;
-        $pc->status = $request->status;
+        $pc->status = $request->status ?? 1;
         $result = $pc->save();
         if ($result) {
-            return ['result' => 'Pc atualizado com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi possivel atualizar.'];
+            return ["result" => "error"];
         }
     }
 }
