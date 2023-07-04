@@ -25,9 +25,9 @@ class pcDefController extends Controller
         $pcDef = pcDefModel::find($request->id);
         $result = $pcDef->delete();
         if ($result) {
-            return ["result" => "Removido com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "Não foi possivel remover!"];
+            return ["result" => "error"];
         }
     }
     function addDefPc(Request $request)
@@ -43,9 +43,9 @@ class pcDefController extends Controller
         $pcDefModel->empresa_resp = $request->empresa_resp;
         $result = $pcDefModel->save();
         if ($result) {
-            return ['result' => 'Inserido com sucesso.'];
+            return ["result" => "success"];
         } else {
-            return ['result' => 'Não foi salvar.'];
+            return ["result" => "error"];
         }
     }
 
@@ -62,9 +62,9 @@ class pcDefController extends Controller
         $pcDefModel->empresa_resp = $request->empresa_resp;
         $result = $pcDefModel->save();
         if ($result) {
-            return ["result" => "Atualizado com sucesso!"];
+            return ["result" => "success"];
         } else {
-            return ["result" => "erro ao atualizar."];
+            return ["result" => "error"];
         }
     }
 }
