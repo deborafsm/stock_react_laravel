@@ -120,6 +120,9 @@ export default function WcRead() {
         <Title>Mouse</Title>
         <SearchForm>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+          <button>
+            <a href="/mouse-create">Create</a>
+          </button>
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
           </DownloadButton>
