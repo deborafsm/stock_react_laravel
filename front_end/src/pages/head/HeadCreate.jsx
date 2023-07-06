@@ -1,12 +1,14 @@
 import React from "react";
-import Create from "../../components/create-component/index";
 
+import Create from "../../components/create-component/index";
+export let setNotification;
 const fields = [
   { name: "marca", label: "Marca", type: "text" },
   { name: "modelo", label: "Modelo", type: "text" },
   { name: "codigo", label: "Código", type: "text" },
-  { name: "status", label: "Status", type: "text" },
+
 ];
+
 const handleCreate = (formData) => {
   fetch("http://127.0.0.1:8000/api/webcamAdd", {
     method: "POST",
