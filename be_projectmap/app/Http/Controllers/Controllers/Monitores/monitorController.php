@@ -22,7 +22,7 @@ class monitorController extends Controller
         $monitor->marca = $request->marca;
         $monitor->modelo = $request->modelo;
         $monitor->codigo = $request->codigo;
-        $monitor->status = $request->status;
+        $monitor->status = $request->status ?? 1;
 
         $result = $monitor->save();
         if ($result) {
