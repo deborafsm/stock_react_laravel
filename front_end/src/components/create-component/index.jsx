@@ -55,7 +55,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-function Create({ fields, onCreate, notification }) {
+function Create({ fields, onCreate, notification, title }) {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e, fieldName) => {
@@ -72,7 +72,7 @@ function Create({ fields, onCreate, notification }) {
 
   return (
     <FormContainer>
-      <FormTitle>Formulário Teclado</FormTitle>
+      <FormTitle>{title}</FormTitle>
       <form onSubmit={handleSubmit}>
         {fields.map((field) => (
           <FormGroup>
