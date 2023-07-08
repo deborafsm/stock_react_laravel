@@ -27,7 +27,7 @@ class webcamController extends Controller
         $webcam->marca = $request->marca;
         $webcam->modelo = $request->modelo;
         $webcam->codigo = $request->codigo;
-        $webcam->status = $request->status;
+        $webcam->status = $request->status ?? 1;
         $result = $webcam->save();
         if ($result) {
             return ["result" => "success"];
@@ -41,7 +41,7 @@ class webcamController extends Controller
         $webcam->marca = $request->marca;
         $webcam->modelo = $request->modelo;
         $webcam->codigo = $request->codigo;
-        $webcam->status = $request->status;
+        $webcam->status = $request->status ?? 1;
         $result = $webcam->save();
         if ($result) {
             return ["result" => "success"];
