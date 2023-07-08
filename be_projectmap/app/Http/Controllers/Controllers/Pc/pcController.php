@@ -42,7 +42,7 @@ class pcController extends Controller
         $pc->memoria = $request->memoria;
         $pc->processador = $request->processador;
         $pc->hd = $request->hd;
-        $pc->status = $request->status;
+        $pc->status = $request->status ?? 1;
         $result = $pc->save();
         if ($result) {
             return ["result" => "success"];
