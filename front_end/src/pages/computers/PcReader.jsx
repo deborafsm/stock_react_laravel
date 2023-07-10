@@ -95,9 +95,11 @@ export default function PcReader() {
     setSearchTerm(e.target.value);
   }
 
-  const filteredData = data.filter((item) =>
-    item.marca.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredData = data
+    .filter((item) =>
+      item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .reverse();
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -131,6 +133,9 @@ export default function PcReader() {
         <Title>Computadores</Title>
         <SearchForm>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+          <button>
+            <a href="/pc-create">Create</a>
+          </button>
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
           </DownloadButton>
