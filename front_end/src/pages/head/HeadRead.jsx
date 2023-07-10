@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
-
+import Modal from "react-modal";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -58,6 +58,7 @@ function HeadRead() {
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     fetchData();
@@ -85,10 +86,11 @@ function HeadRead() {
     setSearchTerm(e.target.value);
   }
 
-  const filteredData = data.filter((item) =>
-    item.marca.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+  const filteredData = data
+    .filter((item) =>
+      item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .reverse();
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
