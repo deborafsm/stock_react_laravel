@@ -9,8 +9,11 @@ import HeadReadPage from "../pages/head/HeadRead.jsx";
 import KeyBoardRead from "../pages/keyboard/KeyBoardRead";
 import KeyBoardCreate from "../pages/keyboard/KeyBoardCreate";
 import MouseRead from "../pages/mouse/MouseRead";
+import MouseCreate from "../pages/mouse/MouseCreate";
 import MonitorRead from "../pages/monitors/MonitorRead";
+import MonitorCreate from "../pages/monitors/MonitorCreate";
 import PcReader from "../pages/computers/PcReader";
+import PcCreate from "../pages/computers/PcCreate";
 import OperatorsReader from "../pages/operators/OperatorsRead";
 import HeadCreate from "../pages/head/HeadCreate";
 import Layout from "../layout/Grid/Layout";
@@ -26,8 +29,11 @@ const Rotas = () => (
       <Route path="/keyboard" element={<KeyBoardRead />} />
       <Route path="/keyboard-create" element={<KeyBoardCreate />} />
       <Route path="/mouses" element={<MouseRead />} />
+      <Route path="/mouse-create" element={<MouseCreate />} />
       <Route path="/monitor" element={<MonitorRead />} />
+      <Route path="/monitor-create" element={<MonitorCreate />} />
       <Route path="/pc" element={<PcReader />} />
+      <Route path="/pc-create" element={<PcCreate />} />
       <Route path="/operators" element={<OperatorsReader />} />
     </Routes>
   </Layout>
