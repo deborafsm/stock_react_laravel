@@ -3,7 +3,7 @@ import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
 import styled from "styled-components";
-
+import FilteredData from "../../components/filter-componente-reverse/filter";
 const Container = styled.div`
   margin-bottom: 1rem;
 `;
@@ -84,9 +84,11 @@ export default function MonitorRead() {
     setSearchTerm(e.target.value);
   }
 
-  const filteredData = data.filter((item) =>
-    item.marca.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredData = data
+    .filter((item) =>
+      item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .reverse();
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -120,6 +122,9 @@ export default function MonitorRead() {
         <Title>Monitor</Title>
         <SearchForm>
           <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+          <button>
+            <a href="/monitor-create">Create</a>
+          </button>
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
           </DownloadButton>
