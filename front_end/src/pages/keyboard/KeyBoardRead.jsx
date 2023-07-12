@@ -58,9 +58,6 @@ export default function KeyBoardReader() {
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
 
-  
-
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -87,10 +84,11 @@ export default function KeyBoardReader() {
     setSearchTerm(e.target.value);
   }
 
-  const filteredData = data.filter((item) =>
-    item.marca.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+  const filteredData = data
+    .filter((item) =>
+      item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .reverse();
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
