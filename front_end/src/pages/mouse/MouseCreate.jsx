@@ -42,6 +42,7 @@ export default function KeyBoardCreate() {
     <div>
       {" "}
       <Create
+        title={"Mouse"}
         fields={fields}
         onCreate={handleCreate}
         notification={notification}
