@@ -84,9 +84,11 @@ export default function WcRead() {
     setSearchTerm(e.target.value);
   }
 
-  const filteredData = data.filter((item) =>
-    item.marca.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredData = data
+    .filter((item) =>
+      item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .reverse();
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -119,10 +121,10 @@ export default function WcRead() {
       <Container>
         <Title>WebCam</Title>
         <SearchForm>
-        <button>
+          <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+          <button>
             <a href="/webcam-create">Create</a>
           </button>
-          <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
           </DownloadButton>
