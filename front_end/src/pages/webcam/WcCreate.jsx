@@ -9,7 +9,7 @@ export default function WcCreate() {
     { name: "codigo", label: "Código", type: "text" },
   ];
   const handleCreate = (formData) => {
-    fetch("http://127.0.0.1:8000/api/tecladoAdd", {
+    fetch("http://127.0.0.1:8000/api/webcamAdd", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,23 +18,34 @@ export default function WcCreate() {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Verifica se a resposta foi bem-sucedida
         if (data.result === "success") {
-          setNotification("Item criado com sucesso!");
+          setNotification({
+            message: "Item criado com sucesso!",
+            backgroundColor: "#28a745",
+          });
         } else {
-          setNotification("Erro ao criar item.");
+          setNotification({
+            message: "Erro ao criar item.",
+            backgroundColor: "#dc3545",
+          });
         }
       })
       .catch((error) => {
         console.error("Erro ao criar item:", error);
-        setNotification(
-          "Erro ao criar item. Por favor, tente novamente mais tarde."
-        );
+        setNotification({
+          message: "Erro ao criar item. Por favor, tente novamente mais tarde.",
+          backgroundColor: "#dc3545",
+        });
       });
   };
   return (
     <div>
-      <Create fields={fields} onCreate={handleCreate} />
+      <Create
+        title={"WebCam"}
+        fields={fields}
+        onCreate={handleCreate}
+        notification={notification}
+      />
     </div>
   );
 }
