@@ -15,7 +15,6 @@ class headController extends Controller
     }
     function getHeadById($id_head = null)
     {
-
         return  $id_head ? heads::find($id_head) : heads::all();
     }
     function addHead(Request $request)
