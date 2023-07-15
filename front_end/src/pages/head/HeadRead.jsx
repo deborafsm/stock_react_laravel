@@ -52,7 +52,15 @@ const StyledTable = styled.table`
     background-color: #f1f2f3;
   }
 `;
+const Notification = styled.div`
+  margin-top: 10px;
+  padding: 10px;
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  color: #fff;
+  border-radius: 4px;
+`;
 function HeadRead() {
+  const [notification, setNotification] = useState(null);
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
@@ -79,7 +87,47 @@ function HeadRead() {
   }
 
   function handleRemove(id) {
-    console.log("Remover item:", id);
+    fetch(`http://127.0.0.1:8000/api/headDel/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result === "success") {
+          console.log("Item removido com sucesso!");
+          // Atualize o estado 'data' com os dados atualizados, excluindo o item removido
+          setData((prevData) => prevData.filter((item) => item.id !== id));
+          // Exiba a notificação de sucesso
+          setNotification({
+            message: "Item removido com sucesso!",
+            backgroundColor: "#28a745",
+          });
+          setTimeout(() => {
+            setNotification(null);
+          }, 1000);
+        } else {
+          console.log("Erro ao remover item.");
+          // Exiba a notificação de erro
+          setNotification({
+            message: "Erro ao remover item.",
+            backgroundColor: "#dc3545",
+          });
+          setTimeout(() => {
+            setNotification(null);
+          }, 1000);
+        }
+      })
+      .catch((error) => {
+        console.error("Erro ao remover item:", error);
+        // Exiba a notificação de erro
+        setNotification({
+          message:
+            "Erro ao remover item. Por favor, tente novamente mais tarde.",
+          backgroundColor: "#dc3545",
+        });
+      });
   }
 
   function handleSearch(e) {
@@ -126,6 +174,7 @@ function HeadRead() {
           <button>
             <a href="/head-create">Create</a>
           </button>
+
           <DownloadButton onClick={handleDownload}>
             Baixar Relatório
           </DownloadButton>
@@ -157,6 +206,11 @@ function HeadRead() {
           currentPage={currentPage}
           paginate={paginate}
         />
+        {notification && (
+          <Notification backgroundColor={notification.backgroundColor}>
+            {notification.message}
+          </Notification>
+        )}
       </Container>
     </div>
   );
