@@ -20,7 +20,7 @@ const StyledButton = styled.button`
 
 function Remove() {
   return (
-    <StyledButton>
+    <StyledButton >
       <BsFillTrashFill />
     </StyledButton>
   );
