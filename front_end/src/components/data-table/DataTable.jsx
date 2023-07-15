@@ -1,12 +1,46 @@
 import React from "react";
-import Edit from "../button/remove/remove";
-import Remove from "../button/edit/edit";
+import StyledButton from "../button/remove/remove";
+import EDIT from "../button/edit/edit";
 import styled from "styled-components";
-
+import { BsFillTrashFill, BsFillPenFill } from "react-icons/bs";
 const CenteredCell = styled.td`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+const ButtonRemove = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #dc3545;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+const ButtonEdit = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ddd;
+  }
 `;
 
 function DataTable({ data, handleRemove, handleEdit, columns }) {
@@ -18,8 +52,12 @@ function DataTable({ data, handleRemove, handleEdit, columns }) {
             <td key={column}>{item[column]}</td>
           ))}
           <CenteredCell>
-            <Remove onClick={() => handleRemove(item.id)}></Remove>
-            <Edit onClick={() => handleEdit(item.id)}></Edit>
+            <ButtonRemove onClick={() => handleRemove(item.id)}>
+              <BsFillTrashFill />
+            </ButtonRemove>
+            <ButtonEdit onClick={() => handleEdit(item.id)}>
+              <BsFillPenFill />
+            </ButtonEdit>
           </CenteredCell>
         </tr>
       ))}
