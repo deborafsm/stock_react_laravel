@@ -87,47 +87,52 @@ function HeadRead() {
   }
 
   function handleRemove(id) {
-    fetch(`http://127.0.0.1:8000/api/headDel/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.result === "success") {
-          console.log("Item removido com sucesso!");
-          // Atualize o estado 'data' com os dados atualizados, excluindo o item removido
-          setData((prevData) => prevData.filter((item) => item.id !== id));
-          // Exiba a notificação de sucesso
-          setNotification({
-            message: "Item removido com sucesso!",
-            backgroundColor: "#28a745",
-          });
-          setTimeout(() => {
-            setNotification(null);
-          }, 1000);
-        } else {
-          console.log("Erro ao remover item.");
+    const confirmDelete = window.confirm(
+      "Tem certeza de que deseja remover este item?"
+    );
+    if (confirmDelete) {
+      fetch(`http://127.0.0.1:8000/api/headDel/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.result === "success") {
+            console.log("Item removido com sucesso!");
+            // Atualize o estado 'data' com os dados atualizados, excluindo o item removido
+            setData((prevData) => prevData.filter((item) => item.id !== id));
+            // Exiba a notificação de sucesso
+            setNotification({
+              message: "Item removido com sucesso!",
+              backgroundColor: "#28a745",
+            });
+            setTimeout(() => {
+              setNotification(null);
+            }, 1000);
+          } else {
+            console.log("Erro ao remover item.");
+            // Exiba a notificação de erro
+            setNotification({
+              message: "Erro ao remover item.",
+              backgroundColor: "#dc3545",
+            });
+            setTimeout(() => {
+              setNotification(null);
+            }, 1000);
+          }
+        })
+        .catch((error) => {
+          console.error("Erro ao remover item:", error);
           // Exiba a notificação de erro
           setNotification({
-            message: "Erro ao remover item.",
+            message:
+              "Erro ao remover item. Por favor, tente novamente mais tarde.",
             backgroundColor: "#dc3545",
           });
-          setTimeout(() => {
-            setNotification(null);
-          }, 1000);
-        }
-      })
-      .catch((error) => {
-        console.error("Erro ao remover item:", error);
-        // Exiba a notificação de erro
-        setNotification({
-          message:
-            "Erro ao remover item. Por favor, tente novamente mais tarde.",
-          backgroundColor: "#dc3545",
         });
-      });
+    }
   }
 
   function handleSearch(e) {
