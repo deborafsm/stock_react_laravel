@@ -51,17 +51,71 @@ const StyledTable = styled.table`
     background-color: #f1f2f3;
   }
 `;
+const Notification = styled.div`
+  margin-top: 10px;
+  padding: 10px;
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  color: #fff;
+  border-radius: 4px;
+`;
 export default function WcRead() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
-
+  const [notification, setNotification] = useState(null);
   useEffect(() => {
     fetchData();
   }, []);
-
+  function handleRemove(id) {
+    const confirmDelete = window.confirm(
+      "Tem certeza de que deseja remover este item?"
+    );
+    if (confirmDelete) {
+      fetch(`http://127.0.0.1:8000/api/webcamDel/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.result === "success") {
+            console.log("Item removido com sucesso!");
+            // Atualize o estado 'data' com os dados atualizados, excluindo o item removido
+            setData((prevData) => prevData.filter((item) => item.id !== id));
+            // Exiba a notificação de sucesso
+            setNotification({
+              message: "Item removido com sucesso!",
+              backgroundColor: "#28a745",
+            });
+            setTimeout(() => {
+              setNotification(null);
+            }, 1000);
+          } else {
+            console.log("Erro ao remover item.");
+            // Exiba a notificação de erro
+            setNotification({
+              message: "Erro ao remover item.",
+              backgroundColor: "#dc3545",
+            });
+            setTimeout(() => {
+              setNotification(null);
+            }, 1000);
+          }
+        })
+        .catch((error) => {
+          console.error("Erro ao remover item:", error);
+          // Exiba a notificação de erro
+          setNotification({
+            message:
+              "Erro ao remover item. Por favor, tente novamente mais tarde.",
+            backgroundColor: "#dc3545",
+          });
+        });
+    }
+  }
   async function fetchData() {
     try {
       const response = await fetch("http://127.0.0.1:8000/api/webcam");
@@ -74,10 +128,6 @@ export default function WcRead() {
 
   function handleEdit(id) {
     console.log("Editar item:", id);
-  }
-
-  function handleRemove(id) {
-    console.log("Remover item:", id);
   }
 
   function handleSearch(e) {
@@ -156,6 +206,11 @@ export default function WcRead() {
           currentPage={currentPage}
           paginate={paginate}
         />
+        {notification && (
+          <Notification backgroundColor={notification.backgroundColor}>
+            {notification.message}
+          </Notification>
+        )}
       </Container>
     </div>
   );
