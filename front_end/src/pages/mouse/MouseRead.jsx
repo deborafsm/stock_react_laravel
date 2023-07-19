@@ -51,12 +51,22 @@ const StyledTable = styled.table`
     background-color: #f1f2f3;
   }
 `;
-export default function WcRead() {
+
+const Notification = styled.div`
+  margin-top: 10px;
+  padding: 10px;
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  color: #fff;
+  border-radius: 4px;
+`;
+
+const WcRead = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
+  const [notification, setNotification] = useState(null);
 
   useEffect(() => {
     fetchData();
@@ -77,7 +87,46 @@ export default function WcRead() {
   }
 
   function handleRemove(id) {
-    console.log("Remover item:", id);
+    const confirmDelete = window.confirm("Tem certeza de que deseja remover este item?");
+    if (confirmDelete) {
+      fetch(`http://127.0.0.1:8000/api/mouseDel/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.result === "success") {
+            console.log("Item removido com sucesso!");
+            setData((prevData) => prevData.filter((item) => item.id !== id));
+            setNotification({
+              message: "Item removido com sucesso!",
+              backgroundColor: "#28a745",
+            });
+            setTimeout(() => {
+              setNotification(null);
+            }, 1000);
+          } else {
+            console.log("Erro ao remover item.");
+            setNotification({
+              message: "Erro ao remover item.",
+              backgroundColor: "#dc3545",
+            });
+            setTimeout(() => {
+              setNotification(null);
+            }, 1000);
+          }
+        })
+        .catch((error) => {
+          console.error("Erro ao remover item:", error);
+          setNotification({
+            message:
+              "Erro ao remover item. Por favor, tente novamente mais tarde.",
+            backgroundColor: "#dc3545",
+          });
+        });
+    }
   }
 
   function handleSearch(e) {
@@ -99,7 +148,6 @@ export default function WcRead() {
   }
 
   const handleDownload = () => {
-    // Exemplo simples: crie um arquivo CSV com os dados da tabela
     const csvContent =
       "data:text/csv;charset=utf-8," +
       data
@@ -157,6 +205,13 @@ export default function WcRead() {
           paginate={paginate}
         />
       </Container>
+      {notification && (
+        <Notification backgroundColor={notification.backgroundColor}>
+          {notification.message}
+        </Notification>
+      )}
     </div>
   );
-}
+};
+
+export default WcRead;
