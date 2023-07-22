@@ -4,7 +4,7 @@ import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
 import Modal from "react-modal";
 import styled from "styled-components";
-
+import { useParams, useHistory } from "react-router-dom";
 const Container = styled.div`
   margin-bottom: 1rem;
 `;
@@ -67,6 +67,7 @@ function HeadRead() {
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     fetchData();
@@ -81,10 +82,12 @@ function HeadRead() {
       console.error("Erro ao buscar os dados:", error);
     }
   }
-
-  function handleEdit(id) {
+  const handleEdit = (id) => {
     console.log("Editar item:", id);
-  }
+    // Redirecionar para a página de edição com o ID do item como parâmetro na URL
+    history.push(`/editar_head/${id}`);
+  };
+  
 
   function handleRemove(id) {
     const confirmDelete = window.confirm(
