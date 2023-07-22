@@ -16,6 +16,7 @@ import PcReader from "../pages/computers/PcReader";
 import PcCreate from "../pages/computers/PcCreate";
 import OperatorsReader from "../pages/operators/OperatorsRead";
 import HeadCreate from "../pages/head/HeadCreate";
+import HeadEdit from "../pages/head/HeadEdit.jsx";
 import Layout from "../layout/Grid/Layout";
 const Rotas = () => (
   <Layout>
@@ -35,7 +36,7 @@ const Rotas = () => (
       <Route path="/pc" element={<PcReader />} />
       <Route path="/pc-create" element={<PcCreate />} />
       <Route path="/operators" element={<OperatorsReader />} />
-    </Routes>
+      <Route path="/editar_head/:id" element={<HeadEdit />} />    </Routes>
   </Layout>
 );
 
