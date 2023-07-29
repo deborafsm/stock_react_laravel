@@ -87,7 +87,6 @@ function HeadRead() {
     // Redirecionar para a página de edição com o ID do item como parâmetro na URL
     history.push(`/editar_head/${id}`);
   };
-  
 
   function handleRemove(id) {
     const confirmDelete = window.confirm(
