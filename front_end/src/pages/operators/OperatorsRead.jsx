@@ -59,22 +59,12 @@ export default function OperatorsReads() {
   const columns = [
     "nome",
     "email",
-    "telefone",
-    "celular",
-    "endereco",
-    "cep",
-    "numero",
-    "complemento",
-    "referencia",
-    "bairro",
-    "cidade",
-    "estado",
     "setor",
     "cargo",
     "status",
     "empresa",
     "supervisor",
-    "cpf",
+    
   ];
 
   useEffect(() => {
@@ -105,10 +95,9 @@ export default function OperatorsReads() {
 
   const filteredData = data
     .filter((item) =>
-      item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+      item.nome.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .reverse();
-
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
@@ -152,21 +141,11 @@ export default function OperatorsReads() {
               <tr>
                 <th>nome</th>
                 <th>email</th>
-                <th>telefone</th>
-                <th>celular</th>
-                <th>endereco</th>
-                <th>cep</th>
-                <th>numero</th>
-                <th>referencia</th>
-                <th>bairro</th>
-                <th>cidade</th>
-                <th>estado</th>
                 <th>setor</th>
                 <th>cargo</th>
                 <th>status</th>
                 <th>empresa</th>
                 <th>supervisor</th>
-                <th>cpf</th>
                 <th>botoes</th>
               </tr>
             </thead>
