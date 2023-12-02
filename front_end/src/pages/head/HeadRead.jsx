@@ -75,7 +75,7 @@ function HeadRead() {
 
   async function fetchData() {
     try {
-      const response = await fetch("http://192.168.0.4:3306/api/head");
+      const response = await fetch("http://127.0.0.1:8000/api/head");
       const jsonData = await response.json();
       setData(jsonData);
     } catch (error) {
