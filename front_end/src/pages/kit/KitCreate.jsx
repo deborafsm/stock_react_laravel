@@ -174,7 +174,7 @@ export default function KitCreate() {
             />
           </Label>
           <Label>
-            VGA:
+            Quant VGA:
             <Input
               type="text"
               valor={formData["qnt_vga"] || ""}
@@ -182,7 +182,7 @@ export default function KitCreate() {
             />
           </Label>
           <Label>
-            Data:
+            Quant Energia:
             <Input
               type="text"
               valor={formData["qnt_e"] || ""}
@@ -190,32 +190,72 @@ export default function KitCreate() {
             />
           </Label>
           <Label>
-            Data:
+            Quant Rede:
             <Input
               type="text"
-              valor={formData["data_kit"] || ""}
-              onChange={(e) => handleChange(e, formData.data_kit.nome)}
+              valor={formData["rede"] || ""}
+              onChange={(e) => handleChange(e, formData.rede.nome)}
             />
           </Label>
           <Label>
-            Data:
+            Quant Lacre:
             <Input
-              type="date"
-              valor={formData["data_kit"] || ""}
-              onChange={(e) => handleChange(e, formData.data_kit.nome)}
+              type="text"
+              valor={formData["lacre"] || ""}
+              onChange={(e) => handleChange(e, formData.lacre.nome)}
             />
           </Label>
           <Label>
-            Data:
+            Operador:
             <Input
-              type="date"
-              valor={formData["data_kit"] || ""}
-              onChange={(e) => handleChange(e, formData.data_kit.nome)}
+              type="text"
+              valor={formData["operador"] || ""}
+              onChange={(e) => handleChange(e, formData.operador.nome)}
             />
           </Label>
           <Label>
             Mouse:
             <Select name="mouse">
+              {mouse.map((mouse) => (
+                <Option key={mouse.id} value={mouse.id}>
+                  {mouse.codigo}
+                </Option>
+              ))}
+            </Select>
+          </Label>
+          <Label>
+            Teclado:
+            <Select name="teclado">
+              {mouse.map((mouse) => (
+                <Option key={mouse.id} value={mouse.id}>
+                  {mouse.codigo}
+                </Option>
+              ))}
+            </Select>
+          </Label>
+          <Label>
+            Computador:
+            <Select name="pc">
+              {mouse.map((mouse) => (
+                <Option key={mouse.id} value={mouse.id}>
+                  {mouse.codigo}
+                </Option>
+              ))}
+            </Select>
+          </Label>
+          <Label>
+            Monitor:
+            <Select name="monitor">
+              {mouse.map((mouse) => (
+                <Option key={mouse.id} value={mouse.id}>
+                  {mouse.codigo}
+                </Option>
+              ))}
+            </Select>
+          </Label>
+          <Label>
+            Web Cam:
+            <Select name="webcam">
               {mouse.map((mouse) => (
                 <Option key={mouse.id} value={mouse.id}>
                   {mouse.codigo}
