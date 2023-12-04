@@ -19,7 +19,8 @@ const FormTitle = styled.h2`
 `;
 
 const FormGroup = styled.div`
-  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const Label = styled.label`
@@ -54,6 +55,11 @@ const SubmitButton = styled.button`
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
   }
 `;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+`;
 
 function Create({ fields, onCreate, notification, title }) {
   const [formData, setFormData] = useState({});
@@ -74,9 +80,9 @@ function Create({ fields, onCreate, notification, title }) {
     <FormContainer>
       <FormTitle>{title}</FormTitle>
       <form onSubmit={handleSubmit}>
-        {fields.map((field) => (
-          <FormGroup>
-            <div key={field.id}>
+        <Grid>
+          {fields.map((field) => (
+            <FormGroup key={field.id}>
               <Label>
                 {field.label}:
                 <Input
@@ -85,9 +91,9 @@ function Create({ fields, onCreate, notification, title }) {
                   onChange={(e) => handleChange(e, field.name)}
                 />
               </Label>
-            </div>
-          </FormGroup>
-        ))}
+            </FormGroup>
+          ))}
+        </Grid>
         <br />
         <SubmitButton type="submit">Create</SubmitButton>
         {notification && (
