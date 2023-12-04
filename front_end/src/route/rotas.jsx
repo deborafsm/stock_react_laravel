@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Info from "../pages/Info";
+import KitCreate from "../pages/kit/KitCreate.jsx";
 import WebCamCreate from "../pages/webcam/WcCreate";
 import WebCam from "../pages/webcam/WcRead"
 import HeadReadPage from "../pages/head/HeadRead.jsx";
@@ -18,6 +19,7 @@ import OperatorsReader from "../pages/operators/OperatorsRead";
 import HeadCreate from "../pages/head/HeadCreate";
 import HeadEdit from "../pages/head/HeadEdit.jsx";
 import Layout from "../layout/Grid/Layout";
+
 const Rotas = () => (
   <Layout>
     <Routes>
@@ -37,6 +39,7 @@ const Rotas = () => (
       <Route path="/pc-create" element={<PcCreate />} />
       <Route path="/operators" element={<OperatorsReader />} />
       <Route path="/editar_head/:id" element={<HeadEdit />} />    </Routes>
+      <Route path="/kit-create" element = {KitCreate}/>
   </Layout>
 );
 
