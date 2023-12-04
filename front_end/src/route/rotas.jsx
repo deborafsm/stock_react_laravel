@@ -25,6 +25,7 @@ const Rotas = () => (
     <Routes>
       <Route path="/home" element={<Home />} />
       <Route path="/info" element={<Info />} />
+      <Route path="/kit-create" element = {<KitCreate/>}/>
       <Route path="/webcam-create" element={<WebCamCreate />} />
       <Route path="/webcam" element={<WebCam />} />
       <Route path="/heads" element={<HeadReadPage />} />
@@ -39,7 +40,7 @@ const Rotas = () => (
       <Route path="/pc-create" element={<PcCreate />} />
       <Route path="/operators" element={<OperatorsReader />} />
       <Route path="/editar_head/:id" element={<HeadEdit />} />    </Routes>
-      <Route path="/kit-create" element = {KitCreate}/>
+      
   </Layout>
 );
 
