@@ -84,6 +84,7 @@ export default function KitCreate() {
   const [pc, setPc] = useState([]);
   const [monitor, setMonitor] = useState([]);
   const [webcam, setWebCam] = useState([]);
+  const [operador, setOperador] = useState([]);
   const fields = [
     { name: "data_kit", label: "Data", type: "date" },
     { name: "status", label: "Status", type: "text" },
@@ -150,6 +151,15 @@ export default function KitCreate() {
       console.error("Erro ao buscar os dados:", error);
     }
   }
+  async function OperadorData() {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/operador");
+      const jsonData = await response.json();
+      setOperador(jsonData);
+    } catch (error) {
+      console.error("Erro ao buscar os dados:", error);
+    }
+  }
   useEffect(() => {
     mouseData();
 
@@ -169,7 +179,10 @@ export default function KitCreate() {
   useEffect(() => {
     WebCamData();
   }, []);
-  
+  useEffect(() => {
+    OperadorData();
+  }, []);
+
   const handleCreate = (formData) => {
     fetch("http://127.0.0.1:8000/api/kitAdd", {
       method: "POST",
@@ -252,9 +265,9 @@ export default function KitCreate() {
           <Label>
             Quant Rede:
             <Input
-              type="text"
-              valor={formData["rede"] || ""}
-              onChange={(e) => handleChange(e, formData.rede.nome)}
+              type={fields.type}
+              value={formData[fields.name] || ""}
+              onChange={(e) => handleChange(e, fields.name)}
             />
           </Label>
           <Label>
@@ -267,11 +280,13 @@ export default function KitCreate() {
           </Label>
           <Label>
             Operador:
-            <Input
-              type="text"
-              valor={formData["operador"] || ""}
-              onChange={(e) => handleChange(e, formData.operador.nome)}
-            />
+            <Select name="operador">
+              {operador.map((operador) => (
+                <Option key={operador.id} value={operador.id}>
+                  {operador.nome}
+                </Option>
+              ))}
+            </Select>
           </Label>
           <Label>
             Mouse:
