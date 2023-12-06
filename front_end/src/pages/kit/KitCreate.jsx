@@ -85,6 +85,7 @@ export default function KitCreate() {
   const [monitor, setMonitor] = useState([]);
   const [webcam, setWebCam] = useState([]);
   const [operador, setOperador] = useState([]);
+  const [head, setHead] = useState([]);
   const fields = [
     { name: "data_kit", label: "Data", type: "date" },
     { name: "status", label: "Status", type: "text" },
@@ -118,6 +119,15 @@ export default function KitCreate() {
       const response = await fetch("http://127.0.0.1:8000/api/teclado");
       const jsonData = await response.json();
       setTeclado(jsonData);
+    } catch (error) {
+      console.error("Erro ao buscar os dados:", error);
+    }
+  }
+  async function headData() {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/head");
+      const jsonData = await response.json();
+      setHead(jsonData);
     } catch (error) {
       console.error("Erro ao buscar os dados:", error);
     }
@@ -182,6 +192,9 @@ export default function KitCreate() {
   useEffect(() => {
     OperadorData();
   }, []);
+  useEffect(() => {
+    headData();
+  }, []);
 
   const handleCreate = (formData) => {
     fetch("http://127.0.0.1:8000/api/kitAdd", {
@@ -214,12 +227,10 @@ export default function KitCreate() {
       });
   };
 
-  const handleChange = (e, fieldName) => {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [fieldName]: e.target.value,
-    }));
-  };
+  function handleChange(e) {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    console.log(formData)
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -234,53 +245,53 @@ export default function KitCreate() {
             Data:
             <Input
               type="date"
-              valor={formData["data_kit"] || ""}
-              onChange={(e) => handleChange(e, formData.data_kit.nome)}
+              name="data_kit"
+              onChange={(e) => handleChange(e, fields.data_kit)}
             />
           </Label>
           <Label>
             Status:
             <Input
               type="text"
-              valor={formData["status"] || ""}
-              onChange={(e) => handleChange(e, formData.status.nome)}
+              name="status"
+              onChange={(e) => handleChange(e, fields.status)}
             />
           </Label>
           <Label>
             Quant VGA:
             <Input
               type="text"
-              valor={formData["qnt_vga"] || ""}
-              onChange={(e) => handleChange(e, formData.qnt_vga.nome)}
+              name="qnt_vga"
+              onChange={(e) => handleChange(e, fields.qnt_vga)}
             />
           </Label>
           <Label>
             Quant Energia:
             <Input
               type="text"
-              valor={formData["qnt_e"] || ""}
-              onChange={(e) => handleChange(e, formData.qnt_e.nome)}
+              name="qnt_e"
+              onChange={(e) => handleChange(e, fields.qnt_e)}
             />
           </Label>
           <Label>
             Quant Rede:
             <Input
-              type={fields.type}
-              value={formData[fields.name] || ""}
-              onChange={(e) => handleChange(e, fields.name)}
+              type="text"
+              name="rede"
+              onChange={(e) => handleChange(e, fields.rede)}
             />
           </Label>
           <Label>
             Quant Lacre:
             <Input
               type="text"
-              valor={formData["lacre"] || ""}
-              onChange={(e) => handleChange(e, formData.lacre.nome)}
+              name="lacre"
+              onChange={(e) => handleChange(e, fields.lacre)}
             />
           </Label>
           <Label>
             Operador:
-            <Select name="operador">
+            <Select name="operador" onChange={handleChange} value={operador.operador} >
               {operador.map((operador) => (
                 <Option key={operador.id} value={operador.id}>
                   {operador.nome}
@@ -290,7 +301,7 @@ export default function KitCreate() {
           </Label>
           <Label>
             Mouse:
-            <Select name="mouse">
+            <Select name="mouse" onChange={handleChange} value={mouse.mouse}>
               {mouse.map((mouse) => (
                 <Option key={mouse.id} value={mouse.id}>
                   {mouse.codigo}
@@ -300,7 +311,7 @@ export default function KitCreate() {
           </Label>
           <Label>
             Teclado:
-            <Select name="teclado">
+            <Select name="teclado" onChange={handleChange} value={teclado.teclado}>
               {teclado.map((teclado) => (
                 <Option key={teclado.id} value={teclado.id}>
                   {teclado.codigo}
@@ -309,8 +320,18 @@ export default function KitCreate() {
             </Select>
           </Label>
           <Label>
+            Head:
+            <Select name="head" onChange={handleChange} value={head.head}>
+              {teclado.map((head) => (
+                <Option key={head.id} value={head.id}>
+                  {head.codigo}
+                </Option>
+              ))}
+            </Select>
+          </Label>
+          <Label>
             Computador:
-            <Select name="pc">
+            <Select name="pc" onChange={handleChange} value={pc.pc}>
               {pc.map((pc) => (
                 <Option key={pc.id} value={pc.id}>
                   {pc.nome}
@@ -320,7 +341,7 @@ export default function KitCreate() {
           </Label>
           <Label>
             Monitor:
-            <Select name="monitor">
+            <Select name="monitor" onChange={handleChange} value={monitor.monitor}>
               {monitor.map((monitor) => (
                 <Option key={monitor.id} value={monitor.id}>
                   {monitor.codigo}
@@ -330,7 +351,7 @@ export default function KitCreate() {
           </Label>
           <Label>
             Web Cam:
-            <Select name="webcam">
+            <Select name="webcam" onChange={handleChange} value={webcam.webcam}>
               {webcam.map((webcam) => (
                 <Option key={webcam.id} value={webcam.id}>
                   {webcam.codigo}
@@ -348,6 +369,6 @@ export default function KitCreate() {
           </Notification>
         )}
       </form>
-    </FormContainer>
+    </FormContainer >
   );
 }
