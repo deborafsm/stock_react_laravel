@@ -80,6 +80,10 @@ export default function KitCreate() {
   const [notification, setNotification] = useState(null);
   const [formData, setFormData] = useState({});
   const [mouse, setMouse] = useState([]);
+  const [teclado, setTeclado] = useState([]);
+  const [pc, setPc] = useState([]);
+  const [monitor, setMonitor] = useState([]);
+  const [webcam, setWebCam] = useState([]);
   const fields = [
     { name: "data_kit", label: "Data", type: "date" },
     { name: "status", label: "Status", type: "text" },
@@ -98,7 +102,7 @@ export default function KitCreate() {
   ];
 
   //   Chamando Mouse
-  async function fetchData() {
+  async function mouseData() {
     try {
       const response = await fetch("http://127.0.0.1:8000/api/mouse");
       const jsonData = await response.json();
@@ -107,9 +111,65 @@ export default function KitCreate() {
       console.error("Erro ao buscar os dados:", error);
     }
   }
+  // teclado
+  async function keyBoardData() {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/teclado");
+      const jsonData = await response.json();
+      setTeclado(jsonData);
+    } catch (error) {
+      console.error("Erro ao buscar os dados:", error);
+    }
+  }
+  // computador
+
+  async function pCData() {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/pc");
+      const jsonData = await response.json();
+      setPc(jsonData);
+    } catch (error) {
+      console.error("Erro ao buscar os dados:", error);
+    }
+  }
+  async function MonitorData() {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/monitor");
+      const jsonData = await response.json();
+      setMonitor(jsonData);
+    } catch (error) {
+      console.error("Erro ao buscar os dados:", error);
+    }
+  }
+  async function WebCamData() {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/webcam");
+      const jsonData = await response.json();
+      setWebCam(jsonData);
+    } catch (error) {
+      console.error("Erro ao buscar os dados:", error);
+    }
+  }
   useEffect(() => {
-    fetchData();
+    mouseData();
+
   }, []);
+  useEffect(() => {
+    keyBoardData();
+  }, []);
+
+  useEffect(() => {
+    pCData();
+  }, []);
+
+  useEffect(() => {
+    MonitorData();
+  }, []);
+
+  useEffect(() => {
+    WebCamData();
+  }, []);
+  
   const handleCreate = (formData) => {
     fetch("http://127.0.0.1:8000/api/kitAdd", {
       method: "POST",
@@ -226,9 +286,9 @@ export default function KitCreate() {
           <Label>
             Teclado:
             <Select name="teclado">
-              {mouse.map((mouse) => (
-                <Option key={mouse.id} value={mouse.id}>
-                  {mouse.codigo}
+              {teclado.map((teclado) => (
+                <Option key={teclado.id} value={teclado.id}>
+                  {teclado.codigo}
                 </Option>
               ))}
             </Select>
@@ -236,9 +296,9 @@ export default function KitCreate() {
           <Label>
             Computador:
             <Select name="pc">
-              {mouse.map((mouse) => (
-                <Option key={mouse.id} value={mouse.id}>
-                  {mouse.codigo}
+              {pc.map((pc) => (
+                <Option key={pc.id} value={pc.id}>
+                  {pc.nome}
                 </Option>
               ))}
             </Select>
@@ -246,9 +306,9 @@ export default function KitCreate() {
           <Label>
             Monitor:
             <Select name="monitor">
-              {mouse.map((mouse) => (
-                <Option key={mouse.id} value={mouse.id}>
-                  {mouse.codigo}
+              {monitor.map((monitor) => (
+                <Option key={monitor.id} value={monitor.id}>
+                  {monitor.codigo}
                 </Option>
               ))}
             </Select>
@@ -256,9 +316,9 @@ export default function KitCreate() {
           <Label>
             Web Cam:
             <Select name="webcam">
-              {mouse.map((mouse) => (
-                <Option key={mouse.id} value={mouse.id}>
-                  {mouse.codigo}
+              {webcam.map((webcam) => (
+                <Option key={webcam.id} value={webcam.id}>
+                  {webcam.codigo}
                 </Option>
               ))}
             </Select>
