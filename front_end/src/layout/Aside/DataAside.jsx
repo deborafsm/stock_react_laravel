@@ -18,7 +18,7 @@ export const SideData = [
   {
     id: "10",
     title: "Kit",
-    path: "/KitRead",
+    path: "/kit-read",
     icon: <MdCamera />,
     cName: "Home",
   },
