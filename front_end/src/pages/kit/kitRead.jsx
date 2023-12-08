@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
-
-
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -60,33 +58,17 @@ const Notification = styled.div`
   color: #fff;
   border-radius: 4px;
 `;
-
 export default function KitRead() {
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(10);
     const [searchTerm, setSearchTerm] = useState("");
     const columns = ["data_kit", "status", "qnt_vga", "qnt_e",
-        "rede", "lacre", "operador", "pc", "foto", "monitor", "webcam", "mouse", "teclado", "head"]
+        "rede", "lacre", "operador", "pc", "foto", "monitor", "webcam", "mouse", "teclado", "head"];
     const [notification, setNotification] = useState(null);
-
-    async function readKit() {
-        try {
-            const responce = await fetch("http://127.0.0.1:8000/api/kit");
-            const jsonData = await responce.json();
-            setData(jsonData);
-        } catch (error) {
-            console.error("Erro ao buscar dados:", error);
-        }
-    }
-
     useEffect(() => {
-        readKit();
+        fetchData();
     }, []);
-    function handleEdit(id) {
-        console.log("Editar item:", id);
-    }
-
     function handleRemove(id) {
         const confirmDelete = window.confirm(
             "Tem certeza de que deseja remover este item?"
@@ -135,6 +117,19 @@ export default function KitRead() {
                 });
         }
     }
+    async function fetchData() {
+        try {
+            const response = await fetch("http://127.0.0.1:8000/api/kit");
+            const jsonData = await response.json();
+            setData(jsonData);
+        } catch (error) {
+            console.error("Erro ao buscar os dados:", error);
+        }
+    }
+
+    function handleEdit(id) {
+        console.log("Editar item:", id);
+    }
 
     function handleSearch(e) {
         setSearchTerm(e.target.value);
@@ -142,9 +137,10 @@ export default function KitRead() {
 
     const filteredData = data
         .filter((item) =>
-            item.lacre.toLowerCase().includes(searchTerm.toLowerCase())
+            item.lacre
         )
         .reverse();
+
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
@@ -160,7 +156,7 @@ export default function KitRead() {
             data
                 .map(
                     (item) =>
-                        `${item.id},${item.lacre},${item.teclado},${item.mouse},${item.foto}`
+                        `${item.id},${item.lacre},${item.monitor},${item.mouse},${item.pc}`
                 )
                 .join("\n");
         const encodedUri = encodeURI(csvContent);
@@ -174,7 +170,7 @@ export default function KitRead() {
     return (
         <div>
             <Container>
-                <Title>Kit</Title>
+                <Title>WebCam</Title>
                 <SearchForm>
                     <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
                     <button>
