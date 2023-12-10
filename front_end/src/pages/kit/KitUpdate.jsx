@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import { useParams } from "react-router-dom";
 
 import styled from "styled-components";
 const FormContainer = styled.div`
@@ -76,7 +77,10 @@ const Grid = styled.div`
   margin: 0 auto;
 `;
 
-export default function KitCreate() {
+export default function KitUpdate() {
+    const [kit, setKit] = useState([]);
+
+    const { id } = useParams()
     const [notification, setNotification] = useState(null);
     const [formData, setFormData] = useState({});
     const [mouse, setMouse] = useState([]);
@@ -86,6 +90,7 @@ export default function KitCreate() {
     const [webcam, setWebCam] = useState([]);
     const [operador, setOperador] = useState([]);
     const [head, setHead] = useState([]);
+
     const fields = [
         { name: "data_kit", label: "Data", type: "date" },
         { name: "status", label: "Status", type: "text" },
@@ -102,7 +107,20 @@ export default function KitCreate() {
         { name: "teclado", label: "Teclado", type: "text" },
         { name: "head", label: "Head", type: "text" },
     ];
-
+    useEffect(() => {
+        fetch(`http://127.0.0.1:8000/api/kit/?id=${id}`, {
+            method: 'GET',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+            },
+        }).then((resp) => resp.json())
+            .then((data) => {
+                setKit(data);
+                console.log(data)
+            })
+            .catch((err) => console.log)
+    }, [id])
     //   Chamando Mouse
     async function mouseData() {
         try {
@@ -195,6 +213,7 @@ export default function KitCreate() {
     useEffect(() => {
         headData();
     }, []);
+
 
     const handleCreate = (formData) => {
         fetch("http://127.0.0.1:8000/api/kitAdd", {
