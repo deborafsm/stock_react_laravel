@@ -3,6 +3,7 @@ import StyledButton from "../button/remove/remove";
 import EDIT from "../button/edit/edit";
 import styled from "styled-components";
 import { BsFillTrashFill, BsFillPenFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const CenteredCell = styled.td`
   display: flex;
   justify-content: center;
@@ -43,7 +44,7 @@ const ButtonEdit = styled.button`
   }
 `;
 
-function DataTable({ data, handleRemove, handleEdit, columns }) {
+function DataTable({ data, handleRemove, handleDetais, columns }) {
   return (
     <tbody>
       {data.map((item) => (
@@ -55,8 +56,11 @@ function DataTable({ data, handleRemove, handleEdit, columns }) {
             <ButtonRemove onClick={() => handleRemove(item.id)}>
               <BsFillTrashFill />
             </ButtonRemove>
-            <ButtonEdit onClick={() => handleEdit(item.id)}>
-              <BsFillPenFill />
+
+            <ButtonEdit>
+              <Link to={`/kit-update/${item.id}`} onClick={() => handleDetais(item.id)}>
+                <BsFillPenFill />
+              </Link>
             </ButtonEdit>
           </CenteredCell>
         </tr>
