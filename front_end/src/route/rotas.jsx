@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Info from "../pages/Info";
 import KitRead from "../pages/kit/kitRead.jsx";
 import KitCreate from "../pages/kit/KitCreate.jsx";
+import KitUpdate from "../pages/kit/KitUpdate.jsx";
 import WebCamCreate from "../pages/webcam/WcCreate";
 import WebCam from "../pages/webcam/WcRead"
 import HeadReadPage from "../pages/head/HeadRead.jsx";
@@ -29,6 +30,7 @@ const Rotas = () => (
       <Route path="/info" element={<Info />} />
       <Route path="/kit-read" element={<KitRead />} />
       <Route path="/kit-create" element={<KitCreate />} />
+      <Route path="/kit-update/:id" element={<KitUpdate />} />
       <Route path="/webcam-create" element={<WebCamCreate />} />
       <Route path="/webcam" element={<WebCam />} />
       <Route path="/heads" element={<HeadReadPage />} />
