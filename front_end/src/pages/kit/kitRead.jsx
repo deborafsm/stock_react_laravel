@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Component, Router } from "react";
 import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const Container = styled.div`
   margin-bottom: 1rem;
 `;
@@ -60,10 +60,11 @@ const Notification = styled.div`
 `;
 export default function KitRead() {
     const [data, setData] = useState([]);
+
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(10);
     const [searchTerm, setSearchTerm] = useState("");
-    const columns = ["data_kit", "status", "qnt_vga", "qnt_e",
+    const columns = ["id", "data_kit", "status", "qnt_vga", "qnt_e",
         "rede", "lacre", "operador", "pc", "foto", "monitor", "webcam", "mouse", "teclado", "head"];
     const [notification, setNotification] = useState(null);
     useEffect(() => {
@@ -82,7 +83,9 @@ export default function KitRead() {
             })
                 .then((response) => response.json())
                 .then((data) => {
+
                     if (data.result === "success") {
+
                         console.log("Item removido com sucesso!");
                         // Atualize o estado 'data' com os dados atualizados, excluindo o item removido
                         setData((prevData) => prevData.filter((item) => item.id !== id));
@@ -126,10 +129,27 @@ export default function KitRead() {
             console.error("Erro ao buscar os dados:", error);
         }
     }
+    async function handleDetais(id) {
+        try {
+            const response = await fetch(`http://127.0.0.1:8000/api/kit/${id}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
 
-    function handleEdit(id) {
-        console.log("Editar item:", id);
+            const data = await response.json();
+            console.log("teste", data.id)
+            // Utilize os dados obtidos da API
+            // ...
+
+            return data; // Retorne a Promise para uso posterior
+        } catch (error) {
+            console.error("Erro ao achar:", error);
+        }
     }
+
+
 
     function handleSearch(e) {
         setSearchTerm(e.target.value);
@@ -170,7 +190,7 @@ export default function KitRead() {
     return (
         <div>
             <Container>
-                <Title>WebCam</Title>
+                <Title>Kit</Title>
                 <SearchForm>
                     <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
                     <button>
@@ -183,8 +203,10 @@ export default function KitRead() {
 
                 <div className="tabela-container">
                     <StyledTable>
+
                         <thead>
                             <tr>
+                                <th>id</th>
                                 <th>Data</th>
                                 <th>Status</th>
                                 <th>Quant VGA</th>
@@ -200,13 +222,16 @@ export default function KitRead() {
                                 <th>Teclado</th>
                                 <th>Head</th>
                             </tr>
+
                         </thead>
+                       
                         <DataTable
                             data={currentItems}
                             handleRemove={handleRemove}
-                            handleEdit={handleEdit}
+                            handleDetais={handleDetais(data.id)}
                             columns={columns}
                         />
+
                     </StyledTable>
                 </div>
                 <PaginationButtons
