@@ -20,8 +20,10 @@ class kitController extends Controller
         $kits = $kits->transform(function ($kit) {
             return ['kit' => $kit];
         });
+
         // Convertendo o array de kits em JSON
         $json = json_encode($kits);
+        return $json;
     }
     function getKitById($id = null)
     {
