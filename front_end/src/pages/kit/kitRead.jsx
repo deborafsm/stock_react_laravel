@@ -139,15 +139,15 @@ export default function KitRead() {
             });
 
             const data = await response.json();
-            console.log("teste", data.id)
+            console.log("teste", data.id);
             // Utilize os dados obtidos da API
             // ...
 
             return data; // Retorne a Promise para uso posterior
         } catch (error) {
-            console.error("Erro ao achar:", error);
+           
         }
-    }
+    };
 
 
 
@@ -224,7 +224,7 @@ export default function KitRead() {
                             </tr>
 
                         </thead>
-                       
+
                         <DataTable
                             data={currentItems}
                             handleRemove={handleRemove}
