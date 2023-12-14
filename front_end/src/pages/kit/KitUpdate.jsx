@@ -116,7 +116,7 @@ export default function KitUpdate() {
             },
         }).then((resp) => resp.json())
             .then((data) => {
-                setKit(data);
+                setKit("status",data.status);
                 console.log(data)
             })
             .catch((err) => console.log)
