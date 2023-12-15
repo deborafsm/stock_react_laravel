@@ -116,7 +116,7 @@ export default function KitUpdate() {
             },
         }).then((resp) => resp.json())
             .then((data) => {
-                setKit("status",data.status);
+                setKit("status", data.status);
                 console.log(data)
             })
             .catch((err) => console.log)
@@ -256,6 +256,7 @@ export default function KitUpdate() {
         handleCreate(formData);
     };
     return (
+
         <FormContainer>
             <FormTitle>Kit</FormTitle>
             <form onSubmit={handleSubmit}>
