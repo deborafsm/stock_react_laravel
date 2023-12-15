@@ -125,6 +125,7 @@ export default function KitRead() {
             const response = await fetch("http://127.0.0.1:8000/api/kit");
             const jsonData = await response.json();
             setData(jsonData);
+            console.log(data)
         } catch (error) {
             console.error("Erro ao buscar os dados:", error);
         }
