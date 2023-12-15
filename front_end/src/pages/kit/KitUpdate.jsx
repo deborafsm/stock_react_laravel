@@ -108,7 +108,7 @@ export default function KitUpdate() {
         { name: "head", label: "Head", type: "text" },
     ];
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/kit/?id=${id}`, {
+        fetch(`http://127.0.0.1:8000/api/kit/${id}`, {
             method: 'GET',
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -116,8 +116,8 @@ export default function KitUpdate() {
             },
         }).then((resp) => resp.json())
             .then((data) => {
-                setKit("status", data.status);
-                console.log(data)
+                setKit(data);
+                console.log(kit)
             })
             .catch((err) => console.log)
     }, [id])
@@ -256,139 +256,147 @@ export default function KitUpdate() {
         handleCreate(formData);
     };
     return (
+        <div>
 
-        <FormContainer>
-            <FormTitle>Kit</FormTitle>
-            <form onSubmit={handleSubmit}>
-                <Grid>
-                    <Label>
-                        Data:
-                        <Input
-                            type="date"
-                            name="data_kit"
-                            onChange={(e) => handleChange(e, fields.data_kit)}
-                        />
-                    </Label>
-                    <Label>
-                        Status:
-                        <Input
-                            type="text"
-                            name="status"
-                            onChange={(e) => handleChange(e, fields.status)}
-                        />
-                    </Label>
-                    <Label>
-                        Quant VGA:
-                        <Input
-                            type="text"
-                            name="qnt_vga"
-                            onChange={(e) => handleChange(e, fields.qnt_vga)}
-                        />
-                    </Label>
-                    <Label>
-                        Quant Energia:
-                        <Input
-                            type="text"
-                            name="qnt_e"
-                            onChange={(e) => handleChange(e, fields.qnt_e)}
-                        />
-                    </Label>
-                    <Label>
-                        Quant Rede:
-                        <Input
-                            type="text"
-                            name="rede"
-                            onChange={(e) => handleChange(e, fields.rede)}
-                        />
-                    </Label>
-                    <Label>
-                        Quant Lacre:
-                        <Input
-                            type="text"
-                            name="lacre"
-                            onChange={(e) => handleChange(e, fields.lacre)}
-                        />
-                    </Label>
-                    <Label>
-                        Operador:
-                        <Select name="operador" onChange={handleChange} value={operador.operador} >
-                            {operador.map((operador) => (
-                                <Option key={operador.id} value={operador.id}>
-                                    {operador.nome}
-                                </Option>
-                            ))}
-                        </Select>
-                    </Label>
-                    <Label>
-                        Mouse:
-                        <Select name="mouse" onChange={handleChange} value={mouse.mouse}>
-                            {mouse.map((mouse) => (
-                                <Option key={mouse.id} value={mouse.id}>
-                                    {mouse.codigo}
-                                </Option>
-                            ))}
-                        </Select>
-                    </Label>
-                    <Label>
-                        Teclado:
-                        <Select name="teclado" onChange={handleChange} value={teclado.teclado}>
-                            {teclado.map((teclado) => (
-                                <Option key={teclado.id} value={teclado.id}>
-                                    {teclado.codigo}
-                                </Option>
-                            ))}
-                        </Select>
-                    </Label>
-                    <Label>
-                        Head:
-                        <Select name="head" onChange={handleChange} value={head.head}>
-                            {teclado.map((head) => (
-                                <Option key={head.id} value={head.id}>
-                                    {head.codigo}
-                                </Option>
-                            ))}
-                        </Select>
-                    </Label>
-                    <Label>
-                        Computador:
-                        <Select name="pc" onChange={handleChange} value={pc.pc}>
-                            {pc.map((pc) => (
-                                <Option key={pc.id} value={pc.id}>
-                                    {pc.nome}
-                                </Option>
-                            ))}
-                        </Select>
-                    </Label>
-                    <Label>
-                        Monitor:
-                        <Select name="monitor" onChange={handleChange} value={monitor.monitor}>
-                            {monitor.map((monitor) => (
-                                <Option key={monitor.id} value={monitor.id}>
-                                    {monitor.codigo}
-                                </Option>
-                            ))}
-                        </Select>
-                    </Label>
-                    <Label>
-                        Web Cam:
-                        <Select name="webcam" onChange={handleChange} value={webcam.webcam}>
-                            {webcam.map((webcam) => (
-                                <Option key={webcam.id} value={webcam.id}>
-                                    {webcam.codigo}
-                                </Option>
-                            ))}
-                        </Select>
-                    </Label>
-                </Grid>
+            <FormContainer>
+                <FormTitle>Kit</FormTitle>
+                <form onSubmit={handleSubmit}>
+                    <Grid>
+                        <Label>
+                            Data:
+                            <Input
+                                type="date"
+                                name="data_kit"
+                                defaultValue={kit.data_kit}
+                                onChange={(e) => handleChange(e, fields.data_kit)}
+                            />
+                        </Label>
+                        <Label>
+                            Status:
+                            <Input
+                                type="text"
+                                name="status"
+                                defaultValue={kit.status}
+                                onChange={(e) => handleChange(e, fields.status)}
+                            />
+                        </Label>
+                        <Label>
+                            Quant VGA:
+                            <Input
+                                type="text"
+                                name="qnt_vga"
+                                defaultValue={kit.qnt_vga}
+                                onChange={(e) => handleChange(e, fields.qnt_vga)}
+                            />
+                        </Label>
+                        <Label>
+                            Quant Energia:
+                            <Input
+                                type="text"
+                                name="qnt_e"
+                                defaultValue={kit.qnt_e}
+                                onChange={(e) => handleChange(e, fields.qnt_e)}
+                            />
+                        </Label>
+                        <Label>
+                            Quant Rede:
+                            <Input
+                                type="text"
+                                name="rede"
+                                defaultValue={kit.rede}
+                                onChange={(e) => handleChange(e, fields.rede)}
+                            />
+                        </Label>
+                        <Label>
+                            Quant Lacre:
+                            <Input
+                                type="text"
+                                name="lacre"
+                                defaultValue={kit.lacre}
+                                onChange={(e) => handleChange(e, fields.lacre)}
+                            />
+                        </Label>
+                        <Label>
+                            Operador:
+                            <Select name="operador" onChange={handleChange} value={operador.operador} defaultValue={kit.operador} >
+                                {operador.map((operador) => (
+                                    <Option key={operador.id} value={operador.id}>
+                                        {operador.nome}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </Label>
+                        <Label>
+                            Mouse:
+                            <Select name="mouse" onChange={handleChange} value={mouse.mouse} defaultValue={kit.mouse}>
+                                {mouse.map((mouse) => (
+                                    <Option key={mouse.id} value={mouse.id}>
+                                        {mouse.codigo}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </Label>
+                        <Label>
+                            Teclado:
+                            <Select name="teclado" onChange={handleChange} value={teclado.teclado} defaultValue={kit.teclado}>
+                                {teclado.map((teclado) => (
+                                    <Option key={teclado.id} value={teclado.id}>
+                                        {teclado.codigo}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </Label>
+                        <Label>
+                            Head:
+                            <Select name="head" onChange={handleChange} value={head.head} defaultValue={kit.head}>
+                                {teclado.map((head) => (
+                                    <Option key={head.id} value={head.id}>
+                                        {head.codigo}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </Label>
+                        <Label>
+                            Computador:
+                            <Select name="pc" onChange={handleChange} value={pc.pc} defaultValue={kit.pc}>
+                                {pc.map((pc) => (
+                                    <Option key={pc.id} value={pc.id}>
+                                        {pc.nome}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </Label>
+                        <Label>
+                            Monitor:
+                            <Select name="monitor" onChange={handleChange} value={monitor.monitor} defaultValue={kit.monitor}>
+                                {monitor.map((monitor) => (
+                                    <Option key={monitor.id} value={monitor.id}>
+                                        {monitor.codigo}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </Label>
+                        <Label>
+                            Web Cam:
+                            <Select name="webcam" onChange={handleChange} value={webcam.webcam} defaultValue={kit.webcam}>
+                                {webcam.map((webcam) => (
+                                    <Option key={webcam.id} value={webcam.id}>
+                                        {webcam.codigo}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </Label>
+                    </Grid>
 
-                <br />
-                <SubmitButton type="submit">Create</SubmitButton>
-                {notification && (
-                    <Notification backgroundColor={notification.backgroundColor}>
-                        {notification.message}
-                    </Notification>
-                )}
-            </form>
-        </FormContainer >
+                    <br />
+                    <SubmitButton type="submit">Update</SubmitButton>
+                    {notification && (
+                        <Notification backgroundColor={notification.backgroundColor}>
+                            {notification.message}
+                        </Notification>
+                    )}
+                </form>
+            </FormContainer >
+        </div>
     );
 }
