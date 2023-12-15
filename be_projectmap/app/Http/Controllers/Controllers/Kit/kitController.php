@@ -13,17 +13,7 @@ class kitController extends Controller
 {
     function getKit()
     {
-        // Obtendo todos os kits
-        $kits = kitModel::all();
-
-        // Transformando o array de kits
-        $kits = $kits->transform(function ($kit) {
-            return ['kit' => $kit];
-        });
-
-        // Convertendo o array de kits em JSON
-        $json = json_encode($kits);
-        return $json;
+        return kitModel::all();
     }
     function getKitById($id = null)
     {
