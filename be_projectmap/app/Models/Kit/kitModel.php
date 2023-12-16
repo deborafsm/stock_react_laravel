@@ -9,4 +9,6 @@ class kitModel extends Model
 {
     protected $table = "kit";
     use HasFactory;
+
+    
 }
