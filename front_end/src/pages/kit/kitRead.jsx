@@ -60,7 +60,6 @@ const Notification = styled.div`
 `;
 export default function KitRead() {
     const [data, setData] = useState([]);
-
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(10);
     const [searchTerm, setSearchTerm] = useState("");
