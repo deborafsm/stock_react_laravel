@@ -67,8 +67,24 @@ function HeadRead() {
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const history = useHistory();
 
+
+  async function headDetais(id) {
+    try {
+      const response = await fetch(`http://127.0.0.1:8000/api/head_id/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+      console.log("teste", data.id);
+      return data; // Retorne a Promise para uso posterior
+    } catch (error) {
+
+    }
+  };
   useEffect(() => {
     fetchData();
   }, []);
@@ -149,7 +165,7 @@ function HeadRead() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
-
+  console.log("current:", currentItems);
   function paginate(pageNumber) {
     setCurrentPage(pageNumber);
   }
@@ -200,9 +216,10 @@ function HeadRead() {
               </tr>
             </thead>
             <DataTable
+              rota={"/head-update"}
               data={currentItems}
               handleRemove={handleRemove}
-              handleEdit={handleEdit}
+              handleEdit={headDetais(data.id)}
               columns={columns}
             />
           </StyledTable>
