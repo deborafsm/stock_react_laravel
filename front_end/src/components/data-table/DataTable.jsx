@@ -44,7 +44,7 @@ const ButtonEdit = styled.button`
   }
 `;
 
-function DataTable({ data, handleRemove, handleDetais, columns }) {
+function DataTable({ data, handleRemove, handleDetais, columns, rota}) {
   return (
     <tbody>
       {data.map((item) => (
@@ -58,7 +58,7 @@ function DataTable({ data, handleRemove, handleDetais, columns }) {
             </ButtonRemove>
 
             <ButtonEdit>
-              <Link to={`/kit-update/${item.id}`} onClick={() => handleDetais(item.id)}>
+              <Link to={`${rota}/${item.id}`} onClick={() => handleDetais(item.id)}>
                 <BsFillPenFill />
               </Link>
             </ButtonEdit>
