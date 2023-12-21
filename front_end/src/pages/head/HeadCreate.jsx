@@ -40,6 +40,7 @@ export default function HeadCreate({ onCreate }) {
   };
   return (
     <div>
+      
       <Create
         title={"Head"}
         fields={fields}
