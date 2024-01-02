@@ -34,16 +34,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Usuario
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
+// //Usuario
+// Route::post('/register', [Auth::class, 'register']);
+// Route::post('/login', [AuthController::class, 'login']);
 
-Route::middleware('auth:api')->group(function () {
-    Route::get('/user', [UserController::class, 'user']);
-    Route::post('/logout', [AuthController::class, 'logout']);
-});
-Route::post('/users', [UserController::class, 'create']);
-Route::get('/read', [UserController::class, 'read']);
+// Route::middleware('auth:api')->group(function () {
+//     Route::get('/user', [UserController::class, 'user']);
+//     Route::post('/logout', [AuthController::class, 'logout']);
+// });
+// Route::post('/users', [UserController::class, 'create']);
+// Route::get('/read', [UserController::class, 'read']);
 // Card
 // Route::get("card", [cardApi::class, 'getCard']);
 // Route::get("card_id/{id?}", [cardApi::class, 'getCardId']);
