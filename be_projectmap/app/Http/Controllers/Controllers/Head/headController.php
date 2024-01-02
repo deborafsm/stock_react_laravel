@@ -34,7 +34,7 @@ class headController extends Controller
     function updateHead(Request $request)
     {
         $head = heads::find($request->id);
-        $head->marca ?? $head->marca;
+        $head->marca = $request->marca;
         $head->modelo = $request->modelo;
         $head->codigo = $request->codigo;
         $head->status = $request->status;
