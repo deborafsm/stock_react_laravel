@@ -124,7 +124,7 @@ export default function HeadEdit() {
       });
   };
   function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData, [e.target.name]: e.target.value ,id})
     console.log(formData)
   }
   const handleSubmit = (e) => {
