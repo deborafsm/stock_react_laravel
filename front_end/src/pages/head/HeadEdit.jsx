@@ -124,13 +124,13 @@ export default function HeadEdit() {
       });
   };
   function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value ,id})
+    setFormData({ ...formData, [e.target.name]: e.target.value, id })
     console.log(formData)
   }
   const handleSubmit = (e) => {
     e.preventDefault();
     handleUpdate(formData);
-};
+  };
   useEffect(() => {
     fetch(`http://127.0.0.1:8000/api/head_id/${id}`, {
       method: 'GET',
