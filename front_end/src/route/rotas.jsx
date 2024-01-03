@@ -11,6 +11,7 @@ import WebCam from "../pages/webcam/WcRead"
 import HeadReadPage from "../pages/head/HeadRead.jsx";
 import KeyBoardRead from "../pages/keyboard/KeyBoardRead";
 import KeyBoardCreate from "../pages/keyboard/KeyBoardCreate";
+import KeyBoardUpdate from "../pages/keyboard/KeyBoardUpdate";
 import MouseRead from "../pages/mouse/MouseRead";
 import MouseCreate from "../pages/mouse/MouseCreate";
 import MonitorRead from "../pages/monitors/MonitorRead";
@@ -38,6 +39,8 @@ const Rotas = () => (
       <Route path="/head-update/:id" element={<HeadEdit />} />
       <Route path="/keyboard" element={<KeyBoardRead />} />
       <Route path="/keyboard-create" element={<KeyBoardCreate />} />
+      <Route path="/keyboard-update/:id" element={<KeyBoardUpdate />} />
+
       <Route path="/mouses" element={<MouseRead />} />
       <Route path="/mouse-create" element={<MouseCreate />} />
       <Route path="/monitor" element={<MonitorRead />} />
