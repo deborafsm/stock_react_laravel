@@ -123,8 +123,8 @@ export default function KeyBoardUpdate() {
             });
     };
     function handleChange(e) {
-        setFormData({ ...formData, [e.target.name]: e.target.value, id })
-        console.log(formData)
+        setFormData({ ...keyboard, [e.target.name]: e.target.value, id,   })
+        console.log("form dta",formData)
     }
     const handleSubmit = (e) => {
         e.preventDefault();
