@@ -149,7 +149,7 @@ export default function HeadEdit() {
     <div>
       <div>
         <FormContainer>
-          <FormTitle>Kit</FormTitle>
+          <FormTitle>Heads</FormTitle>
           <form onSubmit={handleSubmit}>
             <Grid>
               <Label>
