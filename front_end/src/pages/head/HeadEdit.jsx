@@ -124,8 +124,9 @@ export default function HeadEdit() {
       });
   };
   function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value, id })
+    setFormData({ ...head , [e.target.name]: e.target.value, id })
     console.log(formData)
+   
   }
   const handleSubmit = (e) => {
     e.preventDefault();
