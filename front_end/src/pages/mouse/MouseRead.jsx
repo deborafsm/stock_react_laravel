@@ -85,7 +85,22 @@ const WcRead = () => {
   function handleEdit(id) {
     console.log("Editar item:", id);
   }
+  async function handleDetais(id) {
+    try {
+      const response = await fetch(`http://127.0.0.1:8000/api/mouse_id/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
+      const data = await response.json();
+      console.log("teste", data);
+      return data;
+    } catch (error) {
+
+    }
+  };
   function handleRemove(id) {
     const confirmDelete = window.confirm("Tem certeza de que deseja remover este item?");
     if (confirmDelete) {
@@ -192,8 +207,9 @@ const WcRead = () => {
             </thead>
             <DataTable
               data={currentItems}
+              rota={"/mouse-update"}
               handleRemove={handleRemove}
-              handleEdit={handleEdit}
+              handleDetais={handleDetais(data.id)}
               columns={columns}
             />
           </StyledTable>
