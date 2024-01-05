@@ -14,6 +14,7 @@ import KeyBoardCreate from "../pages/keyboard/KeyBoardCreate";
 import KeyBoardUpdate from "../pages/keyboard/KeyBoardUpdate";
 import MouseRead from "../pages/mouse/MouseRead";
 import MouseCreate from "../pages/mouse/MouseCreate";
+import MouseUpdate from "../pages/mouse/MouseUpdate";
 import MonitorRead from "../pages/monitors/MonitorRead";
 import MonitorCreate from "../pages/monitors/MonitorCreate";
 import PcReader from "../pages/computers/PcReader";
@@ -43,6 +44,7 @@ const Rotas = () => (
 
       <Route path="/mouses" element={<MouseRead />} />
       <Route path="/mouse-create" element={<MouseCreate />} />
+      <Route path="/mouse-update/:id" element={<MouseUpdate />} />
       <Route path="/monitor" element={<MonitorRead />} />
       <Route path="/monitor-create" element={<MonitorCreate />} />
       <Route path="/pc" element={<PcReader />} />
