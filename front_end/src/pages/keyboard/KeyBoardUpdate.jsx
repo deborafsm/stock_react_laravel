@@ -90,8 +90,6 @@ export default function KeyBoardUpdate() {
         { name: "codigo", label: "Código", type: "text" },
         { name: "status", label: "status", type: "text" },
     ];
-    const dataHead = ["id", "marca", "modelo", "codigo", "status"];
-
     const handleUpdate = (formData) => {
         fetch("http://127.0.0.1:8000/api/tecladoUpdate", {
             method: "POST",
@@ -123,8 +121,8 @@ export default function KeyBoardUpdate() {
             });
     };
     function handleChange(e) {
-        setFormData({ ...keyboard, [e.target.name]: e.target.value, id,   })
-        console.log("form dta",formData)
+        setFormData({ ...keyboard, [e.target.name]: e.target.value, id, })
+        console.log("form dta", formData)
     }
     const handleSubmit = (e) => {
         e.preventDefault();
