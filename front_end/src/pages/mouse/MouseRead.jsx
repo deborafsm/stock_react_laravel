@@ -82,9 +82,6 @@ const WcRead = () => {
     }
   }
 
-  function handleEdit(id) {
-    console.log("Editar item:", id);
-  }
   async function handleDetais(id) {
     try {
       const response = await fetch(`http://127.0.0.1:8000/api/mouse_id/${id}`, {
