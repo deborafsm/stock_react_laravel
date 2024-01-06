@@ -82,7 +82,6 @@ export default function MouseUpdate() {
     const [mouse, setMouse] = useState([]);
     const [notification, setNotification] = useState(null);
     const [formData, setFormData] = useState({});
-
     const fields = [
         { name: "id", label: "id", type: "text" },
         { name: "marca", label: "Marca", type: "text" },
@@ -90,8 +89,6 @@ export default function MouseUpdate() {
         { name: "codigo", label: "Código", type: "text" },
         { name: "status", label: "status", type: "text" },
     ];
-    const dataHead = ["id", "marca", "modelo", "codigo", "status"];
-
     const handleUpdate = (formData) => {
         fetch("http://127.0.0.1:8000/api/mouseUpdate", {
             method: "POST",
