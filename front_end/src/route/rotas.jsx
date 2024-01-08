@@ -8,7 +8,7 @@ import KitCreate from "../pages/kit/KitCreate.jsx";
 import KitUpdate from "../pages/kit/KitUpdate.jsx";
 import WebCamCreate from "../pages/webcam/WcCreate";
 import WebCam from "../pages/webcam/WcRead"
-import WebCamUpdate from "../pages/webcam/WcUpdate"
+import WebCamUpdate from "../pages/webcam/WcUpdate.jsx/index.js"
 import HeadReadPage from "../pages/head/HeadRead.jsx";
 import KeyBoardRead from "../pages/keyboard/KeyBoardRead";
 import KeyBoardCreate from "../pages/keyboard/KeyBoardCreate";
@@ -43,7 +43,6 @@ const Rotas = () => (
       <Route path="/keyboard" element={<KeyBoardRead />} />
       <Route path="/keyboard-create" element={<KeyBoardCreate />} />
       <Route path="/keyboard-update/:id" element={<KeyBoardUpdate />} />
-
       <Route path="/mouses" element={<MouseRead />} />
       <Route path="/mouse-create" element={<MouseCreate />} />
       <Route path="/mouse-update/:id" element={<MouseUpdate />} />
