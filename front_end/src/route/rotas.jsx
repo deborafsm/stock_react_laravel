@@ -18,6 +18,7 @@ import MouseCreate from "../pages/mouse/MouseCreate";
 import MouseUpdate from "../pages/mouse/MouseUpdate";
 import MonitorRead from "../pages/monitors/MonitorRead";
 import MonitorCreate from "../pages/monitors/MonitorCreate";
+import MonitorUpdate from "../pages/monitors/MonitorUpdate";
 import PcReader from "../pages/computers/PcReader";
 import PcCreate from "../pages/computers/PcCreate";
 import OperatorsReader from "../pages/operators/OperatorsRead";
@@ -47,7 +48,8 @@ const Rotas = () => (
       <Route path="/mouse-create" element={<MouseCreate />} />
       <Route path="/mouse-update/:id" element={<MouseUpdate />} />
       <Route path="/monitor" element={<MonitorRead />} />
-      <Route path="/monitor-create" element={<MonitorCreate />} />
+      <Route path="/monitor-create" element={<MonitorCreate />} /> 
+      <Route path="/monitor-update" element={<MonitorUpdate />} /> 
       <Route path="/pc" element={<PcReader />} />
       <Route path="/pc-create" element={<PcCreate />} />
       <Route path="/operators" element={<OperatorsReader />} />
