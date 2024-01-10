@@ -94,7 +94,7 @@ export default function HeadEdit() {
 
 
     const handleUpdate = (formData) => {
-        fetch("http://127.0.0.1:8000/api/headUpdate", {
+        fetch("http://127.0.0.1:8000/api/monitorUp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -133,7 +133,7 @@ export default function HeadEdit() {
         handleUpdate(formData);
     };
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/head_id/${id}`, {
+        fetch(`http://127.0.0.1:8000/api/monitor_id/${id}`, {
             method: 'GET',
             headers: {
                 'Access-Control-Allow-Origin': '*',
