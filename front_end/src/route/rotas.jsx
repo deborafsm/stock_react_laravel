@@ -21,6 +21,7 @@ import MonitorCreate from "../pages/monitors/MonitorCreate";
 import MonitorUpdate from "../pages/monitors/MonitorUpdate";
 import PcReader from "../pages/computers/PcReader";
 import PcCreate from "../pages/computers/PcCreate";
+import PcUpdate from "../pages/computers/PcUpdate.jsx/index.js";
 import OperatorsReader from "../pages/operators/OperatorsRead";
 import HeadCreate from "../pages/head/HeadCreate";
 import HeadEdit from "../pages/head/HeadEdit.jsx";
@@ -51,7 +52,8 @@ const Rotas = () => (
       <Route path="/monitor-create" element={<MonitorCreate />} /> 
       <Route path="/monitor-update" element={<MonitorUpdate />} /> 
       <Route path="/pc" element={<PcReader />} />
-      <Route path="/pc-create" element={<PcCreate />} />
+      <Route path="/pc-create" element={<PcCreate />} /> 
+      <Route path="/pc-update" element={<PcUpdate />} /> 
       <Route path="/operators" element={<OperatorsReader />} />
     </Routes>
 
