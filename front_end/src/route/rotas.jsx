@@ -8,7 +8,7 @@ import KitCreate from "../pages/kit/KitCreate.jsx";
 import KitUpdate from "../pages/kit/KitUpdate.jsx";
 import WebCamCreate from "../pages/webcam/WcCreate";
 import WebCam from "../pages/webcam/WcRead"
-import WebCamUpdate from "../pages/webcam/WcUpdate.jsx/index.js"
+import WebCamUpdate from "../pages/webcam/WcUpdate"
 import HeadReadPage from "../pages/head/HeadRead.jsx";
 import KeyBoardRead from "../pages/keyboard/KeyBoardRead";
 import KeyBoardCreate from "../pages/keyboard/KeyBoardCreate";
@@ -21,7 +21,7 @@ import MonitorCreate from "../pages/monitors/MonitorCreate";
 import MonitorUpdate from "../pages/monitors/MonitorUpdate";
 import PcReader from "../pages/computers/PcReader";
 import PcCreate from "../pages/computers/PcCreate";
-import PcUpdate from "../pages/computers/PcUpdate.jsx/index.js";
+import PcUpdate from "../pages/computers/PcUpdate";
 import OperatorsReader from "../pages/operators/OperatorsRead";
 import HeadCreate from "../pages/head/HeadCreate";
 import HeadEdit from "../pages/head/HeadEdit.jsx";
