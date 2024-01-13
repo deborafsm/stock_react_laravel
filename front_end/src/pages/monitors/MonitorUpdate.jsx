@@ -124,7 +124,7 @@ export default function HeadEdit() {
             });
     };
     function handleChange(e) {
-        setFormData({ ...monitr, [e.target.name]: e.target.value, id })
+        setFormData({ ...monitor, [e.target.name]: e.target.value, id })
         console.log(formData)
 
     }
