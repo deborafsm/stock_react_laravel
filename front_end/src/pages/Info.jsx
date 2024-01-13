@@ -1,9 +1,11 @@
 import React from "react";
 
+import {H1STYLE } from './../style/styledComponents';
+
 const Info = () => {
   return (
     <div>
-      <h1>Info</h1>
+      <H1STYLE>Info</H1STYLE>
     </div>
   );
 };
