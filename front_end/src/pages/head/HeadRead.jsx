@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
-import Modal from "react-modal";
-import styled from "styled-components";
-import { useParams, useHistory } from "react-router-dom";
 import { Container, Title, SearchForm, DownloadButton, StyledTable, Notification } from '../../style/styledComponents';
 function HeadRead() {
   const [notification, setNotification] = useState(null);
@@ -13,8 +10,6 @@ function HeadRead() {
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
 
   async function headDetais(id) {
     try {
@@ -47,8 +42,6 @@ function HeadRead() {
   }
   const handleEdit = (id) => {
     console.log("Editar item:", id);
-    // Redirecionar para a página de edição com o ID do item como parâmetro na URL
-    // history.push(`/editar_head/${id}`);
   };
 
   function handleRemove(id) {
