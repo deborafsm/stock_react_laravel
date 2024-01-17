@@ -78,3 +78,51 @@ export const Grid = styled.div`
   margin: 0 auto;
 `;
 
+// 
+export const Container = styled.div`
+  margin-bottom: 1rem;
+`;
+
+export const Title = styled.h1`
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+`;
+
+export const SearchForm = styled.form`
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+`;
+
+export const DownloadButton = styled.button`
+  padding: 5px 10px;
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+export const StyledTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f1f2f3;
+  }
+`;
