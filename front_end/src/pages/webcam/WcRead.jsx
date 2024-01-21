@@ -2,55 +2,9 @@ import React, { useEffect, useState } from "react";
 import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
-import styled from "styled-components";
+import { Container, Title, SearchForm, DownloadButton, StyledTable, Notification } from '../../style/styledComponents';
 
-const Container = styled.div`
-  margin-bottom: 1rem;
-`;
 
-const Title = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
-`;
-
-const SearchForm = styled.form`
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  margin-bottom: 10px;
-  justify-content: space-between;
-`;
-
-const DownloadButton = styled.button`
-  padding: 5px 10px;
-  background-color: #343a40;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-`;
-const StyledTable = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-
-  th,
-  td {
-    border: 1px solid #dee2e6;
-    padding: 8px;
-    text-align: center;
-  }
-
-  th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f1f2f3;
-  }
-`;
 const Notification = styled.div`
   margin-top: 10px;
   padding: 10px;
