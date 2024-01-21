@@ -11,7 +11,9 @@ export default function KeyBoardReader() {
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const columns = ["id", "marca", "modelo", "codigo", "status"];
+  
   const [notification, setNotification] = useState(null);
+
   useEffect(() => {
     fetchData();
   }, []);
