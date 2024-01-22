@@ -4,14 +4,6 @@ import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
 import { Container, Title, SearchForm, DownloadButton, StyledTable, Notification } from '../../style/styledComponents';
 
-
-const Notification = styled.div`
-  margin-top: 10px;
-  padding: 10px;
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  color: #fff;
-  border-radius: 4px;
-`;
 export default function WcRead() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
