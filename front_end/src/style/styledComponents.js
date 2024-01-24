@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+
 export const H1STYLE = styled.h1`
   color: blue;
 `;
@@ -7,6 +8,7 @@ export const FormContainer = styled.div`
   max-width: 500px;
   margin: 0 auto;
 `;
+
 export const Notification = styled.div`
   margin-top: 10px;
   padding: 10px;
