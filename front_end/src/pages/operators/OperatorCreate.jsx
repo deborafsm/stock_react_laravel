@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Create from "../../components/create-component/index";
-export default function HeadCreate() {
+export default function OperatorCreate() {
   const [notification, setNotification] = useState(null);
 
   const fields = [
@@ -16,7 +16,7 @@ export default function HeadCreate() {
   ];
 
   const handleCreate = (formData) => {
-    fetch("http://127.0.0.1:8000/api/pcAdd", {
+    fetch("http://127.0.0.1:8000/api/OperatorAdd", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
