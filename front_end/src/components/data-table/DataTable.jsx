@@ -51,7 +51,7 @@ const ButtonEye = styled.button`
   font-size: 1rem;
   border: none;
   border-radius: 20px;
-  background-color: #2a2d30;
+  background-color: #64696e;
   color: #ced2d6;
   cursor: pointer;
   transition: background-color 0.3s ease;
