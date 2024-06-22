@@ -99,17 +99,19 @@ function HeadRead() {
 
   const filteredData = data
     .filter((item) =>
-      item.marca.toLowerCase().includes(searchTerm.toLowerCase())
+      item.marca
     )
     .reverse();
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
-  console.log("current:", currentItems);
+
   function paginate(pageNumber) {
     setCurrentPage(pageNumber);
   }
 
+  
   const handleDownload = () => {
     // Exemplo simples: crie um arquivo CSV com os dados da tabela
     const csvContent =

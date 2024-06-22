@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FormContainer, FormTitle, Label, Input, SubmitButton, Grid, Notification } from '../../style/styledComponents';
+import {select, option, FormContainer, FormTitle, Label, Input, SubmitButton, Grid, Notification } from '../../style/styledComponents';
 
 export default function KitCreate() {
   const [notification, setNotification] = useState(null);
@@ -216,73 +216,73 @@ export default function KitCreate() {
           </Label>
           <Label>
             Operador:
-            <Select name="operador" onChange={handleChange} value={operador.operador} >
+            <select name="operador" onChange={handleChange} value={operador.operador} >
               {operador.map((operador) => (
-                <Option key={operador.id} value={operador.id}>
+                <option key={operador.id} value={operador.id}>
                   {operador.nome}
-                </Option>
+                </option>
               ))}
-            </Select>
+            </select>
           </Label>
           <Label>
             Mouse:
-            <Select name="mouse" onChange={handleChange} value={mouse.mouse}>
+            <select name="mouse" onChange={handleChange} value={mouse.mouse}>
               {mouse.map((mouse) => (
-                <Option key={mouse.id} value={mouse.id}>
+                <option key={mouse.id} value={mouse.id}>
                   {mouse.codigo}
-                </Option>
+                </option>
               ))}
-            </Select>
+            </select>
           </Label>
           <Label>
             Teclado:
-            <Select name="teclado" onChange={handleChange} value={teclado.teclado}>
+            <select name="teclado" onChange={handleChange} value={teclado.teclado}>
               {teclado.map((teclado) => (
-                <Option key={teclado.id} value={teclado.id}>
+                <option key={teclado.id} value={teclado.id}>
                   {teclado.codigo}
-                </Option>
+                </option>
               ))}
-            </Select>
+            </select>
           </Label>
           <Label>
             Head:
-            <Select name="head" onChange={handleChange} value={head.head}>
+            <select name="head" onChange={handleChange} value={head.head}>
               {teclado.map((head) => (
-                <Option key={head.id} value={head.id}>
+                <option key={head.id} value={head.id}>
                   {head.codigo}
-                </Option>
+                </option>
               ))}
-            </Select>
+            </select>
           </Label>
           <Label>
             Computador:
-            <Select name="pc" onChange={handleChange} value={pc.pc}>
+            <select name="pc" onChange={handleChange} value={pc.pc}>
               {pc.map((pc) => (
-                <Option key={pc.id} value={pc.id}>
+                <option key={pc.id} value={pc.id}>
                   {pc.nome}
-                </Option>
+                </option>
               ))}
-            </Select>
+            </select>
           </Label>
           <Label>
             Monitor:
-            <Select name="monitor" onChange={handleChange} value={monitor.monitor}>
+            <select name="monitor" onChange={handleChange} value={monitor.monitor}>
               {monitor.map((monitor) => (
-                <Option key={monitor.id} value={monitor.id}>
+                <option key={monitor.id} value={monitor.id}>
                   {monitor.codigo}
-                </Option>
+                </option>
               ))}
-            </Select>
+            </select>
           </Label>
           <Label>
             Web Cam:
-            <Select name="webcam" onChange={handleChange} value={webcam.webcam}>
+            <select name="webcam" onChange={handleChange} value={webcam.webcam}>
               {webcam.map((webcam) => (
-                <Option key={webcam.id} value={webcam.id}>
+                <option key={webcam.id} value={webcam.id}>
                   {webcam.codigo}
-                </Option>
+                </option>
               ))}
-            </Select>
+            </select>
           </Label>
         </Grid>
 

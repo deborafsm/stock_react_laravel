@@ -2,7 +2,7 @@ import React from "react";
 import StyledButton from "../button/remove/remove";
 import EDIT from "../button/edit/edit";
 import styled from "styled-components";
-import { BsFillTrashFill, BsFillPenFill } from "react-icons/bs";
+import { BsFillTrashFill, BsFillPenFill, BsEye } from "react-icons/bs";
 import { Link } from "react-router-dom";
 const CenteredCell = styled.td`
   display: flex;
@@ -43,10 +43,28 @@ const ButtonEdit = styled.button`
     background-color: #ddd;
   }
 `;
+const ButtonEye = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #2a2d30;
+  color: #ced2d6;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
-function DataTable({ data, handleRemove, handleDetais, columns, rota}) {
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
+function DataTable({ data, handleRemove, handleDetais, columns, rota }) {
   return (
     <tbody>
+      
       {data.map((item) => (
         <tr key={item.id}>
           {columns.map((column) => (
@@ -62,6 +80,12 @@ function DataTable({ data, handleRemove, handleDetais, columns, rota}) {
                 <BsFillPenFill />
               </Link>
             </ButtonEdit>
+
+            <ButtonEye>
+              <Link to={`${rota}/${item.id}`} onClick={() => handleDetais(item.id)}>
+                <BsEye />
+              </Link>
+            </ButtonEye>
           </CenteredCell>
         </tr>
       ))}

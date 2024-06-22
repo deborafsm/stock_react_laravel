@@ -111,7 +111,7 @@ function HeadReadPage() {
               {currentItems.map((item) => (
                 <tr key={item.id}>
                   <td>{item.id}</td>
-                  <td>{item.marca}</td>
+                  <td>{item.head_marca}</td>
                   <td>{item.modelo}</td>
                   <td>{item.codigo}</td>
                   <td>{item.status}</td>

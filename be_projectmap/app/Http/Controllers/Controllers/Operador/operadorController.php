@@ -36,22 +36,12 @@ class operadorController extends Controller
         $operador = new operador();
         $operador->nome = $request->nome;
         $operador->email = $request->email;
-        $operador->telefone = $request->telefone;
-        $operador->celular = $request->celular;
-        $operador->endereco = $request->endereco;
-        $operador->cep = $request->cep;
-        $operador->numero = $request->numero;
-        $operador->complemento = $request->complemento;
-        $operador->referencia = $request->referencia;
-        $operador->bairro = $request->bairro;
-        $operador->cidade = $request->cidade;
-        $operador->estado = $request->estado;
         $operador->setor = $request->setor;
         $operador->cargo = $request->cargo;
         $operador->status = $request->status ?? 1;
         $operador->empresa = $request->empresa;
         $operador->supervisor = $request->supervisor;
-        $operador->cpf = $request->cpf;
+       
         $result = $operador->save();
         if ($result) {
             return ["result" => "success"];
@@ -64,22 +54,11 @@ class operadorController extends Controller
         $operador = operador::find($request->id);
         $operador->nome = $request->nome;
         $operador->email = $request->email;
-        $operador->telefone = $request->telefone;
-        $operador->celular = $request->celular;
-        $operador->endereco = $request->endereco;
-        $operador->cep = $request->cep;
-        $operador->numero = $request->numero;
-        $operador->complemento = $request->complemento;
-        $operador->referencia = $request->referencia;
-        $operador->bairro = $request->bairro;
-        $operador->cidade = $request->cidade;
-        $operador->estado = $request->estado;
         $operador->setor = $request->setor;
         $operador->cargo = $request->cargo;
-        $operador->status = $request->status;
+        $operador->status = $request->status ?? 1;
         $operador->empresa = $request->empresa;
         $operador->supervisor = $request->supervisor;
-        $operador->cpf = $request->cpf;
         $result = $operador->save();
         if ($result) {
             return ["result" => "success"];
