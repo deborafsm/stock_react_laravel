@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import DataTable from "../../components/data-table/DataTable";
 import SearchBar from "../../search/SearchBar";
 import PaginationButtons from "../../components/pagintation-buttons/PaginationButtons";
+import '../../assets/admin/css/styles.css';
+import '../../assets/admin/js/scripts.js';
+
+
 import { Container, Title, SearchForm, DownloadButton, StyledTable, Notification } from '../../style/styledComponents';
 function HeadRead() {
   const [notification, setNotification] = useState(null);
@@ -111,7 +115,7 @@ function HeadRead() {
     setCurrentPage(pageNumber);
   }
 
-  
+
   const handleDownload = () => {
     // Exemplo simples: crie um arquivo CSV com os dados da tabela
     const csvContent =
@@ -132,21 +136,27 @@ function HeadRead() {
 
   return (
     <div>
-      <Container>
-        <Title>Head</Title>
-        <SearchForm>
-          <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
-          <button>
-            <a href="/head-create">Create</a>
-          </button>
+      {/* <Container> */}
+      <Title>Head</Title>
+      <SearchForm>
+        <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+        <button>
+          <a href="/head-create">Create</a>
+        </button>
 
-          <DownloadButton onClick={handleDownload}>
-            Baixar Relatório
-          </DownloadButton>
-        </SearchForm>
-
-        <div className="tabela-container">
-          <StyledTable>
+        <DownloadButton onClick={handleDownload}>
+          Baixar Relatório
+        </DownloadButton>
+      </SearchForm>
+     
+      <div classNameName="card mb-4">
+        <div classNameName="card-header">
+          <i classNameName="fas fa-table me-1"></i>
+          DataTable Example
+        </div>
+        <div classNameName="card-body">
+          <table className="table" id="datatablesSimple">
+            {/* <StyledTable> */}
             <thead>
               <tr>
                 <th>ID</th>
@@ -164,20 +174,22 @@ function HeadRead() {
               handleEdit={headDetais(data.id)}
               columns={columns}
             />
-          </StyledTable>
+            {/* </StyledTable> */}
+          </table>
         </div>
-        <PaginationButtons
-          data={filteredData}
-          itemsPerPage={itemsPerPage}
-          currentPage={currentPage}
-          paginate={paginate}
-        />
-        {notification && (
-          <Notification backgroundColor={notification.backgroundColor}>
-            {notification.message}
-          </Notification>
-        )}
-      </Container>
+      </div>
+      <PaginationButtons
+        data={filteredData}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        paginate={paginate}
+      />
+      {notification && (
+        <Notification backgroundColor={notification.backgroundColor}>
+          {notification.message}
+        </Notification>
+      )}
+      {/* </Container> */}
     </div>
   );
 }

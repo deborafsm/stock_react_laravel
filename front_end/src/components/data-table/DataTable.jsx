@@ -17,8 +17,8 @@ const ButtonRemove = styled.button`
   font-size: 1rem;
   border: none;
   border-radius: 20px;
-  background-color: #dc3545;
-  color: #333;
+ 
+
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -34,8 +34,8 @@ const ButtonEdit = styled.button`
   font-size: 1rem;
   border: none;
   border-radius: 20px;
-  background-color: #007bff;
-  color: #333;
+  
+  
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -51,8 +51,8 @@ const ButtonEye = styled.button`
   font-size: 1rem;
   border: none;
   border-radius: 20px;
-  background-color: #64696e;
-  color: #ced2d6;
+  
+  
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -66,22 +66,22 @@ function DataTable({ data, handleRemove, handleDetais, columns, rota }) {
     <tbody>
       
       {data.map((item) => (
-        <tr key={item.id}>
+        <tr scope="row" key={item.id}>
           {columns.map((column) => (
             <td key={column}>{item[column]}</td>
           ))}
           <CenteredCell>
-            <ButtonRemove onClick={() => handleRemove(item.id)}>
+            <ButtonRemove className="btn btn-danger" onClick={() => handleRemove(item.id)}>
               <BsFillTrashFill />
             </ButtonRemove>
 
-            <ButtonEdit>
+            <ButtonEdit className="btn btn-primary">
               <Link to={`${rota}/${item.id}`} onClick={() => handleDetais(item.id)}>
                 <BsFillPenFill />
               </Link>
             </ButtonEdit>
 
-            <ButtonEye>
+            <ButtonEye className="btn btn-dark">
               <Link to={`${rota}/${item.id}`} onClick={() => handleDetais(item.id)}>
                 <BsEye />
               </Link>

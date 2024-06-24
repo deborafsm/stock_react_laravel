@@ -6,7 +6,8 @@ import MasterLayout from "./layouts/admin/MasterLayout.jsx";
 import Dashboard from "./components/admin/Dashboard.jsx";
 import Profile from "./components/admin/Profile.jsx";
 import Rotas from "./routes/Rotas.js";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
 
 function App() {
   return (
