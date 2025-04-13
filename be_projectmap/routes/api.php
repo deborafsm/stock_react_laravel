@@ -17,7 +17,8 @@ use App\Http\Controllers\Controllers\WebCam\webcamController;
 use App\Models\Monitor\monitor;
 use App\Models\WebCam\webcam;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\API\AuthController;
+ 
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::post("delete/{id?}", [cardApi::class, 'delCard']);
 // Route::get("search/{tag}", [cardApi::class, 'findCard']);
 // Route::apiResource("member", memberController::class);
+Route::post("register", [AuthController::class,'register']);
 // Head
 Route::get("head", [headController::class, 'getHead']);
 Route::get("head_id/{id_head?}", [headController::class, 'getHeadById']);

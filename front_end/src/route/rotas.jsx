@@ -26,11 +26,16 @@ import OperatorsReader from "../pages/operators/OperatorsRead";
 import HeadCreate from "../pages/head/HeadCreate";
 import HeadEdit from "../pages/head/HeadEdit.jsx";
 import Layout from "../layout/Grid/Layout";
-
-
+import MasterLayout from "../layouts/admin/MasterLayout.jsx";
+import Login from "../pages/login/login.jsx";
+import Register from "../pages/login/register.jsx";
 const Rotas = () => (
-  <Layout>
+  <MasterLayout>
+    {/* outro layout */}
+    {/* <Layout> */}
     <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/home" element={<Home />} />
       <Route path="/info" element={<Info />} />
       <Route path="/kit-read" element={<KitRead />} />
@@ -56,8 +61,8 @@ const Rotas = () => (
       <Route path="/pc-update" element={<PcUpdate />} /> 
       <Route path="/operators" element={<OperatorsReader />} />
     </Routes>
-
-  </Layout>
+    {/* </Layout> */}
+  </MasterLayout>
 );
 
 export default Rotas;

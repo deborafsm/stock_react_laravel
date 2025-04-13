@@ -71,21 +71,21 @@ function DataTable({ data, handleRemove, handleDetais, columns, rota }) {
             <td key={column}>{item[column]}</td>
           ))}
           <CenteredCell>
-            <ButtonRemove className="btn btn-danger" onClick={() => handleRemove(item.id)}>
+            <button className="btn btn-danger" onClick={() => handleRemove(item.id)}>
               <BsFillTrashFill />
-            </ButtonRemove>
+            </button>
 
-            <ButtonEdit className="btn btn-primary">
+            <button className="btn btn-primary">
               <Link to={`${rota}/${item.id}`} onClick={() => handleDetais(item.id)}>
-                <BsFillPenFill />
+                <BsFillPenFill color="white"/>
               </Link>
-            </ButtonEdit>
+            </button>
 
-            <ButtonEye className="btn btn-dark">
+            <button className="btn btn-dark">
               <Link to={`${rota}/${item.id}`} onClick={() => handleDetais(item.id)}>
-                <BsEye />
+                <BsEye color="white" />
               </Link>
-            </ButtonEye>
+            </button>
           </CenteredCell>
         </tr>
       ))}
