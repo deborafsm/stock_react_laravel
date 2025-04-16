@@ -1,0 +1,12 @@
+CREATE DATABASE tarefasdb;
+
+USE tarefasdb;
+
+CREATE TABLE tarefas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    status VARCHAR(20) NOT NULL,
+    tag VARCHAR(50),
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
+);
